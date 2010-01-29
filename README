@@ -1,0 +1,10 @@
+
+
+Use local Apache installation for testing, because Jekyll test server on http://0.0.0.0:4000/ does not support rewriting of urls.
+
+
+References:
+* Static html generator: http://wiki.github.com/mojombo/jekyll/
+* Formatting syntax: http://daringfireball.net/projects/markdown/syntax
+* Ruby implementation of Markdown: http://github.com/rtomayko/rdiscount
+* Syntax highlighting: http://pygments.org/
