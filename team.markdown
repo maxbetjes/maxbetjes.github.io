@@ -19,15 +19,16 @@ GFRD
 
 Software
 --------
-
-* Thomas Miedema
+* Nils Becker
 * Laurens Bossen
-* Thomas Sokolowski
+* Kazunari Kaizu
 * Moriyoshi Koizumi
+* Thomas Miedema
+* Thomas Sokolowski
 * [Koichi Takahashi](http://www.e-cell.org/ecell/)
 
 
 Contributors
 ------------
-* Nils Becker
+* You!
 
