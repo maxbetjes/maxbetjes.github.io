@@ -15,7 +15,7 @@ found in the [samples](http://github.com/gfrd/gfrd/tree/develop/samples) directo
 ---------------------------------------
 
 {% highlight python %}
-{% include surfaces-run.py %}
+{% include example.py %}
 {% endhighlight %}
 
 
