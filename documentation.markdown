@@ -7,9 +7,9 @@ title:
 Documentation
 =============
 
-* [Installation](installation)
-* [Running a simulation](simulation)
-* [Visualization](visualization)
+* [Installation](/installation)
+* [Running a simulation](/simulation)
+* [Visualization](/visualization)
 
 More documentation, including Green's functions and pseudocode for the 
 algorithm can be found in the [doc](http://github.com/gfrd/gfrd/tree/develop/doc") directory of 
