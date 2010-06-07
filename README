@@ -1,6 +1,25 @@
 
+Two options:
 
-Use local Apache installation for testing, because Jekyll test server on http://0.0.0.0:4000/ does not support rewriting of urls.
+1) /about/ redirects to /about/index.hml (more robust)
+$ jekyll --permalink pretty
+* Test using Jekyll or Apache server
+* See http://github.com/henrik/jekyll
+
+2) /about redirects to /about.hml (a bit nicer)
+$ jekyll
+* Test using Apache server.
+* Set 'Options MultiViews' in httpd.conf.
+* Note: Apache gets confused about trailing slash when _site previously 
+  created with jekyll --permalinks pretty is now replaced by _site created 
+  without --permalinks pretty.
+
+
+$ jekyll --server
+http://0.0.0.0:4000/ 
+
+$ apachectl restart
+http://localhost:8000/
 
 
 References:
