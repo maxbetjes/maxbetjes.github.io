@@ -27,3 +27,4 @@ References:
 * Formatting syntax: http://daringfireball.net/projects/markdown/syntax
 * Ruby implementation of Markdown: http://github.com/rtomayko/rdiscount
 * Syntax highlighting: http://pygments.org/
+* Embedding video: http://github.com/etianen/html5media
