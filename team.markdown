@@ -10,11 +10,9 @@ Team
 
 GFRD
 ----
-
 * Jeroen van Zon
 * Sorin Tanase Nicola
-* Koichi Takahashi
-* [Pieter Rein ten Wolde](http://www.amolf.nl/research/biochemical-networks/)
+* [Pieter Rein ten Wolde](http://www.amolf.nl/research/biochemical-networks/) 
 
 
 Software
@@ -30,5 +28,5 @@ Software
 
 Contributors
 ------------
-* You!
+* Filipe Tostevin
 

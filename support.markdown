@@ -7,4 +7,4 @@ Support
 =======
 
 If you have any questions about the GFRD software package please contact 
-<support@gfrd.org>.
+<miedema@amolf.nl>.
