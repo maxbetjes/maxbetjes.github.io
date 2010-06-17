@@ -1,6 +1,7 @@
 ---
-layout: default
-title:
+layout: main
+title: GFRD downloads
+file: downloads
 ---
 
 

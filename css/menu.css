@@ -43,11 +43,11 @@
 /* ON STATES */
 /*#globalheader.home #globalnav li#gn-home a { background-position: 0 -114px; 
  * ! important; } */
-#globalheader.about #globalnav li#gn-about a { background-position: -117px -114px !important; }
-#globalheader.downloads #globalnav li#gn-downloads a { background-position: -234px -114px !important; }
-#globalheader.documentation #globalnav li#gn-documentation a { background-position: -351px -114px !important; }
-#globalheader.development #globalnav li#gn-development a { background-position: -468px -114px !important; }
-#globalheader.support #globalnav li#gn-support a { background-position: -585px -114px !important; }
-#globalheader.empty #globalnav li#gn-empty a { background-position: -702px -114px !important; }
+.about #globalheader #globalnav li#gn-about a { background-position: -117px -114px !important; }
+.downloads #globalheader #globalnav li#gn-downloads a { background-position: -234px -114px !important; }
+.documentation #globalheader #globalnav li#gn-documentation a { background-position: -351px -114px !important; }
+.development #globalheader #globalnav li#gn-development a { background-position: -468px -114px !important; }
+.support #globalheader #globalnav li#gn-support a { background-position: -585px -114px !important; }
+/*#globalheader.empty #globalnav li#gn-empty a { background-position: -702px -114px !important; } */
 
 

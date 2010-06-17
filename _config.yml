@@ -2,3 +2,5 @@ destination: ./_site
 #auto: true
 pygments: true
 markdown: rdiscount 
+rdiscount:
+  smart: true

@@ -1,6 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>GFRD</title>
+  <title>{{ page.title }}</title>
   <link rel="stylesheet" href="/css/base.css" type="text/css" />
   <link rel="stylesheet" href="/css/home.css" type="text/css" />
   <link rel="stylesheet" href="/css/menu.css" type="text/css" />
@@ -9,12 +10,13 @@
   <script src="/movies/html5media/html5media.min.js"></script>
 </head>
 <body>
+
+<div class="home">
 {% include menu.html %}
+</div>
 
 <div id="billboard">
-
    {{ content }}
-
 </div>
 
 {% include footer.html %}

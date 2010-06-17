@@ -1,7 +1,9 @@
 ---
-layout: default
-title:
+layout: main
+title: GFRD Support
+file: support
 ---
+
 
 Support
 =======
