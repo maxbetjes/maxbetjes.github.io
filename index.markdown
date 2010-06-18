@@ -1,26 +1,20 @@
 ---
 layout: index
-title:
+title: GFRD home
 ---
 
+## Welcome to the homepage of Green’s Function Reaction Dynamics (GFRD)
 
-GFRD
-====
+GFRD is an algorithm that makes it possible to simulate reaction-diffusion systems at the particle level [[1](#1), [2](#2), [3](#3)]. The principal idea of GFRD is to decompose the many-body reaction-diffusion problem into one- and two-body reaction-diffusion problems that can be solved analytically using Green’s Functions [[1](#1), [2](#2)]. These Green’s Functions are then employed to set up an event-driven algorithm, which makes it possible to make large jumps in time and space when the particles are far apart from each other. In biological systems this is often the case, and, indeed, GFRD can be up to 6 orders of magnitude faster than conventional Brownian Dynamics under biologically relevant conditions [[1](#1)].
 
-Homepage text by PR
--------------------
+Recently, ideas developed by Opplestrup and coworkers [[4](#4)] have been implemented, which has turned GFRD into an exact, asynchronous event-driven algorithm [[3](#3)].
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et aliquet mi.  
-Vivamus faucibus, orci vel lobortis adipiscing, nisi dui malesuada sapien, 
-at scelerisque libero ante quis sem. Integer eu urna ac orci dictum 
-condimentum. Cras adipiscing, nunc vitae laoreet dictum, mauris ipsum 
-tincidunt nulla, sed pellentesque libero turpis ut felis. Donec orci felis, 
-tincidunt vel ultrices sed, aliquam quis tortor. Sed accumsan, ante id 
-adipiscing accumsan, orci purus tincidunt nisi, ut mattis nisl lacus eu sem.  
-Nunc sollicitudin scelerisque accumsan. Pellentesque habitant morbi 
-tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam 
-massa leo, vestibulum vel commodo non, sollicitudin vitae nisi. Vivamus 
-ornare fermentum lobortis.
+The GFRD algorithm is generic and can be applied to a wide variety of reaction-diffusion problems, including those in population dynamics, evolution, and soft-condensed matter physics. The scheme presented here has been specifically designed to simulate biochemical networks. The current version allows the efficient simulation of signal transduction pathways and gene regulation networks in the cytoplasm, but work is in progress to implement reactions at surfaces such as membranes, and reactions at, and passive and active transport along, polymers such as microtubules and DNA.
 
+GFRD is developed in the groups of Takahashi at the [Riken institute](http://www.riken.jp) in Japan and Ten Wolde at the FOM insitute for [Atomic and Molecular Physics (AMOLF)](http://www.amolf.nl) in The Netherlands.
 
-![](images/mapk400.png "mapk")
+[1](id:1) Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. _Phys Rev Lett_, 94: 128103.  
+[2](id:2) Van Zon JS,  Ten Wolde PR (2005) Green’s Function Reaction Dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123: 234910.  
+[3](id:3) Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. _Proc. Natl Acad Sci USA_, 107: 2473 — 2478.  
+[4](id:4) Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. _Phys Rev Lett_, 97:230602.
+
