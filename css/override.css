@@ -12,9 +12,6 @@ ul { list-style: circle; margin-left: 2em; }
 .right { float:right; } 
 .left { float:left; } 
 .w400 { width:400px; }
-.w450 { width:450px; }
-.w500 { width:500px; }
-.w600 { width:600px; }
 
 h2:first-child { margin: 0px 0px 7px; }
 h2 { margin: 25px 0px 7px; }

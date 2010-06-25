@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>GFRD home</title>
+  <link rel="stylesheet" href="/css/base.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/home.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/menu.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/override.css" type="text/css"/>
+
+  <script src="/movies/html5media/html5media.min.js"></script>
+</head>
+<body>
+
+<div class="home">
+<div id="globalheader">
+  <!--googleoff: all-->
+  <ul id="globalnav">
+    <li id="gn-home"><a href="/">Home</a></li>
+    <li id="gn-background"><a href="/background">Background</a></li>
+    <li id="gn-downloads"><a href="/downloads">Downloads</a></li>
+    <li id="gn-documentation"><a href="/documentation">Documentation</a></li>
+    <li id="gn-support"><a href="/support">Support</a></li>
+    <li id="gn-empty"><a></a></li>
+    <li id="gn-empty"><a></a></li>
+  </ul>
+  <!--googleon: all-->
+  <div id="lastbutton"> </div>
+</div>
+</div>
+
+<div id="container">
+<h1> Welcome to the homepage of <u>Green’s Function Reaction Dynamics</u> </h1>
+<div class="box"> 
+<div class="cap"></div> 
+<div class="text">
+<div class="media right w400"><p><video class="video" poster="/movies/12-particles_100-steps/step.0000.png" width="400" height="400" controls preload>
+  <source src="/movies/12-particles_100-steps/movie.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
+  <source src="/movies/12-particles_100-steps/movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+</video><br/>
+Movie. <em>A movie of eGFRD in action. The green spheres are protective domains for single particles, the yellow sphere seen towards the end of the movie is a protective domains for a pair of particles. With the color blue the protective domain which will be updated next is highlighted.</em></p></div>
+
+<p>Green&rsquo;s Function Reaction Dynamics (GFRD) is an algorithm that makes it possible to simulate reaction-diffusion systems at the particle level [<a href="#1">1</a>, <a href="#2">2</a>, <a href="#3">3</a>]. The principal idea of GFRD is to decompose the many-body reaction-diffusion problem into one- and two-body reaction-diffusion problems that can be solved analytically using Green’s Functions [<a href="#1">1</a>, <a href="#2">2</a>]. These Green’s Functions are then employed to set up an event-driven algorithm, which makes it possible to make large jumps in time and space when the particles are far apart from each other. In biological systems this is often the case, and, indeed, GFRD can be up to 6 orders of magnitude faster than conventional Brownian Dynamics under biologically relevant conditions [<a href="#1">1</a>].</p>
+
+<p>Recently, ideas developed by Opplestrup and coworkers [<a href="#4">4</a>] have been implemented, which has turned GFRD into an exact, asynchronous event-driven algorithm [<a href="#3">3</a>].</p>
+
+<p>The GFRD algorithm is generic and can be applied to a wide variety of reaction-diffusion problems, including those in population dynamics, evolution, and soft-condensed matter physics. The scheme presented here has been specifically designed to simulate biochemical networks. The current version allows the efficient simulation of signal transduction pathways and gene regulation networks in the cytoplasm, but work is in progress to implement reactions at surfaces such as membranes, and reactions at, and passive and active transport along, polymers such as microtubules and DNA.</p>
+
+<p>GFRD is developed in the groups of Takahashi at the <a href="http://www.riken.jp">Riken institute</a> in Japan and Ten Wolde at the FOM insitute for <a href="http://www.amolf.nl">Atomic and Molecular Physics (AMOLF)</a> in The Netherlands.</p>
+
+<h3>References</h3>
+
+<p><a id="1">1</a> Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. <em>Phys Rev Lett</em>, 94: 128103.<br/>
+<a id="2">2</a> Van Zon JS,  Ten Wolde PR (2005) Green’s Function Reaction Dynamics: A particle-based approach for simulating biochemical networks in time and space. <em>J Chem Phys</em>, 123: 234910.<br/>
+<a id="3">3</a> Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. <em>Proc. Natl Acad Sci USA</em>, 107: 2473 — 2478.<br/>
+<a id="4">4</a> Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. <em>Phys Rev Lett</em>, 97:230602.</p>
+</div>
+<div class="boot"></div> 
+</div>
+</div>
+
+
+<div id="globalfooter">
+  <div class="gf-sosumi">
+    <p>Copyright &copy; 2010 FOM institute AMOLF</p>
+    <ul class="piped">
+      <li><a href="/team">Team</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>eGFRD Visualization</title>
+  <link rel="stylesheet" href="/css/base.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/menu.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css"/>
+  <link rel="stylesheet" href="/css/override.css" type="text/css"/>
+</head>
+<body>
+
+<div id="globalheader">
+  <!--googleoff: all-->
+  <ul id="globalnav">
+    <li id="gn-home"><a href="/">Home</a></li>
+    <li id="gn-background"><a href="/background">Background</a></li>
+    <li id="gn-downloads"><a href="/downloads">Downloads</a></li>
+    <li id="gn-documentation"><a href="/documentation">Documentation</a></li>
+    <li id="gn-support"><a href="/support">Support</a></li>
+    <li id="gn-empty"><a></a></li>
+    <li id="gn-empty"><a></a></li>
+  </ul>
+  <!--googleon: all-->
+  <div id="lastbutton"> </div>
+</div>
+
+
+<div id="container">
+<h1> Visualization </h1>
+<div class="box"> 
+<div class="cap"></div> 
+<div class="text">
+<p>This same information can also be found in the file
+<a href="http://github.com/gfrd/gfrd/tree/develop/doc/visualization.txt">visualization.txt</a>
+in the <a href="http://github.com/gfrd/gfrd/tree/develop/doc">doc</a> directory of the code.</p>
+
+<h2>Setting up the simulation</h2>
+
+<ul>
+<li>Setup the vtklogger like this in your simulation script (also see
+&lt;egfrdDirectory>/samples/example/example.py):</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="python"><span class="n">s</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span class="n">vtklogger</span> <span class="o">=</span> <span class="n">VTKLogger</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&#39;&lt;mySimulationDataDirectory&gt;&#39;</span><span class="p">)</span>
+<span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+    <span class="n">vtklogger</span><span class="o">.</span><span class="n">log</span><span class="p">()</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">RuntimeError</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&#39;Error.&#39;</span><span class="p">,</span> <span class="n">message</span>
+    <span class="k">break</span>
+<span class="n">vtklogger</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="n">s</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+</code></pre>
+</div>
+
+
+<ul>
+<li>Replace &lsquo;&lt;mySimulationDataDirectory>&rsquo; by a descriptive name for each
+simulation that you run. It can be a nested directory structure, like
+&lsquo;data/10000steps/run1&rsquo;, and is automatically created inside the directory
+that contains your simulation script.</li>
+</ul>
+
+
+<h2>Configuration options to VTKLogger</h2>
+
+<div class="highlight"><pre><code class="python"><span class="n">bufferSize</span><span class="o">=</span><span class="bp">None</span>  
+</code></pre>
+</div>
+
+
+<p>By default the simulation data files are written directly during the
+simulation. By specifying a bufferSize, all data is stored in a buffer during
+the simulation, and the VTKLogger only writes the data for the last
+&lsquo;bufferSize&rsquo; simulation steps after the simulation has finished.</p>
+
+<div class="highlight"><pre><code class="python"><span class="n">brownian</span><span class="o">=</span><span class="bp">False</span>  
+</code></pre>
+</div>
+
+
+<p>If brownian is set to True, no shell data is written.</p>
+
+<div class="highlight"><pre><code class="python"><span class="n">extraParticleStep</span><span class="o">=</span><span class="bp">True</span>  
+</code></pre>
+</div>
+
+
+<p>By default the VTKLogger writes 2 visualization steps for each simulation
+step. In the first visualization step only the active particle is updated, in
+the second visualization step the active shell is updated (and the next shell
+changes to blue). If extraParticleStep is set to False, these two steps are
+combined into one.</p>
+
+<h2>Running the simulation</h2>
+
+<ul>
+<li>Run the simulation script.</li>
+</ul>
+
+
+<div class="highlight"><pre><code class="python"><span class="n">PYTHONPATH</span><span class="o">=../../</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span>
+</code></pre>
+</div>
+
+
+<ul>
+<li><p>This should produce the files static.pvd and files.pvd inside the
+simulation data directory specified in your simulation script. The former
+contains static information about the surfaces you defined in your
+simulation. The latter contains a list of references to .vtu files. For each
+timestep there is a .vtu file that contains information about the particles,
+a .vtu file for the sphericle shells, and a .vtu file for all the
+cylindrical shells.</p></li>
+<li><p>When not using a buffer, i.e. option 2, the .vtu files are created during
+the simulation. However, we have to wait for the simulation to finish before
+we can visualize the data using Paraview. It is not till the call to
+vtklogger.stop() that files.pvd is created with an overview of all .vtu
+files. For this reason the visualization can not be shown real-time
+at the moment.</p></li>
+</ul>
+
+
+<h2>Visualizing the data</h2>
+
+<ul>
+<li><p>In the file &lt;egfrdDirectory>/paraview/visualization.py change the variable
+paraview_scripts_directory to &lsquo;&lt;egfrdDirectory>/paraview&rsquo; and the variable
+simulation_data_directory to the location of your simulation data as
+specified in your simulation script. These need to be absolute paths.</p></li>
+<li><p>Start Paraview.</p></li>
+<li><p>Go to Tools > Python Shell.</p></li>
+<li><p>Click &lsquo;Run Script&rsquo;.</p></li>
+<li><p>Select &lt;egfrdDirectory>/paraview/visualization.py.</p></li>
+<li><p>You should see a pipeline being build up.</p></li>
+<li><p>Click the play button. You should see an animation of your simulation.</p></li>
+</ul>
+
+
+<h2>Rerunning a simulation</h2>
+
+<ul>
+<li>If you run a new simulation that writes to the same simulation data
+directory, usually Paraview will reload the new data correctly. There can be
+a problem if you increase or decrease the number of timesteps. If so, rerun
+the Python script that builds the pipeline (see above).</li>
+</ul>
+
+</div>
+<div class="boot"></div> 
+</div>
+</div>
+
+<div id="globalfooter">
+  <div class="gf-sosumi">
+    <p>Copyright &copy; 2010 FOM institute AMOLF</p>
+    <ul class="piped">
+      <li><a href="/team">Team</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

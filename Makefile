@@ -8,6 +8,9 @@ all: website
 website:
 	cd $(CODE) && cp $(FILES) $(HERE)/_includes
 	jekyll
+	mv _site/src/*.html _site/
+	cp _site/*.html .
+	rm support.html
 
 
 .PHONY: deploy
