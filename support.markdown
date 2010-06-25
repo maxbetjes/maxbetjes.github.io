@@ -1,9 +1,11 @@
 ---
 layout: main
-title: GFRD Support
+title: eGFRD support
 file: support
+header: eGFRD support
+
 ---
 
-If you have any questions about the GFRD software package please contact 
-<miedema@amolf.nl>.
+If you have any questions about the eGFRD simulator please contact 
+Thomas Miedema: <miedema@amolf.nl>.
 

@@ -15,7 +15,7 @@
 
 /* BUTTONS */
 #globalheader #globalnav li#gn-home a { background-position: 0 0; }
-#globalheader #globalnav li#gn-about a { background-position: -117px 0; }
+#globalheader #globalnav li#gn-background a { background-position: -117px 0; }
 #globalheader #globalnav li#gn-downloads a { background-position: -234px 0; }
 #globalheader #globalnav li#gn-documentation a { background-position: -351px 0; }
 #globalheader #globalnav li#gn-development a { background-position: -468px 0; }
@@ -24,7 +24,7 @@
 
 /* OVER STATES */
 #globalheader #globalnav li#gn-home a:hover { background-position: 0 -38px; }
-#globalheader #globalnav li#gn-about a:hover { background-position: -117px -38px; }
+#globalheader #globalnav li#gn-background a:hover { background-position: -117px -38px; }
 #globalheader #globalnav li#gn-downloads a:hover { background-position: -234px -38px; }
 #globalheader #globalnav li#gn-documentation a:hover { background-position: -351px -38px; }
 #globalheader #globalnav li#gn-development a:hover { background-position: -468px -38px; }
@@ -33,7 +33,7 @@
 
 /* PRESSED STATES */
 #globalheader #globalnav li#gn-home a:active { background-position: 0 -76px; }
-#globalheader #globalnav li#gn-about a:active { background-position: -117px -76px; }
+#globalheader #globalnav li#gn-background a:active { background-position: -117px -76px; }
 #globalheader #globalnav li#gn-downloads a:active { background-position: -234px -76px; }
 #globalheader #globalnav li#gn-documentation a:active { background-position: -351px -76px; }
 #globalheader #globalnav li#gn-development a:active { background-position: -468px -76px; }
@@ -43,7 +43,7 @@
 /* ON STATES */
 /*#globalheader.home #globalnav li#gn-home a { background-position: 0 -114px; 
  * ! important; } */
-.about #globalheader #globalnav li#gn-about a { background-position: -117px -114px !important; }
+.about #globalheader #globalnav li#gn-background a { background-position: -117px -114px !important; }
 .downloads #globalheader #globalnav li#gn-downloads a { background-position: -234px -114px !important; }
 .documentation #globalheader #globalnav li#gn-documentation a { background-position: -351px -114px !important; }
 .development #globalheader #globalnav li#gn-development a { background-position: -468px -114px !important; }

@@ -1,22 +1,11 @@
 ---
 layout: default
-title:
+title: eGFRD Team
+header: eGFRD Team
 ---
 
 
-Team 
-====
-
-
-GFRD
-----
-* Jeroen van Zon
-* Sorin Tanase Nicola
-* [Pieter Rein ten Wolde](http://www.amolf.nl/research/biochemical-networks/) 
-
-
-Software
---------
+## Developed by
 * Nils Becker
 * Laurens Bossen
 * Kazunari Kaizu
@@ -24,9 +13,9 @@ Software
 * Thomas Miedema
 * Thomas Sokolowski
 * [Koichi Takahashi](http://www.e-cell.org/ecell/)
+* [Pieter Rein ten Wolde](http://www.amolf.nl/research/biochemical-networks/) 
 
 
-Contributors
-------------
+## Contributors
 * Filipe Tostevin
 

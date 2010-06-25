@@ -1,10 +1,14 @@
 /* BILLBOARD */
-#billboard, #promos, #headlines, #ticker, #options, #links, #homefooter { width: 980px; margin: 0 auto 10px; clear: both; }
+/*
+#billboard, #promos, #headlines, #ticker, #options, #links, #homefooter { width: 984px; margin: 0 auto 10px; clear: both; }
 #billboard { margin: 10px auto 0 auto; }
 #billboard img.bottom { padding: 0; border: 0; margin: 0; margin-bottom: 16px; }
 #billboard a.more { padding-right: 8px; background: url(/global/elements/arrows/morearrow_08c.gif) no-repeat 100% 50%; text-decoration: none; }
 #billboard a.more:hover { text-decoration: underline; }
 #billboard .left { float: left; }
+*/
+
+
 
 /* PROMOS */
 #promos { width: 980px; height: 155px; }
