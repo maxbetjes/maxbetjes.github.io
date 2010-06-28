@@ -46,7 +46,9 @@ Fig.1: _Overview of GFRD. The principal idea of GFRD is to decompose the many-bo
 
 >>>%media%
 <video class="video" poster="/movies/planar-surface_6-particles_100-steps/step.0201.png" width="430" height="430" controls preload="none">
+  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
   <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
+  <source src="http://github.com/downloads/thomie/gfrd.github.com/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
   <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video><br/>
 >>>Movie 1 ([ogv](/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv), 

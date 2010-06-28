@@ -6,7 +6,9 @@ header: "GFRD: super fast reaction-diffusion simulations at the particle level"
 
 >%media right w400%
 <video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="400" height="400" controls preload="none">
+  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
   <source src="/movies/12-particles_100-steps/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
+  <source src="http://github.com/downloads/thomie/gfrd.github.com/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
   <source src="/movies/12-particles_100-steps/12-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>  
 Movie ([ogv](/movies/12-particles_100-steps/12-particles_100-steps.ogv), [mp4](/movies/12-particles_100-steps/12-particles_100-steps.mp4)). _A movie of eGFRD in action. The green spheres are protective domains for single particles, the yellow sphere seen towards the end of the movie is a protective domains for a pair of particles. With the color blue the protective domain which will be updated next is highlighted._
