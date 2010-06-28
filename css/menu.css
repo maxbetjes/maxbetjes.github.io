@@ -43,7 +43,7 @@
 /* ON STATES */
 /*#globalheader.home #globalnav li#gn-home a { background-position: 0 -114px; 
  * ! important; } */
-.about #globalheader #globalnav li#gn-background a { background-position: -117px -114px !important; }
+.background #globalheader #globalnav li#gn-background a { background-position: -117px -114px !important; }
 .downloads #globalheader #globalnav li#gn-downloads a { background-position: -234px -114px !important; }
 .documentation #globalheader #globalnav li#gn-documentation a { background-position: -351px -114px !important; }
 .development #globalheader #globalnav li#gn-development a { background-position: -468px -114px !important; }

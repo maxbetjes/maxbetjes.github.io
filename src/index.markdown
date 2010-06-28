@@ -1,7 +1,7 @@
 ---
 layout: index
 title: GFRD home
-header: Welcome to the homepage of <u>Green’s Function Reaction Dynamics</u>
+header: "GFRD: super fast reaction-diffusion simulations at the particle level" 
 ---
 
 >%media right w400%
@@ -9,13 +9,13 @@ header: Welcome to the homepage of <u>Green’s Function Reaction Dynamics</u>
   <source src="/movies/12-particles_100-steps/movie.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
   <source src="/movies/12-particles_100-steps/movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>  
-Movie. _A movie of eGFRD in action. The green spheres are protective domains for single particles, the yellow sphere seen towards the end of the movie is a protective domains for a pair of particles. With the color blue the protective domain which will be updated next is highlighted._
+Movie ([ogv](/movies/12-particles_100-steps/movie.ogv), [mp4](/movies/12-particles_100-steps/movie.mp4)). _A movie of eGFRD in action. The green spheres are protective domains for single particles, the yellow sphere seen towards the end of the movie is a protective domains for a pair of particles. With the color blue the protective domain which will be updated next is highlighted._
 
-Green's Function Reaction Dynamics (GFRD) is an algorithm that makes it possible to simulate reaction-diffusion systems at the particle level [[1](#1), [2](#2), [3](#3)]. The principal idea of GFRD is to decompose the many-body reaction-diffusion problem into one- and two-body reaction-diffusion problems that can be solved analytically using Green’s Functions [[1](#1), [2](#2)]. These Green’s Functions are then employed to set up an event-driven algorithm, which makes it possible to make large jumps in time and space when the particles are far apart from each other. In biological systems this is often the case, and, indeed, GFRD can be up to 6 orders of magnitude faster than conventional Brownian Dynamics under biologically relevant conditions [[1](#1)].
+Green's Function Reaction Dynamics (GFRD) is an algorithm that makes it possible to simulate reaction-diffusion systems at the particle level [[1](#1), [2](#2), [3](#3)]. The principal idea of GFRD is to decompose the **many-body reaction-diffusion problem** into one- and two-body reaction-diffusion problems that can be **solved analytically using Green’s Functions** [[1](#1), [2](#2)]. These Green’s Functions are then employed to set up an event-driven algorithm, which makes it possible to make large jumps in time and space when the particles are far apart from each other. In biological systems this is often the case, and, indeed, GFRD can be up to **6 orders of magnitude faster** than conventional Brownian Dynamics under biologically relevant conditions [[1](#1)].
 
-Recently, ideas developed by Opplestrup and coworkers [[4](#4)] have been implemented, which has turned GFRD into an exact, asynchronous event-driven algorithm [[3](#3)].
+Recently, ideas developed by Opplestrup and coworkers [[4](#4)] have been implemented, which has turned GFRD into an **exact**, **asynchronous event-driven** algorithm [[3](#3)].
 
-The GFRD algorithm is generic and can be applied to a wide variety of reaction-diffusion problems, including those in population dynamics, evolution, and soft-condensed matter physics. The scheme presented here has been specifically designed to simulate biochemical networks. The current version allows the efficient simulation of signal transduction pathways and gene regulation networks in the cytoplasm, but work is in progress to implement reactions at surfaces such as membranes, and reactions at, and passive and active transport along, polymers such as microtubules and DNA.
+The GFRD algorithm is generic and can be applied to a wide variety of reaction-diffusion problems, including those in population dynamics, evolution, and soft-condensed matter physics. The scheme presented here has been specifically designed to simulate biochemical networks. The current version allows the efficient **simulation** of **signal transduction pathways** and **gene regulation networks** in the cytoplasm, but work is in progress to implement reactions at surfaces such as membranes, and reactions at, and passive and active transport along, polymers such as microtubules and DNA.
 
 GFRD is developed in the groups of Takahashi at the [Riken institute](http://www.riken.jp) in Japan and Ten Wolde at the FOM insitute for [Atomic and Molecular Physics (AMOLF)](http://www.amolf.nl) in The Netherlands.
 

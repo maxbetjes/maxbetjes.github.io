@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="/css/menu.css" type="text/css"/>
   <link rel="stylesheet" href="/css/syntax.css" type="text/css"/>
   <link rel="stylesheet" href="/css/override.css" type="text/css"/>
+
+  <script src="/html5media/html5media.min.js"></script>
 </head>
 <body>
 
@@ -72,11 +74,16 @@
 <div class="column last"><div class="media"><p><img src="/images/gfrd.png" width="400" title="Fig.1. GFRD" alt="" /><br/>
 Fig.1: <em>Overview of GFRD. The principal idea of GFRD is to decompose the many-body reaction-diffusion problem into one- and two-body problems that can be solved analytically using Green’s Functions. To this end, protective domains are put around single particles and pairs of particles, leading to so-called </em>Singles<em> and </em>Pairs<em>, respectively. For each domain, a next </em>event type<em> and a next </em>event time<em> is determined. The </em>event times<em> are put in a chronologically ordered </em>event list<em>, and the events are then executed in chronological order. When an event is executed, the particles of the corresponding domain are propagated, new domains with new events are determined, and the events are put back in the event list.</em></p></div>
 
-<div class="media"><p><video class="video" poster="/movies/planar-surface_6-particles_100-steps/step.0000.png" width="420" height="300" controls preload>
+<div class="media"><p><video class="video" poster="/movies/planar-surface_6-particles_100-steps/step.0000.png" width="430" height="430" controls preload>
   <source src="/movies/planar-surface_6-particles_100-steps/movie.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
   <source src="/movies/planar-surface_6-particles_100-steps/movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video><br/>
-Movie 1. <em>A movie of eGFRD in action in 2 dimensions. The green cylinders are protective domains for single particles, the yellow cylinders are protective domains for pairs of particles. With the color blue the protective domain which will be updated next is highlighted.</em></p></div>
+Movie 1 (<a href="/movies/planar-surface_6-particles_100-steps/movie.ogv">ogv</a>,
+<a href="/movies/planar-surface_6-particles_100-steps/movie.mp4">mp4</a>). <em>A
+movie of eGFRD in action in 2 dimensions. The green cylinders are
+protective domains for single particles, the yellow cylinders are
+protective domains for pairs of particles. With the color blue the
+protective domain which will be updated next is highlighted.</em></p></div>
 
 <div class="media"><p><img src="/images/single.png" width="400" title="Fig.2. Single" alt="" /><br/>
 Fig.2: <em>A </em>Single<em>, a protective domain that contains only a single particle. The possible </em>event types<em> are either a unimolecular reaction or the escape of the single particle from the protective domain.</em></p></div>
