@@ -143,13 +143,13 @@ a.audio { background: url(./../elements/icons/globaliconaudio12x12.gif) 0 0.4em 
 #globalfooter .gf-links a.last { padding-right: 0; _float: none !important; width: auto !important; }
 
 /*--- Global Footer ---*/
-#globalfooter { width: 980px; color: #888; font-size: 10px; margin: 18px auto; padding-bottom: 36px; text-align: left !important; }
+#globalfooter { width: 980px; color: #888; font-size: 10px; margin: 0px auto; padding-bottom: 6px; text-align: left !important; }
 #globalfooter a { color: #08c; }
 #globalfooter p { margin-bottom: 1em; }
 #globalfooter p.gf-buy { float: left; width: 52%; margin: 18px 0 9px 3px; }
 #globalfooter ul.piped a { padding: 0 0 0 1.5em; margin-left: 1.5em; border-left: 1px solid #d0d0d0; }
 #globalfooter .gf-links { float: right; margin: 18px 3px 9px 0; }
-#globalfooter .gf-sosumi { clear: both; width: 100%; border-top: 1px solid #ddd; padding-top: 9px; }
+#globalfooter .gf-sosumi { clear: both; width: 100%; border-top: 0px solid #ddd; padding-top: 9px; }
 #globalfooter .gf-sosumi a { padding: 0 10px; }
 #globalfooter .gf-sosumi p { float: left; margin-left: 3px; }
 #globalfooter form { margin: 18px 10px; }
