@@ -5,11 +5,11 @@ header: "GFRD: super fast reaction-diffusion simulations at the particle level"
 ---
 
 >%media right w400%
-<video class="video" poster="/movies/12-particles_100-steps/step.0000.png" width="400" height="400" controls preload>
-  <source src="/movies/12-particles_100-steps/movie.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
-  <source src="/movies/12-particles_100-steps/movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+<video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="400" height="400" controls preload="none">
+  <source src="/movies/12-particles_100-steps/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
+  <source src="/movies/12-particles_100-steps/12-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>  
-Movie ([ogv](/movies/12-particles_100-steps/movie.ogv), [mp4](/movies/12-particles_100-steps/movie.mp4)). _A movie of eGFRD in action. The green spheres are protective domains for single particles, the yellow sphere seen towards the end of the movie is a protective domains for a pair of particles. With the color blue the protective domain which will be updated next is highlighted._
+Movie ([ogv](/movies/12-particles_100-steps/12-particles_100-steps.ogv), [mp4](/movies/12-particles_100-steps/12-particles_100-steps.mp4)). _A movie of eGFRD in action. The green spheres are protective domains for single particles, the yellow sphere seen towards the end of the movie is a protective domains for a pair of particles. With the color blue the protective domain which will be updated next is highlighted._
 
 Green's Function Reaction Dynamics (GFRD) is an algorithm that makes it possible to simulate reaction-diffusion systems at the particle level [[1](#1), [2](#2), [3](#3)]. The principal idea of GFRD is to decompose the **many-body reaction-diffusion problem** into one- and two-body reaction-diffusion problems that can be **solved analytically using Green’s Functions** [[1](#1), [2](#2)]. These Green’s Functions are then employed to set up an event-driven algorithm, which makes it possible to make large jumps in time and space when the particles are far apart from each other. In biological systems this is often the case, and, indeed, GFRD can be up to **6 orders of magnitude faster** than conventional Brownian Dynamics under biologically relevant conditions [[1](#1)].
 
