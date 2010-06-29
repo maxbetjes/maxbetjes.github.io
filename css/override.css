@@ -16,6 +16,33 @@ ul { list-style: circle; margin-left: 2em; }
 .right { float:right; } 
 .left { float:left; } 
 .w400 { width:400px; }
+.w800 { width:800px; }
 
 h2:first-child { margin: 0px 0px 7px; }
 h2 { margin: 25px 0px 7px; }
+
+
+.references a { color: #000; /*text-decoration: underline; */ }
+.references a:hover { color: #08c; }
+.references a #c1,
+.references a #c1,
+.references a #c2,
+.references a #c3,
+.references a #c4,
+.references a #c5,
+.references a #c6,
+.references a #c7,
+.references a #c8,
+.references a #c9,
+.references a #c10,
+.references a #c11,
+.references a #c12,
+.references a #c13,
+.references a #c14,
+.references a #c15,
+.references a #c16,
+.references a #c17,
+.references a #c18,
+.references a #c19,
+.references a #c20
+{ color: #08c; text-decoration: none; }

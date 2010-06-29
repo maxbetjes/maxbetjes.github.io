@@ -36,43 +36,175 @@
 <div class="text">
 <h2>The importance of modeling networks in time and space at the particle level</h2>
 
-<p>In many networks of interacting components, the spatial distribution of the components and the stochastic character of their interactions are of critical importance for the macroscopic behavior of the system. Examples are to be found in biological evolution and population dynamics, but arguably the most studied and best characterized examples are biochemical networks. Biochemical networks consist of biomolecules, such as proteins and DNA, which chemically and physically interact with one another. These biochemical networks are the analog computers of life. They allow living cells to detect, amplify and integrate signals, as well as transmit signals from one place to another. Indeed, biochemical networks can perform a large number of computational tasks analogous to electronic circuits. However, their design principles are markedly different. In a biochemical network, the components often move in an erratic fashion, namely by diffusion, and they interact with each other in a stochastic manner – chemical and physical interactions are probabilistic in nature. To understand the design principles that allow biochemical networks to process information reliably, we have to take into account the spatial distribution of the components and the stochastic character of their interactions [<a href="#1">VanZon06</a>]. Moreover, we have recently shown that spatio-temporal correlations at molecular length scales can drastically change the macroscopic behavior of systems that are <em>uniform</em> at cellular length scales [<a href="#2">Takahashi10</a>]. Finally, many biological systems exhibit macroscopic concentration gradients. Well-known examples are morphogen gradients, which provide positional information to differentiating cells during embryonic development. To understand how these gradients are read out precisely [<a href="#3">Gregor07</a>], the system has to be described at the particle level in time and space [<a href="#4">Erdman09</a>].</p>
+<p>In many networks of interacting components, the spatial distribution of the
+components and the stochastic character of their interactions are of critical
+importance for the macroscopic behavior of the system. Examples are to be
+found in biological evolution and population dynamics, but arguably the most
+studied and best characterized examples are biochemical networks. Biochemical
+networks consist of biomolecules, such as proteins and DNA, which chemically
+and physically interact with one another. These biochemical networks are the
+analog computers of life. They allow living cells to detect, amplify and
+integrate signals, as well as transmit signals from one place to another.
+Indeed, biochemical networks can perform a large number of computational tasks
+analogous to electronic circuits. However, their design principles are
+markedly different. In a biochemical network, the components often move in an
+erratic fashion, namely by diffusion, and they interact with each other in a
+stochastic manner – chemical and physical interactions are probabilistic in
+nature. To understand the design principles that allow biochemical networks to
+process information reliably, we have to take into account the spatial
+distribution of the components and the stochastic character of their
+interactions<sup><span id="r1"><a href="#c1">VanZon06</a></span></sup>. Moreover, we have recently shown
+that spatio-temporal correlations at molecular length scales can drastically
+change the macroscopic behavior of systems that are <em>uniform</em> at cellular
+length scales<sup><span id="r2"><a href="#c2">Takahashi10</a></span></sup>. Finally, many biological systems
+exhibit macroscopic concentration gradients. Well-known examples are morphogen
+gradients, which provide positional information to differentiating cells
+during embryonic development. To understand how these gradients are read out
+precisely<sup><span id="r3"><a href="#c3">Gregor07</a></span></sup>, the system has to be described at the
+particle level in time and space<sup><span id="r4"><a href="#c4">Erdman09</a></span></sup>.</p>
 
 <h2>Overview of simulation techniques</h2>
 
-<p>In principle, computer simulations are ideally suited for studying reaction-diffusion systems. The conventional approach is to write down the macroscopic reaction-diffusion equations and solve the corresponding differential equations either analytically or numerically. This approach resolves the system in time and space, but ignores the discrete nature of the reactants and the stochastic character of their interactions. Schemes based on the zero-dimensional chemical master equation, such as the Gillespie algorithm [<a href="#5">Gillespie77</a>] or the Gibson-Bruck scheme [<a href="#6">Gibson00</a>], incorporate the latter, but assume that at each instant the particles are uniformly distributed in space.</p>
+<p>In principle, computer simulations are ideally suited for studying
+reaction-diffusion systems. The conventional approach is to write down the
+macroscopic reaction-diffusion equations and solve the corresponding
+differential equations either analytically or numerically. This approach
+resolves the system in time and space, but ignores the discrete nature of the
+reactants and the stochastic character of their interactions. Schemes based on
+the zero-dimensional chemical master equation, such as the Gillespie
+algorithm<sup><span id="r5"><a href="#c5">Gillespie77</a></span></sup> or the Gibson-Bruck
+scheme<sup><span id="r6"><a href="#c6">Gibson00</a></span></sup>, incorporate the latter, but assume that at
+each instant the particles are uniformly distributed in space.</p>
 
-<p>In the past years, a number of techniques have been developed that take into account both the spatial distribution of the components and the stochastic nature of their interactions. One class of techniques is based upon the reaction-diffusion master equation [<a href="#7">Baras96</a>, <a href="#8">Stundzia96</a>]; examples are SmartCell [<a href="#9">Ander04</a>], MesoRD [<a href="#19">Hattne05</a>] and URMD [<a href="#10">Engblom09</a>]. The main idea of these techniques is to divide the reaction volume into a number of subvolumes; particles can react within the subvolumes, but also diffuse from one subvolume to the next. Importantly, it is assumed that within each subvolume the particles are well mixed. These techniques thus rely on the existence of a length and time scale on which the system is spatially uniform. When the concentrations are fairly high, as in spatio-temporal calcium oscillations, such a scale possibly exists, but at lower concentrations this assumption is likely to fail.</p>
+<p>In the past years, a number of techniques have been developed that take into
+account both the spatial distribution of the components and the stochastic
+nature of their interactions. One class of techniques is based upon the
+reaction-diffusion master
+equation<sup><span id="r7"><a href="#c7">Baras96</a></span>,<span id="r8"><a href="#c8">Stundzia96</a></span></sup>; examples are
+SmartCell<sup><span id="r9"><a href="#c9">Ander04</a></span></sup>, MesoRD<sup><span id="r16"><a href="#c16">Hattne05</a></span></sup> and
+URMD<sup><span id="r10"><a href="#c10">Engblom09</a></span></sup>. The main idea of these techniques is to
+divide the reaction volume into a number of subvolumes; particles can react
+within the subvolumes, but also diffuse from one subvolume to the next.
+Importantly, it is assumed that within each subvolume the particles are well
+mixed. These techniques thus rely on the existence of a length and time scale
+on which the system is spatially uniform.  When the concentrations are fairly
+high, as in spatio-temporal calcium oscillations, such a scale possibly
+exists, but at lower concentrations this assumption is likely to fail.</p>
 
-<p>Another class of techniques simulates the network in time and space at the particle level. One natural approach is to use Brownian Dynamics; examples are Smoldyn [<a href="#11">Andrews04</a>], Reaction Brownian Dynamics [<a href="#12">Morelli08</a>], and GridCell [<a href="#13">Boulianne08</a>]. In essence, the particles undergo a random walk, and when two reaction partners happen to meet each other, they can react with a probability consistent with the rate constant. However, under biologically relevant conditions, Brownian Dynamics is not very efficient, since much CPU time is wasted on propagating the particles towards each other. Moreover, it is not exact, since a finite time step is used.</p>
+<p>Another class of techniques simulates the network in time and space at the
+particle level. One natural approach is to use Brownian Dynamics; examples are
+Smoldyn<sup><span id="r11"><a href="#c11">Andrews04</a></span></sup>, Reaction Brownian
+Dynamics<sup><span id="r12"><a href="#c12">Morelli08</a></span></sup> and
+GridCell<sup><span id="r13"><a href="#c13">Boulianne08</a></span></sup>. In essence, the particles undergo a
+random walk, and when two reaction partners happen to meet each other, they
+can react with a probability consistent with the rate constant. However, under
+biologically relevant conditions, Brownian Dynamics is not very efficient,
+since much CPU time is wasted on propagating the particles towards each
+other.  Moreover, it is not exact, since a finite time step is used.</p>
 
-<p>Another approach to simulate a network at the particle level in time and space is to use an event-driven algorithm. Green’s Function Reaction Dynamics (GFRD) [<a href="#14">VanZon05_1</a>, <a href="#15">VanZon05_2</a>, <a href="#2">Takahashi10</a>] and First Passage Kinetic Monte Carlo (FPKMC) [<a href="#17">Opplestrup06</a>, <a href="#18">Opplestrup09</a>] are examples of such an approach.  The idea is to exploit the solution of the Smoluchowski equation — the Green’s function — to set up an event-driven algorithm that concatenates the propagation of the particles in space with the reactions between them. These algorithms thus alleviate the need to propagate the particles toward each other to let them react, as in conventional Brownian Dynamics: even when the reactants are far apart from one another, the algorithm can immediately jump to the next reaction event. This event-driven nature makes these schemes highly powerful, especially when the concentrations of the components are low, as in most signal transduction pathways and gene regulation networks.</p>
+<p>Another approach to simulate a network at the particle level in time and space
+is to use an event-driven algorithm. Green’s Function Reaction Dynamics
+(GFRD)<sup><span id="r14"><a href="#c14">VanZon05_1</a></span>,<span id="r15"><a href="#c15">VanZon05_2</a></span>,<a href="#c2">Takahashi10</a></sup>
+and First Passage Kinetic Monte Carlo
+(FPKMC)<sup><span id="r17"><a href="#c17">Opplestrup06</a></span>,<span id="r18"><a href="#c18">Opplestrup09</a></span></sup> are
+examples of such an approach.  The idea is to exploit the solution of the
+Smoluchowski equation — the Green’s function — to set up an event-driven
+algorithm that concatenates the propagation of the particles in space with the
+reactions between them. These algorithms thus alleviate the need to propagate
+the particles toward each other to let them react, as in conventional Brownian
+Dynamics: even when the reactants are far apart from one another, the
+algorithm can immediately jump to the next reaction event. This event-driven
+nature makes these schemes highly powerful, especially when the concentrations
+of the components are low, as in most signal transduction pathways and gene
+regulation networks.</p>
 
 <h2>Green’s Function Reaction Dynamics</h2>
 
-<div class="grid2colh"><div class="column first"><p>A reaction-diffusion system is a many-body problem that cannot be solved analytically. The key idea of GFRD is to decompose the many-body problem into one- and two-body problems that can be solved analytically via Green’s functions, and use these Green’s functions to set up an event-driven algorithm [<a href="#14">VanZon05_1</a>, <a href="#15">VanZon05_2</a>]. The Green’s functions allow GFRD to make large jumps in time and space when the particles are far apart from each other.</p>
+<div class="grid2colh"><div class="column first"><p>A reaction-diffusion system is a many-body problem that cannot be solved
+analytically. The key idea of GFRD is to decompose the many-body problem into
+one- and two-body problems that can be solved analytically via Green’s
+functions, and use these Green’s functions to set up an event-driven
+algorithm<sup><a href="#c14">VanZon05_1</a>,<a href="#c15">VanZon05_2</a></sup>. The Green’s functions allow
+GFRD to make large jumps in time and space when the particles are far apart
+from each other.</p>
 
-<p>In the original version of the algorithm, the many-body problem was solved by determining at each step of the simulation a maximum time step such that each particle could interact with at most one other particle during that time step [<a href="#14">VanZon05_1</a>, <a href="#15">VanZon05_2</a>]. Although already up to five orders more efficient than conventional Brownian Dynamics [<a href="#14">VanZon05_1</a>] and also very accurate by its own right, the original GFRD algorithm has three drawbacks:</p>
+<p>In the original version of the algorithm, the many-body problem was solved by
+determining at each step of the simulation a maximum time step such that each
+particle could interact with at most one other particle during that time
+step<sup><a href="#c14">VanZon05_1</a>,<a href="#c15">VanZon05_2</a></sup>. Although already up to five orders
+more efficient than conventional Brownian Dynamics<sup><a href="#c14">VanZon05_1</a></sup> and also
+very accurate by its own right, the original GFRD algorithm has three
+drawbacks:</p>
 
 <ol>
-<li>because of the synchronous nature, the decomposition into one and two-body problems has to happen at every simulation step;</li>
-<li>all components in the system are propagated according to the smallest tentative reaction time, making the performance sub-optimal;</li>
-<li>the decomposition into single particles and pairs of particles involves cut-off distances, which makes the algorithm inexact; the systematic error is controlled by a parameter that determines the probability that during a time step a particle travels a distance further than the maximum distance set by the requirement that each particle can interact with at most one other particle; this means that there is a trade-off between performance and error.</li>
+<li>because of the synchronous nature, the decomposition into one and two-body
+problems has to happen at every simulation step;</li>
+<li>all components in the system are propagated according to the smallest
+tentative reaction time, making the performance sub-optimal;</li>
+<li>the decomposition into single particles and pairs of particles involves
+cut-off distances, which makes the algorithm inexact; the systematic error is
+controlled by a parameter that determines the probability that during a time
+step a particle travels a distance further than the maximum distance set by
+the requirement that each particle can interact with at most one other
+particle; this means that there is a trade-off between performance and error.</li>
 </ol>
 
 
-<p>In the new version of the algorithm, we overcome the drawbacks of the original algorithm by implementing ideas of Opplestrup and coworkers [<a href="#17">Opplestrup06</a>]. In this new scheme, protective domains are put around single particles and pairs of particles, as shown in Fig. 1. For each of the domains, the reaction-diffusion problem is solved analytically using Green’s functions. This yields for each domain an <em>event type</em> and an <em>event time</em>; as described below, the set of possible <em>event types</em> depends on whether the domain is a <em>Single</em>, meaning it contains a single particle, or a <em>Pair</em>, meaning it contains a pair of particles. The <em>event times</em> are put in a chronologically ordered <em>event list</em>, and the events are then executed in chronological order. When an event is executed, the particles of the corresponding domain are propagated, for the propagated particles new domains, with new <em>event types</em> and new <em>event times</em>, are determined, and the new events are put back in the <em>event list</em>.   The new version of GFRD, called eGFRD, is thus an exact, event-driven, asynchronous algorithm. Its asynchronous nature makes eGFRD similar in spirit to the Gibson-Bruck scheme, which is an exact, event-driven asynchronous algorithm for simulating the <em>zero-dimensional</em> chemical master equation [<a href="#6">Gibson00</a>]. A movie of eGFRD in action is shown in Movie 1.</p>
+<p>In the new version of the algorithm, we overcome the drawbacks of the original
+algorithm by implementing ideas of Opplestrup and
+coworkers<sup><a href="#c17">Opplestrup06</a></sup>. In this new scheme, protective domains are put
+around single particles and pairs of particles, as shown in Fig. 1. For each
+of the domains, the reaction-diffusion problem is solved analytically using
+Green’s functions. This yields for each domain an <em>event type</em> and an <em>event
+time</em>; as described below, the set of possible <em>event types</em> depends on
+whether the domain is a <em>Single</em>, meaning it contains a single particle, or a
+<em>Pair</em>, meaning it contains a pair of particles. The <em>event times</em> are put in
+a chronologically ordered <em>event list</em>, and the events are then executed in
+chronological order. When an event is executed, the particles of the
+corresponding domain are propagated, for the propagated particles new domains,
+with new <em>event types</em> and new <em>event times</em>, are determined, and the new
+events are put back in the <em>event list</em>. The new version of GFRD, called
+eGFRD, is thus an exact, event-driven, asynchronous algorithm. Its
+asynchronous nature makes eGFRD similar in spirit to the Gibson-Bruck scheme,
+which is an exact, event-driven asynchronous algorithm for simulating the
+<em>zero-dimensional</em> chemical master equation<sup><a href="#c6">Gibson00</a></sup>. A movie of eGFRD
+in action is shown in Movie 1.</p>
 
 <h2><em>Single</em></h2>
 
-<p>A <em>Single</em> is a domain that contains only a single particle. The next <em>event type</em> is either a unimolecular reaction of the type A ⇾ B + C + … or A ⇾ Ø, or an escape from the domain, as sketched in Fig. 2. To determine which of the two possible events will occur, a tentative <em>event time</em> is determined for each of them; the event with the smallest tentative <em>event time</em> is the one that will occur for that domain; it is the one that is put in the <em>event list</em>.</p>
+<p>A <em>Single</em> is a domain that contains only a single particle. The next <em>event
+type</em> is either a unimolecular reaction of the type A ⇾ B + C + … or A ⇾ Ø, or
+an escape from the domain, as sketched in Fig. 2. To determine which of the
+two possible events will occur, a tentative <em>event time</em> is determined for
+each of them; the event with the smallest tentative <em>event time</em> is the one
+that will occur for that domain; it is the one that is put in the <em>event
+list</em>.</p>
 
 <h2><em>Pair</em></h2>
 
-<p>A <em>Pair</em> is a domain that contains a pair of particles. The reaction-diffusion problem of two particles that can react with each other and diffuse in a spherical domain with absorbing boundary conditions can, to our knowledge, not be solved analytically. We therefore apply a coordinate transformation leading to a diffusion problem for the center-of-mass coordinate <strong>R</strong> and a reaction-diffusion problem for the inter-particle vector r, as sketched in Fig. 3. The <em>event types</em> that can occur are <strong>R</strong> leaving its domain, <strong>r</strong> leaving its domain, a unimolecular reaction or a bimolecular reaction. For each of these events a tentative <em>event time</em> is determined, and the event with the smallest tentative <em>event time</em> is the one that will happen, and put in the <em>event list</em>.</p></div>
+<p>A <em>Pair</em> is a domain that contains a pair of particles. The reaction-diffusion
+problem of two particles that can react with each other and diffuse in a
+spherical domain with absorbing boundary conditions can, to our knowledge, not
+be solved analytically. We therefore apply a coordinate transformation leading
+to a diffusion problem for the center-of-mass coordinate <strong>R</strong> and a
+reaction-diffusion problem for the inter-particle vector r, as sketched in
+Fig. 3. The <em>event types</em> that can occur are <strong>R</strong> leaving its domain, <strong>r</strong>
+leaving its domain, a unimolecular reaction or a bimolecular reaction. For
+each of these events a tentative <em>event time</em> is determined, and the event
+with the smallest tentative <em>event time</em> is the one that will happen, and put
+in the <em>event list</em>.</p></div>
 
 <div class="column last"><div class="media"><p><img src="/images/gfrd.png" width="400" title="Fig.1. GFRD" alt="" /><br/>
-Fig.1: <em>Overview of GFRD. The principal idea of GFRD is to decompose the many-body reaction-diffusion problem into one- and two-body problems that can be solved analytically using Green’s Functions. To this end, protective domains are put around single particles and pairs of particles, leading to so-called </em>Singles<em> and </em>Pairs<em>, respectively. For each domain, a next </em>event type<em> and a next </em>event time<em> is determined. The </em>event times<em> are put in a chronologically ordered </em>event list<em>, and the events are then executed in chronological order. When an event is executed, the particles of the corresponding domain are propagated, new domains with new events are determined, and the events are put back in the event list.</em></p></div>
+Fig.1: <em>Overview of GFRD. The principal idea of GFRD is to decompose the
+many-body reaction-diffusion problem into one- and two-body problems that can
+be solved analytically using Green’s Functions. To this end, protective
+domains are put around single particles and pairs of particles, leading to
+so-called </em>Singles<em> and </em>Pairs<em>, respectively. For each domain, a next </em>event
+type<em> and a next </em>event time<em> is determined. The </em>event times<em> are put in a
+chronologically ordered </em>event list<em>, and the events are then executed in
+chronological order. When an event is executed, the particles of the
+corresponding domain are propagated, new domains with new events are
+determined, and the events are put back in the event list.</em></p></div>
 
 <div class="media"><p><video class="video" poster="/movies/planar-surface_6-particles_100-steps/step.0201.png" width="440" height="260" controls preload="none" title="Movie 1. GFRD in 2D">
   <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
@@ -81,46 +213,98 @@ Fig.1: <em>Overview of GFRD. The principal idea of GFRD is to decompose the many
   <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video><br/>
 Movie 1 (<a href="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv">ogv</a>,
-<a href="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4">mp4</a>). <em>A
-movie of eGFRD in action in 2D. The green cylinders are
-protective domains for single particles, the yellow cylinders are
-protective domains for pairs of particles. With the color blue the
-protective domain which will be updated next is highlighted.</em></p></div>
+<a href="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4">mp4</a>).
+<em>A movie of eGFRD in action in 2D. The green cylinders are protective
+domains for single particles, the yellow cylinders are protective domains for
+pairs of particles. With the color blue the protective domain which will be
+updated next is highlighted.</em></p></div>
 
 <div class="media"><p><img src="/images/single.png" width="400" title="Fig.2. Single" alt="" /><br/>
-Fig.2: <em>A </em>Single<em>, a protective domain that contains only a single particle. The possible </em>event types<em> are either a unimolecular reaction or the escape of the single particle from the protective domain.</em></p></div>
+Fig.2: <em>A </em>Single<em>, a protective domain that contains only a single particle.
+The possible </em>event types<em> are either a unimolecular reaction or the escape of
+the single particle from the protective domain.</em></p></div>
 
 <div class="media"><p><img src="/images/pair.png" width="400" title="Fig.3. Pair" alt="" /><br/>
-Fig.3: <em>A </em>Pair<em>, a protective domain that contains a pair of particles. A coordinate transformation is applied, and one protective domain is defined for the center-of-mass coordinate <strong>R</strong> and one for the inter-particle vector <em>r</em>. The sizes of these domains are determined such that when both <strong>R</strong> and <strong>r</strong> would reach their maximum values, |<strong>R</strong>|<sup><strong>max</strong></sup> and |<strong>r</strong>|<sup><strong>max</strong>,</sup> respectively, the two particles would still be within the original protective domain. The dynamics of <strong>R</strong> is a diffusion problem of a random walker in a spherical domain with absorbing boundary conditions. The dynamics of <strong>r</strong> takes into account that the two particles not only diffuse, but can also react with each other; this is the problem of a random walker between two concentric spherical surfaces, with a radiation boundary condition at the inner surface, describing the bimolecular reaction, and an adsorbing boundary condition at the outer surface, describing the escape from the domain. The next event is thus either the escape of <strong>R</strong> from its domain, the escape of <strong>r</strong> from its domain, a bimolecular reaction, or a unimolecular reaction.</em></p></div></div>
+Fig.3: <em>A </em>Pair<em>, a protective domain that contains a pair of particles. A
+coordinate transformation is applied, and one protective domain is defined for
+the center-of-mass coordinate <strong>R</strong> and one for the inter-particle vector <em>r</em>.
+The sizes of these domains are determined such that when both <strong>R</strong> and <strong>r</strong>
+would reach their maximum values, |<strong>R</strong>|<sup><strong>max</strong></sup> and |<strong>r</strong>|<sup><strong>max</strong></sup>,
+respectively, the two particles would still be within the original protective
+domain. The dynamics of <strong>R</strong> is a diffusion problem of a random walker in a
+spherical domain with absorbing boundary conditions. The dynamics of <strong>r</strong>
+takes into account that the two particles not only diffuse, but can also react
+with each other; this is the problem of a random walker between two concentric
+spherical surfaces, with a radiation boundary condition at the inner surface,
+describing the bimolecular reaction, and an adsorbing boundary condition at
+the outer surface, describing the escape from the domain. The next event is
+thus either the escape of <strong>R</strong> from its domain, the escape of <strong>r</strong> from its
+domain, a bimolecular reaction, or a unimolecular reaction.</em></p></div></div>
 
 <div class="column first"><h2>Performance</h2>
 
-<p>Fig.4 shows the power of eGFRD. Plotted is the CPU time for simulating a system consisting of hard spheres for a fixed amount of real time as a function of the number of particles N, for two scenarios: one in which the concentration C is kept constant (solid line) and one in which the volume V is kept constant (dashed lines). For comparison, two curves (in blue) obtained with Brownian Dynamics (BD) are also shown: one corresponding to a BD simulation with a conventional, small time step of δt = 10<sup>-6</sup> σ<sup>2</sup> / D, and one corresponding to a (relaxed) BD simulation using a relatively large time step of δt = 10<sup>-3</sup> σ<sup>2</sup> / D. It is seen that the CPU time of eGFRD scales linearly with N when the concentration is constant, as in BD; this is because a cell list is used for determining which particles or domains interact with a given particle or domain. However, the CPU time of eGFRD scales with N<sup>5/3</sup> when the volume is kept constant. This can be understood by noting that the CPU time scales with N / &lt;Δt>, where &lt;Δt> is the magnitude of the average time step in the eGFRD simulations; the size of the average time step scales as &lt;Δt> ~ 1 / l<sup>2</sup> ~ N<sup>2/3,</sup> where l is the average distance between the particles.  Indeed, when N is increased while V is kept constant, the concentration C increases and the average distance between the particles decreases. This decreases the jumps in time and space that can be made during the eGFRD simulations. Since the CPU time of BD scales with N wile that of eGFRD scales with N<sup>5/3</sup> when V is constant, there is a concentration above which BD becomes more efficient than eGFRD. This is demonstrated in the inset of Fig.4. It is seen that the cross-over occurs at mM concentration. However, the concentrations of components in signal transduction pathways are typically in the µM range, while those in gene regulation networks are typically in the nM range. Under these biologically relevant conditions, eGFRD is up to 6 orders of magnitude more efficient than BD.</p></div></div>
+<p>Fig.4 shows the power of eGFRD. Plotted is the CPU time for simulating a
+system consisting of hard spheres for a fixed amount of real time as a
+function of the number of particles N, for two scenarios: one in which the
+concentration C is kept constant (solid line) and one in which the volume V is
+kept constant (dashed lines). For comparison, two curves (in blue) obtained
+with Brownian Dynamics (BD) are also shown: one corresponding to a BD
+simulation with a conventional, small time step of δt = 10<sup>-6</sup> σ<sup>2</sup> / D, and one
+corresponding to a (relaxed) BD simulation using a relatively large time step
+of δt = 10<sup>-3</sup> σ<sup>2</sup> / D. It is seen that the CPU time of eGFRD scales linearly
+with N when the concentration is constant, as in BD; this is because a cell
+list is used for determining which particles or domains interact with a given
+particle or domain. However, the CPU time of eGFRD scales with N<sup>5/3</sup> when the
+volume is kept constant. This can be understood by noting that the CPU time
+scales with N / &lt;Δt>, where &lt;Δt> is the magnitude of the average time step in
+the eGFRD simulations; the size of the average time step scales as &lt;Δt> ~ 1 /
+l<sup>2</sup> ~ N<sup>2/3</sup>, where l is the average distance between the particles.  Indeed,
+when N is increased while V is kept constant, the concentration C increases
+and the average distance between the particles decreases. This decreases the
+jumps in time and space that can be made during the eGFRD simulations. Since
+the CPU time of BD scales with N wile that of eGFRD scales with N<sup>5/3</sup> when V
+is constant, there is a concentration above which BD becomes more efficient
+than eGFRD. This is demonstrated in the inset of Fig.4. It is seen that the
+cross-over occurs at mM concentration. However, the concentrations of
+components in signal transduction pathways are typically in the µM range,
+while those in gene regulation networks are typically in the nM range. Under
+these biologically relevant conditions, eGFRD is up to 6 orders of magnitude
+more efficient than BD.</p></div></div>
 
-<div class="media"><p><img src="/images/performance.png" title="Fig.4. Performance" alt="" /><br/>
-Fig.4. <em>CPU time for simulating a system of hard spheres for a fixed amount of real time as a function of the number of particles N for two scenarios: one in which the concentration C is kept constant (solid line), and one in which the volume V is kept constant (dashed line). For comparison, we also show the results for BD simulations (blue curves), with one curve corresponding to a simulation with a conventional small time step of δt = 10<sup>-6</sup> σ<sup>2</sup> / D, and one corresponding to a (relaxed) BD simulation using a relatively large time step of δt = 10<sup>-3</sup> σ<sup>2</sup> / D. The inset shows the CPU time as a function of the concentration C, for N=300 and N=3000 (the volume is thus varied). It is seen that above mM concentrations, BD is more efficient than eGFRD. However, in the biologically relevant concentration range of nM to µM eGFRD can be up to 6 orders of magnitude more efficient than conventional BD.</em></p></div>
+<div class="media w800"><p><img src="/images/performance.png" title="Fig.4. Performance" alt="" /><br/>
+Fig.4. <em>CPU time for simulating a system of hard spheres for a fixed amount of
+real time as a function of the number of particles N for two scenarios: one in
+which the concentration C is kept constant (solid line), and one in which the
+volume V is kept constant (dashed line). For comparison, we also show the
+results for BD simulations (blue curves), with one curve corresponding to a
+simulation with a conventional small time step of δt = 10<sup>-6</sup> σ<sup>2</sup> / D, and one
+corresponding to a (relaxed) BD simulation using a relatively large time step
+of δt = 10<sup>-3</sup> σ<sup>2</sup> / D. The inset shows the CPU time as a function of the
+concentration C, for N=300 and N=3000 (the volume is thus varied). It is seen
+that above mM concentrations, BD is more efficient than eGFRD. However, in the
+biologically relevant concentration range of nM to µM eGFRD can be up to 6
+orders of magnitude more efficient than conventional BD.</em></p></div>
 
-<h3>References</h3>
+<div class="references"><h3>References</h3>
 
-<p><a id="1">1</a> van Zon JS, Morelli M, Tanase-Nicola S, ten Wolde PR (2006) Diffusion of transcription factors can drastically enhance the noise in gene expression. <em>Biophys J</em>, 91:4350 — 4367.<br/>
-<a id="2">2</a> Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010), Spatio-temporal correlations can drastically change the response of a MAPK pathway. <em>Proc Natl. Acad Sci USA</em>, 107:2473 — 2478.<br/>
-<a id="3">3</a> Gregor T, Tank DW, Wie schaus EF, Bialek W (2007) Probing the limits to positional information. <em>Cell</em>, 130: 153 — 164.<br/>
-<a id="4">4</a> Erdmann T, Howard M, Ten Wolde PR (2009) Role of spatial averaging in the precision of gene expression patterns. <em>Phys Rev Lett</em>, 103: 258101.<br/>
-<a id="5">5</a> Gillespie DT (1977) Exact stochastic simulation of coupled chemical reactions. <em>J Phys Chem</em>, 81:2340 — 2361.<br/>
-<a id="6">6</a> Gibson MA, Bruck J (2000) Efficient exact stochastic simulation of chemical systems with many species and many channels. <em>J Phys Chem A</em>, 104: 1876 — 1888.<br/>
-<a id="7">7</a> Baras F, Mansour M (1996) Reaction-diffusion master equation: A comparison with microscopic simulations. <em>Phys Rev E</em>, 54:6139 — 6148.<br/>
-<a id="8">8</a> Stundzia AB, Lumsden CJ (1996) Stochastic simulation of coupled reaction-diffusion processes. <em>J Comp Phys</em>, 127: 196 — 207.<br/>
-<a id="9">9</a> Ander M et al. (2004) SmartCell, a framework to simulate cellular processes that combines stochastic approximation with diffusion and localization: analysis of simple networks. <em>Sys Biol</em>, 1:129 — 138.<br/>
-<a id="10">10</a> Engblom S, Ferm L, Hellander A, Lötstedt P (2009) Simulation of stochastic reaction-diffusion processes on unstructured meshes. <em>SIAM J Sci Comput</em>, 31:1774 — 1797.<br/>
-<a id="11">11</a> Andrews S, Bray D (2004) Stochastic simulation of chemical reactions with spatial resolution and single molecule detail. <em>Phys Biol</em>, 1:137 — 151.<br/>
-<a id="12">12</a> Morelli MJ, Ten Wolde PR (2008) Reaction Brownian Dynamics and the effect of spatial fluctuations on the gain of a push-pull network. <em>J Chem Phys</em>, 129: 054112.<br/>
-<a id="13">13</a> Boulianne L, Al Assaad S, Dumontier M, Gross WJ (2008) GridCell: a stochastic particle-based biological system simulator. <em>BMC Sys Biol</em>, 2:66.<br/>
-<a id="14">14</a> van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. <em>Phys Rev Lett</em>, 94:128103.<br/>
-<a id="15">15</a> van Zon JS, ten Wolde PR (2005) Green’s-function reaction dynamics: A particle-based approach f or simulating biochemical networks in time and space. <em>J Chem Phys</em>, 123:234910.<br/>
-<a id="16">16</a> Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. <em>Proc Natl Acad Sci USA</em>, 107: 2473 — 2478.<br/>
-<a id="17">17</a> Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. <em>Phys Rev Lett</em>, 97:230602.<br/>
-<a id="18">18</a> Opplestrup T, Bulatov VV, Donev A, Kalos MH, Gilmer GH, Sadigh B (2009) First passage kinetic Monte Carlo. <em>Phys Rev E</em>, 80: 066701.<br/>
-<a id="19">19</a> Hattne J, Fange D, Elf J (2005) Stochastic reaction-diffusion simulation with MesoRD. <em>Bioinformatics</em>, 21: 2923 — 2924.</p>
+<p><a href="#r1"><span id="c1">1</span></a> <a href="http://dx.doi.org/10.1529/biophysj.106.086157">van Zon JS, Morelli M, Tanase-Nicola S, ten Wolde PR (2006) Diffusion of transcription factors can drastically enhance the noise in gene expression. <em>Biophys J</em>, 91:4350 — 4367.</a><br/>
+<a href="#r2"><span id="c2">2</span></a> <a href="http://dx.doi.org/10.1073/pnas.0906885107">Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010), Spatio-temporal correlations can drastically change the response of a MAPK pathway. <em>Proc Natl. Acad Sci USA</em>, 107:2473 — 2478.</a><br/>
+<a href="#r3"><span id="c3">3</span></a> <a href="http://dx.doi.org/10.1016/j.cell.2007.05.025">Gregor T, Tank DW, Wie schaus EF, Bialek W (2007) Probing the limits to positional information. <em>Cell</em>, 130: 153 — 164.</a><br/>
+<a href="#r4"><span id="c4">4</span></a> <a href="http://dx.doi.org/10.1103/PhysRevLett.103.258101">Erdmann T, Howard M, Ten Wolde PR (2009) Role of spatial averaging in the precision of gene expression patterns. <em>Phys Rev Lett</em>, 103: 258101.</a><br/>
+<a href="#r5"><span id="c5">5</span></a> <a href="http://dx.doi.org/10.1021/j100540a008">Gillespie DT (1977) Exact stochastic simulation of coupled chemical reactions. <em>J Phys Chem</em>, 81:2340 — 2361.</a><br/>
+<a href="#r6"><span id="c6">6</span></a> <a href="http://dx.doi.org/10.1021/jp993732q">Gibson MA, Bruck J (2000) Efficient exact stochastic simulation of chemical systems with many species and many channels. <em>J Phys Chem A</em>, 104: 1876 — 1888.</a><br/>
+<a href="#r7"><span id="c7">7</span></a> <a href="http://dx.doi.org/10.1103/PhysRevE.54.6139">Baras F, Mansour M (1996) Reaction-diffusion master equation: A comparison with microscopic simulations. <em>Phys Rev E</em>, 54:6139 — 6148.</a><br/>
+<a href="#r8"><span id="c8">8</span></a> <a href="http://dx.doi.org/10.1006/jcph.1996.0168">Stundzia AB, Lumsden CJ (1996) Stochastic simulation of coupled reaction-diffusion processes. <em>J Comp Phys</em>, 127: 196 — 207.</a><br/>
+<a href="#r9"><span id="c9">9</span></a> <a href="http://dx.doi.org/10.1049/sb:20045017">Ander M et al. (2004) SmartCell, a framework to simulate cellular processes that combines stochastic approximation with diffusion and localization: analysis of simple networks. <em>Sys Biol</em>, 1:129 — 138.</a><br/>
+<a href="#r10"><span id="c10">10</span></a> <a href="http://dx.doi.org/10.1137/080721388">Engblom S, Ferm L, Hellander A, Lötstedt P (2009) Simulation of stochastic reaction-diffusion processes on unstructured meshes. <em>SIAM J Sci Comput</em>, 31:1774 — 1797.</a><br/>
+<a href="#r11"><span id="c11">11</span></a> <a href="http://dx.doi.org/10.1088/1478-3967/1/3/001">Andrews S, Bray D (2004) Stochastic simulation of chemical reactions with spatial resolution and single molecule detail. <em>Phys Biol</em>, 1:137 — 151.</a><br/>
+<a href="#r12"><span id="c12">12</span></a> <a href="http://dx.doi.org/10.1063/1.2958287">Morelli MJ, Ten Wolde PR (2008) Reaction Brownian Dynamics and the effect of spatial fluctuations on the gain of a push-pull network. <em>J Chem Phys</em>, 129: 054112.</a><br/>
+<a href="#r13"><span id="c13">13</span></a> <a href="http://dx.doi.org/10.1186/1752-0509-2-66">Boulianne L, Al Assaad S, Dumontier M, Gross WJ (2008) GridCell: a stochastic particle-based biological system simulator. <em>BMC Sys Biol</em>, 2:66.</a><br/>
+<a href="#r14"><span id="c14">14</span></a> <a href="http://dx.doi.org/10.1103/PhysRevLett.94.128103">van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. <em>Phys Rev Lett</em>, 94:128103.</a><br/>
+<a href="#r15"><span id="c15">15</span></a> <a href="http://dx.doi.org/10.1063/1.2137716">van Zon JS, ten Wolde PR (2005) Green’s-function reaction dynamics: A particle-based approach for simulating biochemical networks in time and space. <em>J Chem Phys</em>, 123:234910.</a><br/>
+<a href="#r16"><span id="c16">16</span></a> <a href="http://dx.doi.org/10.1093/bioinformatics/bti431">Hattne J, Fange D, Elf J (2005) Stochastic reaction-diffusion simulation with MesoRD. <em>Bioinformatics</em>, 21: 2923 — 2924.</a><br/>
+<a href="#r17"><span id="c17">17</span></a> <a href="http://dx.doi.org/10.1103/PhysRevLett.97.230602">Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. <em>Phys Rev Lett</em>, 97:230602.</a><br/>
+<a href="#r18"><span id="c18">18</span></a> <a href="http://dx.doi.org/10.1103/PhysRevE.80.066701">Opplestrup T, Bulatov VV, Donev A, Kalos MH, Gilmer GH, Sadigh B (2009) First passage kinetic Monte Carlo. <em>Phys Rev E</em>, 80: 066701.</a></p></div>
 </div>
 <div class="boot"></div> 
 </div>
