@@ -2,12 +2,16 @@
 
 ul { list-style: circle; margin-left: 2em; }
 
-.box { float:left; width:984px; margin:0; padding:0; clear:both; background:url(bg_box.png) 0 0 repeat-y; }
-.box .cap { width:985px; height:5px; top:0; background:url(bg_cap.png) 0 0 no-repeat; }
+/*
+.box { float:left; width:984px; margin:0; padding:0; clear:both; }  background:url(bg_box.png) 0 0 repeat-y; } 
+.box .cap { width:985px; height:5px; top:0; background:url(bg_cap.png) 0 0 
+ * no-repeat; }
 .box .boot { width:985px; height:7px; bottom:0; background:url(bg_boot.png) 0 0 no-repeat; }
 .box .text { width:960px; margin:14px; }
+*/
 
-.highlight, .media { border: 1px solid #DDDDDD; margin: 7px 10px 25px; padding: 7px 10px; clear:both }
+.highlight, .media { margin: 7px 10px 25px; padding: 7px 10px; clear:both }
+.highlight { border: 1px solid #DDDDDD; }
 .media p { margin: 0px; }
 .right { float:right; } 
 .left { float:left; } 

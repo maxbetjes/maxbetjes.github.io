@@ -149,7 +149,7 @@ a.audio { background: url(./../elements/icons/globaliconaudio12x12.gif) 0 0.4em 
 #globalfooter p.gf-buy { float: left; width: 52%; margin: 18px 0 9px 3px; }
 #globalfooter ul.piped a { padding: 0 0 0 1.5em; margin-left: 1.5em; border-left: 1px solid #d0d0d0; }
 #globalfooter .gf-links { float: right; margin: 18px 3px 9px 0; }
-#globalfooter .gf-sosumi { clear: both; width: 100%; border-top: 0px solid #ddd; padding-top: 9px; }
+#globalfooter .gf-sosumi { clear: both; width: 100%; border-top: 1px solid #ddd; padding-top: 2px; }
 #globalfooter .gf-sosumi a { padding: 0 10px; }
 #globalfooter .gf-sosumi p { float: left; margin-left: 3px; }
 #globalfooter form { margin: 18px 10px; }
