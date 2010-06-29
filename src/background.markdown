@@ -46,8 +46,8 @@ Fig.1: _Overview of GFRD. The principal idea of GFRD is to decompose the many-bo
 
 >>>%media%
 <video class="video" poster="/movies/planar-surface_6-particles_100-steps/step.0201.png" width="440" height="260" controls preload="none" title="Movie 1. GFRD in 2D">
-  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
-  <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
+  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+  <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
   <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
   <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video><br/>

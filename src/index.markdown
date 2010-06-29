@@ -6,8 +6,8 @@ header: "GFRD: simulating reaction-diffusion systems at the particle level"
 
 >%media right w400%
 <video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="400" height="400" controls preload="none" title="Movie. GFRD in 3D">
-  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
-  <source src="/movies/12-particles_100-steps/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'></source>
+  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+  <source src="/movies/12-particles_100-steps/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
   <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
   <source src="/movies/12-particles_100-steps/12-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>  
