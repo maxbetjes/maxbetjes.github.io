@@ -266,7 +266,7 @@ orders of magnitude more efficient than conventional BD._
 ### References
 [[1](sid:c1)](#r1) [van Zon JS, Morelli M, Tanase-Nicola S, ten Wolde PR (2006) Diffusion of transcription factors can drastically enhance the noise in gene expression. _Biophys J_, 91:4350 — 4367.](http://dx.doi.org/10.1529/biophysj.106.086157)  
 [[2](sid:c2)](#r2) [Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010), Spatio-temporal correlations can drastically change the response of a MAPK pathway. _Proc Natl. Acad Sci USA_, 107:2473 — 2478.](http://dx.doi.org/10.1073/pnas.0906885107)  
-[[3](sid:c3)](#r3) [Gregor T, Tank DW, Wie schaus EF, Bialek W (2007) Probing the limits to positional information. _Cell_, 130: 153 — 164.](http://dx.doi.org/10.1016/j.cell.2007.05.025)  
+[[3](sid:c3)](#r3) [Gregor T, Tank DW, Wieschaus EF, Bialek W (2007) Probing the limits to positional information. _Cell_, 130: 153 — 164.](http://dx.doi.org/10.1016/j.cell.2007.05.025)  
 [[4](sid:c4)](#r4) [Erdmann T, Howard M, Ten Wolde PR (2009) Role of spatial averaging in the precision of gene expression patterns. _Phys Rev Lett_, 103: 258101.](http://dx.doi.org/10.1103/PhysRevLett.103.258101)  
 [[5](sid:c5)](#r5) [Gillespie DT (1977) Exact stochastic simulation of coupled chemical reactions. _J Phys Chem_, 81:2340 — 2361.](http://dx.doi.org/10.1021/j100540a008)  
 [[6](sid:c6)](#r6) [Gibson MA, Bruck J (2000) Efficient exact stochastic simulation of chemical systems with many species and many channels. _J Phys Chem A_, 104: 1876 — 1888.](http://dx.doi.org/10.1021/jp993732q)  

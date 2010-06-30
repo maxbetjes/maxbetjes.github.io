@@ -1,6 +1,6 @@
 ---
 layout: default
-title: eGFRD Visualization
+title: eGFRD visualization
 header: Visualization
 ---
 

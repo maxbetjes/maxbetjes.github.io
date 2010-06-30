@@ -1,6 +1,6 @@
 ---
 layout: default
-title: eGFRD Simulation
+title: eGFRD simulation
 header: Running a simulation
 ---
 
