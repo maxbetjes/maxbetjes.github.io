@@ -32,3 +32,5 @@ References:
 Making the movies:
 * ffmpeg -r 10 -i images/step.%04d.png -vcodec libx264 -an -r 10 movie.mp4
 * ffmpeg2theora movie.mp4
+
+Font of menu entries, png made using the Gimp: Nimbus Sans L, size 13, hinting, anti-aliasing, force auto-hinter.
