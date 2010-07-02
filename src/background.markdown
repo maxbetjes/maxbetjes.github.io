@@ -52,8 +52,8 @@ account both the spatial distribution of the components and the stochastic
 nature of their interactions. One class of techniques is based upon the
 reaction-diffusion master
 equation^[[Baras96](#c7)](sid:r7),[[Stundzia96](#c8)](sid:r8); examples are
-SmartCell^[[Ander04](#c9)](sid:r9), MesoRD^[[Hattne05](#c16)](sid:r16) and
-URMD^[[Engblom09](#c10)](sid:r10). The main idea of these techniques is to
+SmartCell^[[Ander04](#c9)](sid:r9), MesoRD^[[Hattne05](#c10)](sid:r10) and
+URMD^[[Engblom09](#c11)](sid:r11). The main idea of these techniques is to
 divide the reaction volume into a number of subvolumes; particles can react
 within the subvolumes, but also diffuse from one subvolume to the next.
 Importantly, it is assumed that within each subvolume the particles are well
@@ -64,9 +64,8 @@ exists, but at lower concentrations this assumption is likely to fail.
 
 Another class of techniques simulates the network in time and space at the 
 particle level. One natural approach is to use Brownian Dynamics; examples are
-Smoldyn^[[Andrews04](#c11)](sid:r11), Reaction Brownian
-Dynamics^[[Morelli08](#c12)](sid:r12) and
-GridCell^[[Boulianne08](#c13)](sid:r13). In essence, the particles undergo a
+Smoldyn^[[Andrews04](#c12)](sid:r12), MCell^[[Coggan05](#c13)](sid:r13), [Reaction Brownian Dynamics^[[Morelli08](#c14)](sid:r14) and
+GridCell^[[Boulianne08](#c15)](sid:r15). In essence, the particles undergo a
 random walk, and when two reaction partners happen to meet each other, they
 can react with a probability consistent with the rate constant. However, under
 biologically relevant conditions, Brownian Dynamics is not very efficient,
@@ -75,9 +74,9 @@ other.  Moreover, it is not exact, since a finite time step is used.
 
 Another approach to simulate a network at the particle level in time and space
 is to use an event-driven algorithm. Green’s Function Reaction Dynamics
-(GFRD)^[[VanZon05_1](#c14)](sid:r14),[[VanZon05_2](#c15)](sid:r15),[Takahashi10](#c2)
+(GFRD)^[[VanZon05_1](#c16)](sid:r16),[[VanZon05_2](#c17)](sid:r17),[Takahashi10](#c2)
 and First Passage Kinetic Monte Carlo
-(FPKMC)^[[Opplestrup06](#c17)](sid:r17),[[Opplestrup09](#c18)](sid:r18) are
+(FPKMC)^[[Opplestrup06](#c18)](sid:r18),[[Opplestrup09](#c19)](sid:r19) are
 examples of such an approach.  The idea is to exploit the solution of the
 Smoluchowski equation — the Green’s function — to set up an event-driven
 algorithm that concatenates the propagation of the particles in space with the
@@ -97,35 +96,22 @@ A reaction-diffusion system is a many-body problem that cannot be solved
 analytically. The key idea of GFRD is to decompose the many-body problem into 
 one- and two-body problems that can be solved analytically via Green’s
 functions, and use these Green’s functions to set up an event-driven
-algorithm^[VanZon05_1](#c14),[VanZon05_2](#c15). The Green’s functions allow
+algorithm^[VanZon05_1](#c16),[VanZon05_2](#c17). The Green’s functions allow
 GFRD to make large jumps in time and space when the particles are far apart
 from each other. 
 
->>
-In the original version of the algorithm, the many-body problem was solved by 
-determining at each step of the simulation a maximum time step such that each
-particle could interact with at most one other particle during that time
-step^[VanZon05_1](#c14),[VanZon05_2](#c15). Although already up to five orders
-more efficient than conventional Brownian Dynamics^[VanZon05_1](#c14) and also
-very accurate by its own right, the original GFRD algorithm has three
-drawbacks:
+>> In the original version of the algorithm, the many-body problem was solved
+by determining at each step of the simulation a maximum time step such that
+each particle could interact with at most one other particle during that time
+step^[VanZon05_1](#c16),[VanZon05_2](#c17). This scheme was a synchronous
+event-driven algorithm, because at each time step all the particles were
+propagated simultaneously. Moreover, the scheme was not exact, because the
+decomposition into single particles and pairs of particles involved cut-off
+distances, introducing a trade-off between speed and error.
 
 >>
-1. because of the synchronous nature, the decomposition into one and two-body 
-problems has to happen at every simulation step;
-2. all components in the system are propagated according to the smallest 
-tentative reaction time, making the performance sub-optimal;
-3. the decomposition into single particles and pairs of particles involves 
-cut-off distances, which makes the algorithm inexact; the systematic error is 
-controlled by a parameter that determines the probability that during a time 
-step a particle travels a distance further than the maximum distance set by 
-the requirement that each particle can interact with at most one other 
-particle; this means that there is a trade-off between performance and error.
-
->>
-In the new version of the algorithm, we overcome the drawbacks of the original
-algorithm by implementing ideas of Opplestrup and
-coworkers^[Opplestrup06](#c17). In this new scheme, protective domains are put
+In the new version of the algorithm, we have implemented ideas of Opplestrup and
+coworkers^[Opplestrup06](#c18). In this new scheme, protective domains are put
 around single particles and pairs of particles, as shown in Fig. 1. For each
 of the domains, the reaction-diffusion problem is solved analytically using
 Green’s functions. This yields for each domain an _event type_ and an _event
@@ -138,7 +124,8 @@ corresponding domain are propagated, for the propagated particles new domains,
 with new _event types_ and new _event times_, are determined, and the new
 events are put back in the _event list_. The new version of GFRD, called
 eGFRD, is thus an exact, event-driven, asynchronous algorithm. Its
-asynchronous nature makes eGFRD similar in spirit to the Gibson-Bruck scheme,
+asynchronous nature makes eGFRD similar in spirit to event-driven MD
+simulations of hard spheres and the Gibson-Bruck scheme,
 which is an exact, event-driven asynchronous algorithm for simulating the
 _zero-dimensional_ chemical master equation^[Gibson00](#c6). A movie of eGFRD
 in action is shown in Movie 1.
@@ -188,10 +175,10 @@ determined, and the events are put back in the event list._
 </video><br/>
 >>>Movie 1 ([ogv](/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv), 
 [mp4](/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4)). 
-<em>A movie of eGFRD in action in 2D. The green cylinders are protective 
+_A movie of eGFRD in action in 2D. The green cylinders are protective 
 domains for single particles, the yellow cylinders are protective domains for 
-pairs of particles. With the color blue the protective domain which will be 
-updated next is highlighted.</em> 
+pairs of particles. With the color blue the protective domain that will be 
+updated next is highlighted._
 
 >>>%media%
 ![](/images/single.png =400x "Fig.2. Single")  
@@ -205,7 +192,7 @@ Fig.3: _A _Pair_, a protective domain that contains a pair of particles. A
 coordinate transformation is applied, and one protective domain is defined for 
 the center-of-mass coordinate **R** and one for the inter-particle vector *r*. 
 The sizes of these domains are determined such that when both **R** and **r** 
-would reach their maximum values, |**R**|^**max** and |**r**|^**max**, 
+would reach their maximum values, _|_**R**_|_^**max** and _|_**r**_|_^**max**, 
 respectively, the two particles would still be within the original protective 
 domain. The dynamics of **R** is a diffusion problem of a random walker in a 
 spherical domain with absorbing boundary conditions. The dynamics of **r** 
@@ -273,13 +260,14 @@ orders of magnitude more efficient than conventional BD._
 [[7](sid:c7)](#r7) [Baras F, Mansour M (1996) Reaction-diffusion master equation: A comparison with microscopic simulations. _Phys Rev E_, 54:6139 — 6148.](http://dx.doi.org/10.1103/PhysRevE.54.6139)  
 [[8](sid:c8)](#r8) [Stundzia AB, Lumsden CJ (1996) Stochastic simulation of coupled reaction-diffusion processes. _J Comp Phys_, 127: 196 — 207.](http://dx.doi.org/10.1006/jcph.1996.0168)  
 [[9](sid:c9)](#r9) [Ander M et al. (2004) SmartCell, a framework to simulate cellular processes that combines stochastic approximation with diffusion and localization: analysis of simple networks. _Sys Biol_, 1:129 — 138.](http://dx.doi.org/10.1049/sb:20045017)  
-[[10](sid:c10)](#r10) [Engblom S, Ferm L, Hellander A, Lötstedt P (2009) Simulation of stochastic reaction-diffusion processes on unstructured meshes. _SIAM J Sci Comput_, 31:1774 — 1797.](http://dx.doi.org/10.1137/080721388)  
-[[11](sid:c11)](#r11) [Andrews S, Bray D (2004) Stochastic simulation of chemical reactions with spatial resolution and single molecule detail. _Phys Biol_, 1:137 — 151.](http://dx.doi.org/10.1088/1478-3967/1/3/001)  
-[[12](sid:c12)](#r12) [Morelli MJ, Ten Wolde PR (2008) Reaction Brownian Dynamics and the effect of spatial fluctuations on the gain of a push-pull network. _J Chem Phys_, 129: 054112.](http://dx.doi.org/10.1063/1.2958287)  
-[[13](sid:c13)](#r13) [Boulianne L, Al Assaad S, Dumontier M, Gross WJ (2008) GridCell: a stochastic particle-based biological system simulator. _BMC Sys Biol_, 2:66.](http://dx.doi.org/10.1186/1752-0509-2-66)  
-[[14](sid:c14)](#r14) [van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. _Phys Rev Lett_, 94:128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
-[[15](sid:c15)](#r15) [van Zon JS, ten Wolde PR (2005) Green’s-function reaction dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123:234910.](http://dx.doi.org/10.1063/1.2137716)  
-[[16](sid:c16)](#r16) [Hattne J, Fange D, Elf J (2005) Stochastic reaction-diffusion simulation with MesoRD. _Bioinformatics_, 21: 2923 — 2924.](http://dx.doi.org/10.1093/bioinformatics/bti431)  
-[[17](sid:c17)](#r17) [Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. _Phys Rev Lett_, 97:230602.](http://dx.doi.org/10.1103/PhysRevLett.97.230602)  
-[[18](sid:c18)](#r18) [Opplestrup T, Bulatov VV, Donev A, Kalos MH, Gilmer GH, Sadigh B (2009) First passage kinetic Monte Carlo. _Phys Rev E_, 80: 066701.](http://dx.doi.org/10.1103/PhysRevE.80.066701)  
+[[10](sid:c10)](#r10) [Hattne J, Fange D, Elf J (2005) Stochastic reaction-diffusion simulation with MesoRD. _Bioinformatics_, 21: 2923 — 2924.](http://dx.doi.org/10.1093/bioinformatics/bti431)  
+[[11](sid:c11)](#r11) [Engblom S, Ferm L, Hellander A, Lötstedt P (2009) Simulation of stochastic reaction-diffusion processes on unstructured meshes. _SIAM J Sci Comput_, 31:1774 — 1797.](http://dx.doi.org/10.1137/080721388)  
+[[12](sid:c12)](#r12) [Andrews S, Bray D (2004) Stochastic simulation of chemical reactions with spatial resolution and single molecule detail. _Phys Biol_, 1:137 — 151.](http://dx.doi.org/10.1088/1478-3967/1/3/001)  
+[[13](sid:c13)](#r13) [Coggan JS, Bartol TM, Esquenazi E, Stiles JR, Lamont S, Martone ME, Berg DK, Ellisman MH, Sejnowski TJ (2005) Evidence for ectopic neurotransmission at a neauronal synapse. _Science_, 309:446 - 451.]  
+[[14](sid:c14)](#r14) [Morelli MJ, Ten Wolde PR (2008) Reaction Brownian Dynamics and the effect of spatial fluctuations on the gain of a push-pull network. _J Chem Phys_, 129: 054112.](http://dx.doi.org/10.1063/1.2958287)  
+[[15](sid:c15)](#r15) [Boulianne L, Al Assaad S, Dumontier M, Gross WJ (2008) GridCell: a stochastic particle-based biological system simulator. _BMC Sys Biol_, 2:66.](http://dx.doi.org/10.1186/1752-0509-2-66)  
+[[16](sid:c16)](#r16) [van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. _Phys Rev Lett_, 94:128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
+[[17](sid:c17)](#r17) [van Zon JS, ten Wolde PR (2005) Green’s-function reaction dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123:234910.](http://dx.doi.org/10.1063/1.2137716)  
+[[18](sid:c18)](#r18) [Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. _Phys Rev Lett_, 97:230602.](http://dx.doi.org/10.1103/PhysRevLett.97.230602)  
+[[19](sid:c19)](#r19) [Opplestrup T, Bulatov VV, Donev A, Kalos MH, Gilmer GH, Sadigh B (2009) First passage kinetic Monte Carlo. _Phys Rev E_, 80: 066701.](http://dx.doi.org/10.1103/PhysRevE.80.066701)  
 
