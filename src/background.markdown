@@ -19,20 +19,20 @@ integrate signals, as well as transmit signals from one place to another.
 Indeed, biochemical networks can perform a large number of computational tasks 
 analogous to electronic circuits. However, their design principles are 
 markedly different. In a biochemical network, the components often move in an 
-erratic fashion, namely by diffusion, and they interact with each other in a 
-stochastic manner – chemical and physical interactions are probabilistic in 
-nature. To understand the design principles that allow biochemical networks to 
-process information reliably, we have to take into account the spatial 
-distribution of the components and the stochastic character of their 
-interactions^[[VanZon06](#c1)](sid:r1). Moreover, we have recently shown 
-that spatio-temporal correlations at molecular length scales can drastically 
-change the macroscopic behavior of systems that are _uniform_ at cellular 
-length scales^[[Takahashi10](#c2)](sid:r2). Finally, many biological systems 
-exhibit macroscopic concentration gradients. Well-known examples are morphogen 
-gradients, which provide positional information to differentiating cells 
+erratic fashion, namely by diffusion, and they interact with each other in a
+stochastic manner – chemical and physical interactions are probabilistic in
+nature. To understand the design principles that allow biochemical networks to
+process information reliably, we have to take into account the spatial
+distribution of the components and the stochastic character of their
+interactions^[[1](#c1)](sid:r1). Moreover, we have recently shown that
+spatio-temporal correlations at molecular length scales can drastically change
+the macroscopic behavior of systems that are _uniform_ at cellular length
+scales^[[2](#c2)](sid:r2). Finally, many biological systems exhibit
+macroscopic concentration gradients. Well-known examples are morphogen
+gradients, which provide positional information to differentiating cells
 during embryonic development. To understand how these gradients are read out
-precisely^[[Gregor07](#c3)](sid:r3), the system has to be described at the
-particle level in time and space^[[Erdman09](#c4)](sid:r4).
+precisely^[[3](#c3)](sid:r3), the system has to be described at the particle
+level in time and space^[[4](#c4)](sid:r4).
 
 ## Overview of simulation techniques 
 
@@ -41,43 +41,42 @@ reaction-diffusion systems. The conventional approach is to write down the
 macroscopic reaction-diffusion equations and solve the corresponding 
 differential equations either analytically or numerically. This approach 
 resolves the system in time and space, but ignores the discrete nature of the 
-reactants and the stochastic character of their interactions. Schemes based on 
+reactants and the stochastic character of their interactions. Schemes based on
 the zero-dimensional chemical master equation, such as the Gillespie
-algorithm^[[Gillespie77](#c5)](sid:r5) or the Gibson-Bruck
-scheme^[[Gibson00](#c6)](sid:r6), incorporate the latter, but assume that at
-each instant the particles are uniformly distributed in space. 
+algorithm^[[5](#c5)](sid:r5) or the Gibson-Bruck scheme^[[6](#c6)](sid:r6),
+incorporate the latter, but assume that at each instant the particles are
+uniformly distributed in space. 
 
 In the past years, a number of techniques have been developed that take into 
-account both the spatial distribution of the components and the stochastic 
+account both the spatial distribution of the components and the stochastic
 nature of their interactions. One class of techniques is based upon the
-reaction-diffusion master
-equation^[[Baras96](#c7)](sid:r7),[[Stundzia96](#c8)](sid:r8); examples are
-SmartCell^[[Ander04](#c9)](sid:r9), MesoRD^[[Hattne05](#c10)](sid:r10) and
-URMD^[[Engblom09](#c11)](sid:r11). The main idea of these techniques is to
-divide the reaction volume into a number of subvolumes; particles can react
-within the subvolumes, but also diffuse from one subvolume to the next.
-Importantly, it is assumed that within each subvolume the particles are well
-mixed. These techniques thus rely on the existence of a length and time scale
-on which the system is spatially uniform.  When the concentrations are fairly
-high, as in spatio-temporal calcium oscillations, such a scale possibly
-exists, but at lower concentrations this assumption is likely to fail. 
+reaction-diffusion master equation^[[7](#c7)](sid:r7),[[8](#c8)](sid:r8);
+examples are SmartCell^[[9](#c9)](sid:r9), MesoRD^[[10](#c10)](sid:r10) and
+URMD^[[11](#c11)](sid:r11). The main idea of these techniques is to divide the
+reaction volume into a number of subvolumes; particles can react within the
+subvolumes, but also diffuse from one subvolume to the next.  Importantly, it
+is assumed that within each subvolume the particles are well mixed. These
+techniques thus rely on the existence of a length and time scale on which the
+system is spatially uniform.  When the concentrations are fairly high, as in
+spatio-temporal calcium oscillations, such a scale possibly exists, but at
+lower concentrations this assumption is likely to fail. 
 
-Another class of techniques simulates the network in time and space at the 
+Another class of techniques simulates the network in time and space at the
 particle level. One natural approach is to use Brownian Dynamics; examples are
-Smoldyn^[[Andrews04](#c12)](sid:r12), MCell^[[Coggan05](#c13)](sid:r13), [Reaction Brownian Dynamics^[[Morelli08](#c14)](sid:r14) and
-GridCell^[[Boulianne08](#c15)](sid:r15). In essence, the particles undergo a
-random walk, and when two reaction partners happen to meet each other, they
-can react with a probability consistent with the rate constant. However, under
-biologically relevant conditions, Brownian Dynamics is not very efficient,
-since much CPU time is wasted on propagating the particles towards each
-other.  Moreover, it is not exact, since a finite time step is used. 
+Smoldyn^[[12](#c12)](sid:r12), MCell^[[13](#c13)](sid:r13), Reaction Brownian
+Dynamics^[[14](#c14)](sid:r14) and GridCell^[[15](#c15)](sid:r15). In essence,
+the particles undergo a random walk, and when two reaction partners happen to
+meet each other, they can react with a probability consistent with the rate
+constant. However, under biologically relevant conditions, Brownian Dynamics
+is not very efficient, since much CPU time is wasted on propagating the
+particles towards each other.  Moreover, it is not exact, since a finite time
+step is used. 
 
 Another approach to simulate a network at the particle level in time and space
 is to use an event-driven algorithm. Green’s Function Reaction Dynamics
-(GFRD)^[[VanZon05_1](#c16)](sid:r16),[[VanZon05_2](#c17)](sid:r17),[Takahashi10](#c2)
-and First Passage Kinetic Monte Carlo
-(FPKMC)^[[Opplestrup06](#c18)](sid:r18),[[Opplestrup09](#c19)](sid:r19) are
-examples of such an approach.  The idea is to exploit the solution of the
+(GFRD)^[[16](#c16)](sid:r16),[[17](#c17)](sid:r17),[2](#c2) and First Passage
+Kinetic Monte Carlo (FPKMC)^[[18](#c18)](sid:r18),[[19](#c19)](sid:r19) are
+examples of such an approach. The idea is to exploit the solution of the
 Smoluchowski equation — the Green’s function — to set up an event-driven
 algorithm that concatenates the propagation of the particles in space with the
 reactions between them. These algorithms thus alleviate the need to propagate
@@ -96,22 +95,22 @@ A reaction-diffusion system is a many-body problem that cannot be solved
 analytically. The key idea of GFRD is to decompose the many-body problem into 
 one- and two-body problems that can be solved analytically via Green’s
 functions, and use these Green’s functions to set up an event-driven
-algorithm^[VanZon05_1](#c16),[VanZon05_2](#c17). The Green’s functions allow
-GFRD to make large jumps in time and space when the particles are far apart
-from each other. 
+algorithm^[16](#c16),[17](#c17). The Green’s functions allow GFRD to make
+large jumps in time and space when the particles are far apart from each
+other. 
 
 >> In the original version of the algorithm, the many-body problem was solved
 by determining at each step of the simulation a maximum time step such that
 each particle could interact with at most one other particle during that time
-step^[VanZon05_1](#c16),[VanZon05_2](#c17). This scheme was a synchronous
-event-driven algorithm, because at each time step all the particles were
-propagated simultaneously. Moreover, the scheme was not exact, because the
-decomposition into single particles and pairs of particles involved cut-off
-distances, introducing a trade-off between speed and error.
+step^[16](#c16),[17](#c17). This scheme was a synchronous event-driven
+algorithm, because at each time step all the particles were propagated
+simultaneously. Moreover, the scheme was not exact, because the decomposition
+into single particles and pairs of particles involved cut-off distances,
+introducing a trade-off between speed and error.
 
 >>
-In the new version of the algorithm, we have implemented ideas of Opplestrup and
-coworkers^[Opplestrup06](#c18). In this new scheme, protective domains are put
+In the new version of the algorithm, we have implemented ideas of Opplestrup
+and coworkers^[18](#c18). In this new scheme, protective domains are put
 around single particles and pairs of particles, as shown in Fig. 1. For each
 of the domains, the reaction-diffusion problem is solved analytically using
 Green’s functions. This yields for each domain an _event type_ and an _event
@@ -125,10 +124,10 @@ with new _event types_ and new _event times_, are determined, and the new
 events are put back in the _event list_. The new version of GFRD, called
 eGFRD, is thus an exact, event-driven, asynchronous algorithm. Its
 asynchronous nature makes eGFRD similar in spirit to event-driven MD
-simulations of hard spheres and the Gibson-Bruck scheme,
-which is an exact, event-driven asynchronous algorithm for simulating the
-_zero-dimensional_ chemical master equation^[Gibson00](#c6). A movie of eGFRD
-in action is shown in Movie 1.
+simulations of hard spheres and the Gibson-Bruck scheme, which is an exact,
+event-driven asynchronous algorithm for simulating the _zero-dimensional_
+chemical master equation^[6](#c6). A movie of eGFRD in action is shown in
+Movie 1.
 
 >>## _Single_
 A _Single_ is a domain that contains only a single particle. The next _event 
