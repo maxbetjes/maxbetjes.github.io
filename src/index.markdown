@@ -19,31 +19,30 @@ domains for a pair of particles. With the color blue the protective domain
 that will be updated next is highlighted._
 
 
-## _An event-driven algorithm to simulate reaction-diffusion systems at the particle level_
+## _An event-driven algorithm for simulating reaction-diffusion systems at the particle level_
 
 ### Idea
 
-The principal idea of GFRD is to decompose the many-body reaction-diffusion
-problem into one- and two-body reaction-diffusion problems that are solved
-analytically using Green’s Functions to set up an event-driven
-algorithm^[[1](#c1)](sid:r1),[[2](#c2)](sid:r2),[[3](#c3)](sid:r3),[[4](#c4)](sid:r4).
+The crux of Green's Function Reaction Dynamics is to decompose the many-body
+reaction-diffusion problem into one- and two-body problems that can be solved
+analytically using Green's Function, and use these functions to set up an
+event-driven algorithm^[[1](#c1)](sid:r1),[[2](#c2)](sid:r2),[[3](#c3)](sid:r3),[[4](#c4)](sid:r4).
 
 ### Speed
-
 The Green's functions make it possible to make large jumps in time and space
 when the particles are far apart from each other. Under biologically relevant
-conditions GFRD is up to 6 orders of magnitude faster than conventional
-Brownian Dynamics^[1](#c1).
+conditions, GFRD can be up to 6 orders of magnitude faster than brute-force
+Brownian Dynamics.
 
 ### Applications
 
-The GFRD algorithm is generic and can be applied to a wide variety of 
-reaction-diffusion problems, including those in population dynamics, 
-evolution, and soft-condensed matter physics. The scheme presented here has 
-been specifically designed to simulate biochemical networks. The current 
-version allows the efficient simulation of signal transduction pathways and 
-gene regulation networks in the cytoplasm, but work is in progress to 
-implement reactions at surfaces such as membranes, and reactions at, and 
+The GFRD algorithm is generic and can be applied to a wide variety of
+reaction-diffusion problems, including those in population dynamics,
+evolution, and soft-condensed matter physics. The scheme presented here has
+been specifically designed to simulate biochemical networks. The current
+version allows the efficient simulation of signal transduction pathways and
+gene regulation networks in the cytoplasm, but work is in progress to
+implement reactions at surfaces such as membranes, and reactions at, and
 passive and active transport along, polymers such as microtubules and DNA.
 
 ### Developers

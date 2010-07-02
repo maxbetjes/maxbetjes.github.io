@@ -41,21 +41,21 @@ particles, the yellow sphere seen towards the end of the movie is a protective
 domains for a pair of particles. With the color blue the protective domain
 that will be updated next is highlighted.</em></p></div>
 
-<h2><em>An event-driven algorithm to simulate reaction-diffusion systems at the particle level</em></h2>
+<h2><em>An event-driven algorithm for simulating reaction-diffusion systems at the particle level</em></h2>
 
 <h3>Idea</h3>
 
-<p>The principal idea of GFRD is to decompose the many-body reaction-diffusion
-problem into one- and two-body reaction-diffusion problems that are solved
-analytically using Green’s Functions to set up an event-driven
-algorithm<sup><span id="r1"><a href="#c1">1</a></span>,<span id="r2"><a href="#c2">2</a></span>,<span id="r3"><a href="#c3">3</a></span>,<span id="r4"><a href="#c4">4</a></span></sup>.</p>
+<p>The crux of Green&rsquo;s Function Reaction Dynamics is to decompose the many-body
+reaction-diffusion problem into one- and two-body problems that can be solved
+analytically using Green&rsquo;s Function, and use these functions to set up an
+event-driven algorithm<sup><span id="r1"><a href="#c1">1</a></span>,<span id="r2"><a href="#c2">2</a></span>,<span id="r3"><a href="#c3">3</a></span>,<span id="r4"><a href="#c4">4</a></span></sup>.</p>
 
 <h3>Speed</h3>
 
 <p>The Green&rsquo;s functions make it possible to make large jumps in time and space
 when the particles are far apart from each other. Under biologically relevant
-conditions GFRD is up to 6 orders of magnitude faster than conventional
-Brownian Dynamics<sup><a href="#c1">1</a></sup>.</p>
+conditions, GFRD can be up to 6 orders of magnitude faster than brute-force
+Brownian Dynamics.</p>
 
 <h3>Applications</h3>
 
