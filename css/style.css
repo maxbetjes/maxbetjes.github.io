@@ -1,0 +1,126 @@
+/* Reset. */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal; }
+ul,ol { list-style: none; }
+fieldset,img { border: none; }
+caption,th { text-align: left; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+.clear { clear: both; }
+.clearer { clear: both; display: block; margin: 0; padding: 0; height: 0; line-height: 1px; font-size: 1px; }
+
+
+/* Media. */
+img { behavior: url(/css/iepngfix.htc) } /* Fix pngs in IE. */
+
+img { border: 10; }
+.left img { float: left; margin: 2px 20px 16px 0; }
+.right img { float: right; margin: 2px 0 16px 20px; }
+img.across { margin: 2px 0 16px 0; }
+img.flushleft { margin-left: -20px; }
+img.flushright { margin-right: -20px; }
+
+.highlight, .media { margin: 7px 10px 25px; padding: 7px 10px; clear:both }
+.highlight { border: 1px solid #DDDDDD; }
+.media p { margin: 0px; }
+.right { float:right; } 
+.left { float:left; } 
+.w400 { width:400px; }
+.w800 { width:800px; }
+
+
+/* Layout. */
+#container { width: 980px; margin: 0 auto; position: relative; }
+
+.column { float: left; }
+.grid2col, { width: 100%; }
+.grid2col .column { width: 49%; }
+.column.first, .column.last { margin-left: 0 !important; }
+.column.last { float: right !important; }
+
+p.last, ul.last, ol.last, li.last { _width: auto !important; _float: none !important; }
+
+.last { margin-bottom: 0; }
+
+#container:after, .grid2col:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+#container, .grid2col, { zoom: 1; }
+
+
+/* Type. */
+body { font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; background-color: #fff; color: #333; }
+
+strong, b { font-weight: bold; }
+em, i { font-style: italic; }
+sup { padding-left: 1px; font-size: 10px !important; font-weight: normal !important; vertical-align: baseline; position: relative; bottom: 0.33em; color: #76797c; _position: static !important; }
+p { margin-bottom: 18px; }
+
+
+/* Headers. */
+h1 { font-weight: bold; font-size: 24px; line-height: 36px; margin-bottom: 18px; }
+h1 { font: 32px/38px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; background-color: #fff; color: #333; margin:"100px"; }
+h2 { font-weight: bold; font-size: 16px; line-height: 18px; margin-bottom: 18px; }
+h2:first-child { margin: 0px 0px 7px; }
+h2 { margin: 25px 0px 7px; }
+h3 { font-weight: bold; font-size: 1em; line-height: 18px; }
+h4 { font-weight: bold; font-size: 10px; line-height: 18px; }
+
+
+/* Lists. */
+ul { margin-bottom: 18px; list-style: none outside; }
+ol { margin-bottom: 18px; list-style: decimal; margin-left: 2.2em; }
+ul.square,
+ul.circle { margin-left: 2em; }
+ul.square { list-style: square outside; }
+ul.circle { list-style: circle outside; }
+ul ul.circle,
+ul ul.square { margin-top: 4px; margin-bottom: 5px; }
+ul { list-style: circle; margin-left: 2em; }
+
+
+/* Links. */
+a { color: #08c; }
+a:link, a:visited, a:active { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.references a { color: #000; }
+.references a:hover { color: #08c; }
+.references a #c1,
+.references a #c1,
+.references a #c2,
+.references a #c3,
+.references a #c4,
+.references a #c5,
+.references a #c6,
+.references a #c7,
+.references a #c8,
+.references a #c9,
+.references a #c10,
+.references a #c11,
+.references a #c12,
+.references a #c13,
+.references a #c14,
+.references a #c15,
+.references a #c16,
+.references a #c17,
+.references a #c18,
+.references a #c19,
+.references a #c20 { color: #08c; text-decoration: none; }
+
+
+/* Piped links. */
+.piped { display: block; zoom: 1; }
+.piped:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.piped li { float: left; display: inline; }
+.piped a { border-left: 1px solid #797c80; padding: 0 0 0 0.75em; margin-left: 0.75em; }
+.piped a.first { border-left: 0 !important; padding-left: 0; margin-left: 0 !important; }
+
+
+/* Global footer. */
+#globalfooter { width: 980px; color: #888; font-size: 10px; margin: 0px auto; padding-bottom: 6px; text-align: left !important; }
+#globalfooter p { margin-bottom: 1em; }
+#globalfooter ul.piped a { padding: 0 0 0 1.5em; margin-left: 1.5em; border-left: 1px solid #d0d0d0; }
+#globalfooter .gf-sosumi { clear: both; width: 100%; border-top: 1px solid #ddd; padding-top: 2px; }
+#globalfooter .gf-sosumi a { padding: 0 10px; }
+#globalfooter .gf-sosumi p { float: left; margin-left: 3px; }
+
+

@@ -89,7 +89,7 @@ regulation networks.
 
 ## Green’s Function Reaction Dynamics
 
->%grid2colh%
+>%grid2col%
 >>%column first%
 A reaction-diffusion system is a many-body problem that cannot be solved 
 analytically. The key idea of GFRD is to decompose the many-body problem into 
