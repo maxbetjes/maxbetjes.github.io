@@ -53,7 +53,7 @@ institute](http://www.riken.jp) in Japan and Ten Wolde at the FOM insitute for
 Netherlands.
 
 >%references%
-### References
+#### References
 [[1](sid:c1)](#r1) [Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. _Phys Rev Lett_, 94: 128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
 [[2](sid:c2)](#r2) [Van Zon JS,  Ten Wolde PR (2005) Green’s Function Reaction Dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123: 234910.](http://dx.doi.org/10.1063/1.2137716)  
 [[3](sid:c3)](#r3) [Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. _Proc.  Natl Acad Sci USA_, 107: 2473 — 2478.](http://dx.doi.org/10.1073/pnas.0906885107)  
