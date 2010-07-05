@@ -1,15 +1,3 @@
-/* Reset. */
-html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin: 0; padding: 0; }
-h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal; }
-ul,ol { list-style: none; }
-fieldset,img { border: none; }
-caption,th { text-align: left; }
-table { border-collapse: collapse; border-spacing: 0; }
-
-.clear { clear: both; }
-.clearer { clear: both; display: block; margin: 0; padding: 0; height: 0; line-height: 1px; font-size: 1px; }
-
-
 /* Media. */
 img { behavior: url(/css/iepngfix.htc) } /* Fix pngs in IE. */
 
@@ -105,22 +93,3 @@ a:hover { text-decoration: underline; }
 .references a #c18,
 .references a #c19,
 .references a #c20 { color: #08c; text-decoration: none; }
-
-
-/* Piped links. */
-.piped { display: block; zoom: 1; }
-.piped:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.piped li { float: left; display: inline; }
-.piped a { border-left: 1px solid #797c80; padding: 0 0 0 0.75em; margin-left: 0.75em; }
-.piped a.first { border-left: 0 !important; padding-left: 0; margin-left: 0 !important; }
-
-
-/* Global footer. */
-#globalfooter { width: 980px; color: #888; font-size: 10px; margin: 0px auto; padding-bottom: 6px; text-align: left !important; }
-#globalfooter p { margin-bottom: 1em; }
-#globalfooter ul.piped a { padding: 0 0 0 1.5em; margin-left: 1.5em; border-left: 1px solid #d0d0d0; }
-#globalfooter .gf-sosumi { clear: both; width: 100%; border-top: 1px solid #ddd; padding-top: 2px; }
-#globalfooter .gf-sosumi a { padding: 0 10px; }
-#globalfooter .gf-sosumi p { float: left; margin-left: 3px; }
-
-
