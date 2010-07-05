@@ -1,6 +1,9 @@
 /* Reset.
+ * Mix of:
  * http://meyerweb.com/eric/tools/css/reset/index.html
  * v1.0 | 20080212
+ * and
+ * http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
  */
 
 html, body, div, span, applet, object, iframe,
@@ -16,16 +19,24 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	border: 0;
 	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
 	font-size: 100%;
+	font-family: inherit;
 	vertical-align: baseline;
 	background: transparent;
 }
+
 body {
 	line-height: 1;
+	color: black;
+	background: white;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
@@ -54,6 +65,10 @@ table {
 	border-spacing: 0;
 }
 
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
 
 .clear { clear: both; }
 .clearer { clear: both; display: block; margin: 0; padding: 0; height: 0; line-height: 1px; font-size: 1px; }
