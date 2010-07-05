@@ -5,7 +5,7 @@ file: background
 header: GFRD background information
 ---
 
-## The importance of modeling networks in time and space at the particle level
+### The importance of modeling networks in time and space at the particle level
 
 In many networks of interacting components, the spatial distribution of the 
 components and the stochastic character of their interactions are of critical 
@@ -34,7 +34,7 @@ during embryonic development. To understand how these gradients are read out
 precisely^[[3](#c3)](sid:r3), the system has to be described at the particle
 level in time and space^[[4](#c4)](sid:r4).
 
-## Overview of simulation techniques 
+### Overview of simulation techniques
 
 In principle, computer simulations are ideally suited for studying 
 reaction-diffusion systems. The conventional approach is to write down the 
@@ -129,7 +129,7 @@ event-driven asynchronous algorithm for simulating the _zero-dimensional_
 chemical master equation^[6](#c6). A movie of eGFRD in action is shown in
 Movie 1.
 
->>## _Single_
+>>### _Single_
 A _Single_ is a domain that contains only a single particle. The next _event 
 type_ is either a unimolecular reaction of the type A ⇾ B + C + … or A ⇾ Ø, or 
 an escape from the domain, as sketched in Fig. 2. To determine which of the 
@@ -138,7 +138,7 @@ each of them; the event with the smallest tentative _event time_ is the one
 that will occur for that domain; it is the one that is put in the _event 
 list_. 
 
->>## _Pair_
+>>### _Pair_
 A _Pair_ is a domain that contains a pair of particles. The reaction-diffusion 
 problem of two particles that can react with each other and diffuse in a 
 spherical domain with absorbing boundary conditions can, to our knowledge, not 
@@ -204,7 +204,7 @@ thus either the escape of **R** from its domain, the escape of **r** from its
 domain, a bimolecular reaction, or a unimolecular reaction._
 
 >>%column first%
-## Performance
+### Performance
 Fig.4 shows the power of eGFRD. Plotted is the CPU time for simulating a 
 system consisting of hard spheres for a fixed amount of real time as a 
 function of the number of particles N, for two scenarios: one in which the 
@@ -262,7 +262,10 @@ orders of magnitude more efficient than conventional BD._
 [[10](sid:c10)](#r10) [Hattne J, Fange D, Elf J (2005) Stochastic reaction-diffusion simulation with MesoRD. _Bioinformatics_, 21: 2923 — 2924.](http://dx.doi.org/10.1093/bioinformatics/bti431)  
 [[11](sid:c11)](#r11) [Engblom S, Ferm L, Hellander A, Lötstedt P (2009) Simulation of stochastic reaction-diffusion processes on unstructured meshes. _SIAM J Sci Comput_, 31:1774 — 1797.](http://dx.doi.org/10.1137/080721388)  
 [[12](sid:c12)](#r12) [Andrews S, Bray D (2004) Stochastic simulation of chemical reactions with spatial resolution and single molecule detail. _Phys Biol_, 1:137 — 151.](http://dx.doi.org/10.1088/1478-3967/1/3/001)  
-[[13](sid:c13)](#r13) [Coggan JS, Bartol TM, Esquenazi E, Stiles JR, Lamont S, Martone ME, Berg DK, Ellisman MH, Sejnowski TJ (2005) Evidence for ectopic neurotransmission at a neauronal synapse. _Science_, 309:446 - 451.]  
+[[13](sid:c13)](#r13) [Coggan JS, Bartol TM, Esquenazi E, Stiles JR, Lamont S,
+Martone ME, Berg DK, Ellisman MH, Sejnowski TJ (2005) Evidence for ectopic
+neurotransmission at a neauronal synapse. _Science_, 309:446 --
+451.](http://dx.doi.org/10.1126/science.1108239)  
 [[14](sid:c14)](#r14) [Morelli MJ, Ten Wolde PR (2008) Reaction Brownian Dynamics and the effect of spatial fluctuations on the gain of a push-pull network. _J Chem Phys_, 129: 054112.](http://dx.doi.org/10.1063/1.2958287)  
 [[15](sid:c15)](#r15) [Boulianne L, Al Assaad S, Dumontier M, Gross WJ (2008) GridCell: a stochastic particle-based biological system simulator. _BMC Sys Biol_, 2:66.](http://dx.doi.org/10.1186/1752-0509-2-66)  
 [[16](sid:c16)](#r16) [van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. _Phys Rev Lett_, 94:128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
