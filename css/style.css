@@ -1,6 +1,4 @@
 /* Media. */
-img { behavior: url(/css/iepngfix.htc) } /* Fix pngs in IE. */
-
 img { border: 10; }
 .left img { float: left; margin: 2px 20px 16px 0; }
 .right img { float: right; margin: 2px 0 16px 20px; }
