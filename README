@@ -23,11 +23,7 @@ http://localhost:8000/
 
 
 References:
-* Static html generator: http://wiki.github.com/mojombo/jekyll/
-* Formatting syntax: http://daringfireball.net/projects/markdown/syntax
-* Ruby implementation of Markdown: http://github.com/rtomayko/rdiscount
-* Syntax highlighting: http://pygments.org/
-* Embedding video: http://github.com/etianen/html5media
+See [/thanks](/thanks).
 
 Making the movies:
 * ffmpeg -r 10 -i images/step.%04d.png -vcodec libx264 -an -r 10 movie.mp4
