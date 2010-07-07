@@ -5,10 +5,12 @@ file: algorithm
 header: Algorithm
 ---
 
-## Green’s Function Reaction Dynamics
-
 >%grid2col%
 >>%column first%
+
+>>## Green’s Function Reaction Dynamics
+
+>>
 A reaction-diffusion system is a many-body problem that cannot be solved 
 analytically. The key idea of GFRD is to decompose the many-body problem into 
 one- and two-body problems that can be solved analytically via Green’s
@@ -17,7 +19,8 @@ algorithm^[16](#c16),[17](#c17). The Green’s functions allow GFRD to make
 large jumps in time and space when the particles are far apart from each
 other. 
 
->> In the original version of the algorithm, the many-body problem was solved
+>>
+In the original version of the algorithm, the many-body problem was solved
 by determining at each step of the simulation a maximum time step such that
 each particle could interact with at most one other particle during that time
 step^[16](#c16),[17](#c17). This scheme was a synchronous event-driven

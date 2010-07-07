@@ -4,6 +4,8 @@ title: GFRD home
 header: <em>Green's Function Reaction Dynamics</em>
 ---
 
+## _An event-driven algorithm for simulating reaction-diffusion systems at the particle level_
+
 >%media right w400%
 <video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="400" height="400" controls preload="none" title="Movie. GFRD in 3D">
   <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
@@ -18,8 +20,6 @@ particles, the yellow sphere seen towards the end of the movie is a protective
 domains for a pair of particles. With the color blue the protective domain 
 that will be updated next is highlighted._
 
-
-## _An event-driven algorithm for simulating reaction-diffusion systems at the particle level_
 
 ### Idea
 
