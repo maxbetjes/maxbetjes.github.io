@@ -1,10 +1,10 @@
 ---
 layout: index
 title: GFRD home
-header: <em>Green's Function Reaction Dynamics</em>
+header: Green's Function Reaction Dynamics
 ---
 
-## _An event-driven algorithm for simulating reaction-diffusion systems at the particle level_
+## An event-driven algorithm for simulating reaction-diffusion systems at the particle level
 
 >%media right w400%
 <video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="400" height="400" controls preload="none" title="Movie. GFRD in 3D">
