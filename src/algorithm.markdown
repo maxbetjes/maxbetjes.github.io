@@ -15,7 +15,7 @@ A reaction-diffusion system is a many-body problem that cannot be solved
 analytically. The key idea of GFRD is to decompose the many-body problem into 
 one- and two-body problems that can be solved analytically via Green’s
 functions, and use these Green’s functions to set up an event-driven
-algorithm^[16](#c16),[17](#c17). The Green’s functions allow GFRD to make
+algorithm^[1](#c1),[2](#c2). The Green’s functions allow GFRD to make
 large jumps in time and space when the particles are far apart from each
 other. 
 
@@ -23,7 +23,7 @@ other.
 In the original version of the algorithm, the many-body problem was solved
 by determining at each step of the simulation a maximum time step such that
 each particle could interact with at most one other particle during that time
-step^[16](#c16),[17](#c17). This scheme was a synchronous event-driven
+step^[1](#c1),[2](#c2). This scheme was a synchronous event-driven
 algorithm, because at each time step all the particles were propagated
 simultaneously. Moreover, the scheme was not exact, because the decomposition
 into single particles and pairs of particles involved cut-off distances,
@@ -31,7 +31,7 @@ introducing a trade-off between speed and error.
 
 >>
 In the new version of the algorithm, we have implemented ideas of Opplestrup
-and coworkers^[18](#c18). In this new scheme, protective domains are put
+and coworkers^[3](#c3). In this new scheme, protective domains are put
 around single particles and pairs of particles, as shown in Fig. 1. For each
 of the domains, the reaction-diffusion problem is solved analytically using
 Green’s functions. This yields for each domain an _event type_ and an _event
@@ -47,7 +47,7 @@ eGFRD, is thus an exact, event-driven, asynchronous algorithm. Its
 asynchronous nature makes eGFRD similar in spirit to event-driven MD
 simulations of hard spheres and the Gibson-Bruck scheme, which is an exact,
 event-driven asynchronous algorithm for simulating the _zero-dimensional_
-chemical master equation^[6](#c6). A movie of eGFRD in action is shown in
+chemical master equation^[4](#c4). A movie of eGFRD in action is shown in
 Movie 1.
 
 >>### _Single_
@@ -171,3 +171,7 @@ orders of magnitude more efficient than conventional BD._
 
 >%references%
 ### References
+[[1](sid:c1)](#r1) [van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. _Phys Rev Lett_, 94:128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
+[[2](sid:c2)](#r2) [van Zon JS, ten Wolde PR (2005) Green’s-function reaction dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123:234910.](http://dx.doi.org/10.1063/1.2137716)  
+[[3](sid:c3)](#r3) [Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. _Phys Rev Lett_, 97:230602.](http://dx.doi.org/10.1103/PhysRevLett.97.230602)  
+[[4](sid:c4)](#r4) [Gibson MA, Bruck J (2000) Efficient exact stochastic simulation of chemical systems with many species and many channels. _J Phys Chem A_, 104: 1876 — 1888.](http://dx.doi.org/10.1021/jp993732q)  
