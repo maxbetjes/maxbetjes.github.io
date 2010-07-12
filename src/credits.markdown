@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Thanks
-header: Thanks
+title: Credits
+header: Credits
 ---
 
 
-## List of open source software used 
+## List of open source software used
 
 ### Website:
 
