@@ -2,7 +2,7 @@
 layout: main
 title: eGFRD documentation
 file: documentation
-header: eGFRD documentation
+header: Documentation
 ---
 
 ## Overview

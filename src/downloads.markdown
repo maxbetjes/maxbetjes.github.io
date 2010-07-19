@@ -2,7 +2,7 @@
 layout: main
 title: eGFRD downloads
 file: downloads
-header: eGFRD downloads
+header: Downloads
 ---
 
 The current implementation of GFRD is called eGFRD (the e is for enhanced).

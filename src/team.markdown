@@ -1,7 +1,7 @@
 ---
 layout: default
 title: eGFRD Team
-header: eGFRD Team
+header: Team
 ---
 
 
