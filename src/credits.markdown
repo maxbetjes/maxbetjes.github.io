@@ -5,10 +5,14 @@ header: Credits
 ---
 
 
-## List of open source software used
+List of open source software used, among others.
+
+### Infrastructure:
+* [Mercurial](http://mercurial.selenic.com/)
+* [Git](http://git-scm.com/)
+* [Hg-Git](http://hg-git.github.com/)
 
 ### Website:
-
 * [Jekyll](http://wiki.github.com/mojombo/jekyll/): Static html generator.
 * [Markdown](http://daringfireball.net/projects/markdown/syntax): Formatting
 syntax.
@@ -19,8 +23,7 @@ syntax.
 * [Erik Meyer](http://meyerweb.com/eric/tools/css/reset/index.html): CSS reset.
 * [ie7-js](http://code.google.com/p/ie7-js/): W3C compliance for
 Microsoft Internet Explorer.
-
-Menu bar inspired by [Apple.com](http://apple.com).
+* Menu bar inspired by [Apple.com](http://apple.com).
 
 ### Movies:
 * [ffmpeg](http://www.ffmpeg.org/): A complete, cross-platform solution to
