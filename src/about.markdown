@@ -1,13 +1,22 @@
 ---
 layout: default
-title: About eGFRD
-header: About eGFRD
+title: eGFRD about
+header: About
 ---
 
+See the [README](http://github.com/gfrd/egfrd/tree/develop/README) file for more information.
 
-This same information can also be found in the file
-[README](http://github.com/gfrd/gfrd/tree/develop/README)
-of the [code](http://github.com/gfrd/gfrd/tree/develop).
+## Developed by
+* Nils Becker
+* Laurens Bossen
+* Kazunari Kaizu
+* Moriyoshi Koizumi
+* Thomas Miedema
+* Thomas Sokolowski
+* [Koichi Takahashi](http://www.e-cell.org/ecell/)
+* [Pieter Rein ten Wolde](http://www.amolf.nl/research/biochemical-networks/) 
 
-{% include README %}
+
+## Contributors
+* Filipe Tostevin
 

@@ -1,12 +1,12 @@
-CODE=$(HOME)/code/gfrd
-FILES=README INSTALL doc/visualization.txt samples/example/example.py
+DIR_GFRD=$(HOME)/code/gfrd
+FILES_GFRD=doc/visualization.txt samples/example/example.py
 HERE=$(PWD)
 
 all: website
 
 .PHONY: website
 website:
-	cd $(CODE) && cp $(FILES) $(HERE)/_includes
+	cd $(DIR_GFRD) && cp $(FILES_GFRD) $(HERE)/_includes
 	jekyll
 	mv _site/src/*.html _site/
 	cp _site/*.html .

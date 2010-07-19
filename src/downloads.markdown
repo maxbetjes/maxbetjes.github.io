@@ -8,7 +8,7 @@ header: Downloads
 The current implementation of GFRD is called eGFRD (the e is for enhanced).
 
 ## Get up and running in minutes
-See the [installation](http://gfrd.github.com/installation) notes for a list
+See the [INSTALL](http://github.com/gfrd/egfrd/tree/develop/INSTALL) file for a list
 of prerequisites.
 
 ### E-Cell repository (Riken)

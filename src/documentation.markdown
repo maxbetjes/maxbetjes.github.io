@@ -7,7 +7,8 @@ header: Documentation
 
 ## Overview
 
-* [Installation](/installation)
+* Installation. See the
+[INSTALL](http://github.com/gfrd/egfrd/tree/develop/INSTALL) file.
 * [Running a simulation](/simulation)
 * [Visualization](/visualization)
 
@@ -20,6 +21,6 @@ header: Documentation
 ## Learn more
 
 More documentation, including Green's functions and pseudocode for the 
-algorithm can be found in the [doc](http://github.com/gfrd/gfrd/tree/develop/doc") directory of 
+algorithm can be found in the [doc](http://github.com/gfrd/egfrd/tree/develop/doc") directory of 
 the code.
 
