@@ -1,4 +1,4 @@
-DIR_GFRD=$(HOME)/code/gfrd
+DIR_GFRD=$(HOME)/code/amolf/gfrd
 FILES_GFRD=doc/visualization.txt samples/example/example.py
 HERE=$(PWD)
 
