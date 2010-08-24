@@ -1,6 +1,6 @@
 /* GLOBALHEADER */
 #globalheader { width: 982px; height: 38px; margin: 20px auto 15px; position: relative; z-index: 9998; }
-#globalheader #globalnav { margin: 0; padding: 0; zoom: 1; width 100%; }
+#globalheader #globalnav { margin: 0; padding: 0; zoom: 1; width: 100%; }
 #globalheader #globalnav:after { content: "."; display: block; height: 0;      clear: both; visibility: hidden; }
 #globalheader #globalnav li { display: inline; }
 #globalheader #globalnav li a { float: left; width: 117px; height: 0; padding-top: 38px; overflow: hidden; }

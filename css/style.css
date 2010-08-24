@@ -1,5 +1,5 @@
 /* Media. */
-img { border: 10; }
+img { border: 10px; }
 .left img { float: left; margin: 2px 20px 16px 0; }
 .right img { float: right; margin: 2px 0 16px 20px; }
 img.across { margin: 2px 0 16px 0; }
@@ -21,7 +21,7 @@ body { width: 980px; margin: 0 auto; position: relative; }
 #container { margin: 0px; }
 
 .column { float: left; }
-.grid2col, { width: 100%; }
+.grid2col { width: 100%; }
 .grid2col .column { width: 49%; }
 .column.first, .column.last { margin-left: 0 !important; }
 .column.last { float: right !important; }
@@ -31,7 +31,7 @@ p.last, ul.last, ol.last, li.last { _width: auto !important; _float: none !impor
 .last { margin-bottom: 0; }
 
 #container:after, .grid2col:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-#container, .grid2col, { zoom: 1; }
+#container, .grid2col { zoom: 1; }
 
 
 /* Type. */
