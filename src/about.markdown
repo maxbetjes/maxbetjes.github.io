@@ -12,6 +12,7 @@ See the [README](http://github.com/gfrd/egfrd/tree/develop/README) file for more
 * Kazunari Kaizu
 * Moriyoshi Koizumi
 * Thomas Miedema
+* Sorin Tanase-Nicola
 * Thomas Sokolowski
 * [Koichi Takahashi](http://www.e-cell.org/ecell/)
 * [Pieter Rein ten Wolde](http://www.amolf.nl/research/biochemical-networks/) 
