@@ -6,9 +6,9 @@ header: Algorithm
 ---
 
 >%grid2col%
->>%column first%
-
 >>## Green’s Function Reaction Dynamics
+
+>>%column first%
 
 >>
 A reaction-diffusion system is a many-body problem that cannot be solved 
@@ -72,60 +72,7 @@ each of these events a tentative _event time_ is determined, and the event
 with the smallest tentative _event time_ is the one that will happen, and put 
 in the _event list_. 
 
->>%column last%
->>>%media%
-![](/images/gfrd.png =400x "Fig.1. GFRD")  
-Fig.1: _Overview of GFRD. The principal idea of GFRD is to decompose the 
-many-body reaction-diffusion problem into one- and two-body problems that can 
-be solved analytically using Green’s Functions. To this end, protective 
-domains are put around single particles and pairs of particles, leading to 
-so-called _Singles_ and _Pairs_, respectively. For each domain, a next _event 
-type_ and a next _event time_ is determined. The _event times_ are put in a 
-chronologically ordered _event list_, and the events are then executed in 
-chronological order. When an event is executed, the particles of the 
-corresponding domain are propagated, new domains with new events are 
-determined, and the events are put back in the event list._ 
-
->>>%media%
-<video class="video" poster="/movies/planar-surface_6-particles_100-steps/step.0201.png" width="440" height="260" controls preload="none" title="Movie 1. GFRD in 2D">
-  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-  <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
-  <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
-</video><br/>
->>>Movie 1 ([ogv](/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv), 
-[mp4](/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4)). 
-_A movie of eGFRD in action in 2D. The green cylinders are protective 
-domains for single particles, the yellow cylinders are protective domains for 
-pairs of particles. With the color blue the protective domain that will be 
-updated next is highlighted._
-
->>>%media%
-![](/images/single.png =400x "Fig.2. Single")  
-Fig.2: _A _Single_, a protective domain that contains only a single particle. 
-The possible _event types_ are either a unimolecular reaction or the escape of 
-the single particle from the protective domain._
-
->>>%media%
-![](/images/pair.png =400x "Fig.3. Pair")  
-Fig.3: _A _Pair_, a protective domain that contains a pair of particles. A 
-coordinate transformation is applied, and one protective domain is defined for 
-the center-of-mass coordinate **R** and one for the inter-particle vector *r*. 
-The sizes of these domains are determined such that when both **R** and **r** 
-would reach their maximum values, _|_**R**_|_^**max** and _|_**r**_|_^**max**, 
-respectively, the two particles would still be within the original protective 
-domain. The dynamics of **R** is a diffusion problem of a random walker in a 
-spherical domain with absorbing boundary conditions. The dynamics of **r** 
-takes into account that the two particles not only diffuse, but can also react 
-with each other; this is the problem of a random walker between two concentric 
-spherical surfaces, with a radiation boundary condition at the inner surface, 
-describing the bimolecular reaction, and an adsorbing boundary condition at 
-the outer surface, describing the escape from the domain. The next event is 
-thus either the escape of **R** from its domain, the escape of **r** from its 
-domain, a bimolecular reaction, or a unimolecular reaction._
-
->>%column first%
-## Performance
+>>## Performance
 Fig.4 shows the power of eGFRD. Plotted is the CPU time for simulating a 
 system consisting of hard spheres for a fixed amount of real time as a 
 function of the number of particles N, for two scenarios: one in which the 
@@ -154,8 +101,64 @@ while those in gene regulation networks are typically in the nM range. Under
 these biologically relevant conditions, eGFRD is up to 6 orders of magnitude
 more efficient than BD. 
 
->%media w800%
-![](/images/performance.png "Fig.4. Performance")  
+
+>>%column last%
+>>>%media%
+<img width="440px" src="/images/gfrd.png" title="Fig.1. GFRD">  
+Fig.1: _Overview of GFRD. The principal idea of GFRD is to decompose the 
+many-body reaction-diffusion problem into one- and two-body problems that can 
+be solved analytically using Green’s Functions. To this end, protective 
+domains are put around single particles and pairs of particles, leading to 
+so-called _Singles_ and _Pairs_, respectively. For each domain, a next _event 
+type_ and a next _event time_ is determined. The _event times_ are put in a 
+chronologically ordered _event list_, and the events are then executed in 
+chronological order. When an event is executed, the particles of the 
+corresponding domain are propagated, new domains with new events are 
+determined, and the events are put back in the event list._ 
+
+>>>%media%
+<video class="video"
+poster="/movies/planar-surface_6-particles_100-steps/step.0201.png"
+width="440px" height="260px" controls preload="none" title="Movie 1. GFRD in 2D">
+  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+  <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+  <source src="/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+</video>  
+Movie 1 ([ogv](/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.ogv), 
+[mp4](/movies/planar-surface_6-particles_100-steps/planar-surface_6-particles_100-steps.mp4)). 
+_A movie of eGFRD in action in 2D. The green cylinders are protective 
+domains for single particles, the yellow cylinders are protective domains for 
+pairs of particles. With the color blue the protective domain that will be 
+updated next is highlighted._
+
+>>>%media%
+<img width="440px" src="/images/single.png" title="Fig.2. Single">  
+Fig.2: _A _Single_, a protective domain that contains only a single particle. 
+The possible _event types_ are either a unimolecular reaction or the escape of 
+the single particle from the protective domain._
+
+>>>%media%
+<img width="440px" src="/images/pair.png" title="Fig.3. Pair">  
+Fig.3: _A _Pair_, a protective domain that contains a pair of particles. A 
+coordinate transformation is applied, and one protective domain is defined for 
+the center-of-mass coordinate **R** and one for the inter-particle vector *r*. 
+The sizes of these domains are determined such that when both **R** and **r** 
+would reach their maximum values, _|_**R**_|_^**max** and _|_**r**_|_^**max**, 
+respectively, the two particles would still be within the original protective 
+domain. The dynamics of **R** is a diffusion problem of a random walker in a 
+spherical domain with absorbing boundary conditions. The dynamics of **r** 
+takes into account that the two particles not only diffuse, but can also react 
+with each other; this is the problem of a random walker between two concentric 
+spherical surfaces, with a radiation boundary condition at the inner surface, 
+describing the bimolecular reaction, and an adsorbing boundary condition at 
+the outer surface, describing the escape from the domain. The next event is 
+thus either the escape of **R** from its domain, the escape of **r** from its 
+domain, a bimolecular reaction, or a unimolecular reaction._
+
+
+<div style="width: 700px; margin-top: 50px">
+<img src="/images/performance.png" title="Fig.4. Performance">  
 Fig.4. _CPU time for simulating a system of hard spheres for a fixed amount of 
 real time as a function of the number of particles N for two scenarios: one in 
 which the concentration C is kept constant (solid line), and one in which the 
@@ -168,6 +171,7 @@ concentration C, for N=300 and N=3000 (the volume is thus varied). It is seen
 that above mM concentrations, BD is more efficient than eGFRD. However, in the 
 biologically relevant concentration range of nM to µM eGFRD can be up to 6 
 orders of magnitude more efficient than conventional BD._
+</div>
 
 >%references%
 ### References

@@ -4,8 +4,6 @@ title: eGFRD about
 header: About
 ---
 
-See the [README](http://github.com/gfrd/egfrd/tree/develop/README) file for more information.
-
 ## Developed by
 * Nils Becker
 * Laurens Bossen
@@ -20,4 +18,5 @@ See the [README](http://github.com/gfrd/egfrd/tree/develop/README) file for more
 
 ## Contributors
 * Filipe Tostevin
+
 

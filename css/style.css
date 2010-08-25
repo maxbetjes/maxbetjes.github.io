@@ -1,28 +1,24 @@
 /* Media. */
-img { border: 10px; }
-.left img { float: left; margin: 2px 20px 16px 0; }
-.right img { float: right; margin: 2px 0 16px 20px; }
-img.across { margin: 2px 0 16px 0; }
-img.flushleft { margin-left: -20px; }
-img.flushright { margin-right: -20px; }
+.media {margin-top: 70px; }
+.media:first-child {margin-top: 0px; }
+.img { }
 
-.highlight, .media { margin: 7px 10px 25px; padding: 7px 10px; clear:both }
+.highlight { margin: 7px 10px 18px; padding: 7px 10px; clear:both }
 .highlight { border: 1px solid #DDDDDD; }
-.media p { margin: 0px; }
+
 .right { float:right; } 
 .left { float:left; } 
-.w400 { width:400px; }
-.w800 { width:800px; }
 
 
 /* Layout. */
-body { width: 980px; margin: 0 auto; position: relative; }
+body { width: 960px; margin: 0 auto; position: relative; }
 
 #container { margin: 0px; }
 
 .column { float: left; }
 .grid2col { width: 100%; }
-.grid2col .column { width: 49%; }
+.grid2col .column.first { width: 440px; }
+.grid2col .column.last { width: 440px; }
 .column.first, .column.last { margin-left: 0 !important; }
 .column.last { float: right !important; }
 
@@ -35,7 +31,7 @@ p.last, ul.last, ol.last, li.last { _width: auto !important; _float: none !impor
 
 
 /* Type. */
-body { font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; background-color: #fff; color: #333; }
+body { font: 13px/1.5 "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; background-color: #fff; color: #333; }
 
 strong, b { font-weight: bold; }
 em, i { font-style: italic; }
@@ -45,11 +41,12 @@ p { margin-bottom: 18px; }
 code { font-family: monospace; }
 
 /* Headers. */
-h1 { font-weight: bold; font-size: 24px; line-height: 36px; margin-bottom: 15px; }
-h2 { font-weight: bold; font-size: 16px; line-height: 18px; margin-bottom: 5px; }
-/*h2:first-child { margin: 0px 0px 7px; } */
-h3 { font-weight: bold; font-size: 1em; line-height: 18px; }
-h4 { font-weight: bold; font-size: 10px; line-height: 18px; }
+h1 { font-weight: bold; font-size: 28px; line-height: 0; margin: 40px 0px 40px; }
+h2 { font-weight: bold; font-size: 20px; line-height: 1.5; margin: 40px 0px 0px; }
+h3 { font-weight: bold; font-size: 16px; line-height: 1.5; margin: 20px 0px 0px; }
+h4 { font-weight: bold; font-size: 14px; line-height: 1.5; margin: 10px 0px 0px; }
+/* h2:first-child { margin-top: 0px; } */
+.references {margin-top: 40px; }
 
 
 /* Lists. */
@@ -91,4 +88,9 @@ a:hover { text-decoration: underline; }
 .references a #c17,
 .references a #c18,
 .references a #c19,
-.references a #c20 { color: #08c; text-decoration: none; }
+.references a #c20,
+.references a #c21,
+.references a #c22,
+.references a #c23,
+.references a #c24,
+.references a #c25 { color: #08c; text-decoration: none; }

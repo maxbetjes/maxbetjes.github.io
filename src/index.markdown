@@ -6,8 +6,51 @@ header: Green's Function Reaction Dynamics
 
 ## An event-driven algorithm for simulating reaction-diffusion systems at the particle level
 
->%media right w400%
-<video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="400" height="400" controls preload="none" title="Movie. GFRD in 3D">
+>%grid2col%
+>>%column first%
+
+>>### Idea
+The crux of Green's Function Reaction Dynamics is to decompose the many-body
+reaction-diffusion problem into one- and two-body problems that can be solved
+analytically using Green's Function, and use these functions to set up an
+event-driven algorithm^[[1](#c1)](sid:r1),[[2](#c2)](sid:r2),[[3](#c3)](sid:r3),[[4](#c4)](sid:r4).
+
+>>### Speed
+The Green's functions make it possible to make large jumps in time and space
+when the particles are far apart from each other. Under biologically relevant
+conditions, GFRD can be up to 6 orders of magnitude faster than brute-force
+Brownian Dynamics.
+
+>>### Applications
+The GFRD algorithm is generic and can be applied to a wide variety of
+reaction-diffusion problems, including those in population dynamics,
+evolution, and soft-condensed matter physics. The scheme presented here has
+been specifically designed to simulate biochemical networks. The current
+version allows the efficient simulation of signal transduction pathways and
+gene regulation networks in the cytoplasm, but work is in progress to
+implement reactions at surfaces such as membranes, and reactions at, and
+passive and active transport along, polymers such as microtubules and DNA.
+
+>>### Developers
+GFRD is developed in the groups of Takahashi at the [Riken 
+institute](http://www.riken.jp) in Japan and Ten Wolde at the FOM insitute for 
+[Atomic and Molecular Physics (AMOLF)](http://www.amolf.nl) in The 
+Netherlands.
+
+>>>%references%
+#### References
+[[1](sid:c1)](#r1) [Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. _Phys Rev Lett_, 94: 128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
+[[2](sid:c2)](#r2) [Van Zon JS,  Ten Wolde PR (2005) Green’s Function Reaction Dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123: 234910.](http://dx.doi.org/10.1063/1.2137716)  
+[[3](sid:c3)](#r3) [Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. _Proc.  Natl Acad Sci USA_, 107: 2473 — 2478.](http://dx.doi.org/10.1073/pnas.0906885107)  
+[[4](sid:c4)](#r4) [Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops.  _Phys Rev Lett_, 97:230602.](http://dx.doi.org/10.1103/PhysRevLett.97.230602)  
+
+>>%column last%
+
+>>>%media%
+<a href="/downloads"><img style="width: 320px; margin: 100px 50px 30px;" src="/images/download.png" title="Download"/></a>
+
+>>>%media%
+<video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="440px" height="440px" controls preload="none" title="Movie. GFRD in 3D">
   <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
   <source src="/movies/12-particles_100-steps/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
   <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
@@ -21,41 +64,11 @@ domains for a pair of particles. With the color blue the protective domain
 that will be updated next is highlighted._
 
 
-### Idea
 
-The crux of Green's Function Reaction Dynamics is to decompose the many-body
-reaction-diffusion problem into one- and two-body problems that can be solved
-analytically using Green's Function, and use these functions to set up an
-event-driven algorithm^[[1](#c1)](sid:r1),[[2](#c2)](sid:r2),[[3](#c3)](sid:r3),[[4](#c4)](sid:r4).
+<a href="http://www.amolf.nl"><img style="width: 220px; float: left; margin: 45px 0px 10px;" src="/images/AmolfLogo_rgb.jpg " title="Amolf Logo"></a>
 
-### Speed
-The Green's functions make it possible to make large jumps in time and space
-when the particles are far apart from each other. Under biologically relevant
-conditions, GFRD can be up to 6 orders of magnitude faster than brute-force
-Brownian Dynamics.
+<a href="http://www.gfrd.org"><img style="width: 200px; float: left; margin: 0px 0px 15px 220px;" src="/images/gfrdlogo.png" title="GFRD Logo"></a>
 
-### Applications
+<a href="http://www.riken.jp"><img style="width: 100px; float: right; margin: 27px 0px 10px" src="/images/rikenlogo.jpg" title="Riken Logo"></a>
 
-The GFRD algorithm is generic and can be applied to a wide variety of
-reaction-diffusion problems, including those in population dynamics,
-evolution, and soft-condensed matter physics. The scheme presented here has
-been specifically designed to simulate biochemical networks. The current
-version allows the efficient simulation of signal transduction pathways and
-gene regulation networks in the cytoplasm, but work is in progress to
-implement reactions at surfaces such as membranes, and reactions at, and
-passive and active transport along, polymers such as microtubules and DNA.
-
-### Developers
-
-GFRD is developed in the groups of Takahashi at the [Riken 
-institute](http://www.riken.jp) in Japan and Ten Wolde at the FOM insitute for 
-[Atomic and Molecular Physics (AMOLF)](http://www.amolf.nl) in The 
-Netherlands.
-
->%references%
-#### References
-[[1](sid:c1)](#r1) [Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. _Phys Rev Lett_, 94: 128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
-[[2](sid:c2)](#r2) [Van Zon JS,  Ten Wolde PR (2005) Green’s Function Reaction Dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123: 234910.](http://dx.doi.org/10.1063/1.2137716)  
-[[3](sid:c3)](#r3) [Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. _Proc.  Natl Acad Sci USA_, 107: 2473 — 2478.](http://dx.doi.org/10.1073/pnas.0906885107)  
-[[4](sid:c4)](#r4) [Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops.  _Phys Rev Lett_, 97:230602.](http://dx.doi.org/10.1103/PhysRevLett.97.230602)  
 

@@ -5,14 +5,12 @@ header: Credits
 ---
 
 
-List of open source software used, among others.
-
-### Infrastructure:
+## Infrastructure:
 * [Mercurial](http://mercurial.selenic.com/)
 * [Git](http://git-scm.com/)
 * [Hg-Git](http://hg-git.github.com/)
 
-### Website:
+## Website:
 * [Jekyll](http://wiki.github.com/mojombo/jekyll/): Static html generator.
 * [Markdown](http://daringfireball.net/projects/markdown/syntax): Formatting
 syntax.
@@ -25,7 +23,7 @@ syntax.
 Microsoft Internet Explorer.
 * Menu bar inspired by [Apple.com](http://apple.com).
 
-### Movies:
+## Movies:
 * [ffmpeg](http://www.ffmpeg.org/): A complete, cross-platform solution to
 record, convert and stream audio and video.
 * [ffmpeg2theora](http://v2v.cc/~j/ffmpeg2theora/): A simple converter to
