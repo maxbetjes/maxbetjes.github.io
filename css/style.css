@@ -41,7 +41,7 @@ p { margin-bottom: 18px; }
 code { font-family: monospace; }
 
 /* Headers. */
-h1 { font-weight: bold; font-size: 28px; line-height: 0; margin: 40px 0px 40px; }
+h1 { font-weight: bold; font-size: 28px; line-height: 1.5; margin: 30px 0px 40px; }
 h2 { font-weight: bold; font-size: 20px; line-height: 1.5; margin: 40px 0px 0px; }
 h3 { font-weight: bold; font-size: 16px; line-height: 1.5; margin: 20px 0px 0px; }
 h4 { font-weight: bold; font-size: 14px; line-height: 1.5; margin: 10px 0px 0px; }
