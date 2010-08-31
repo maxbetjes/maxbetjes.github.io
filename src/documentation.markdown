@@ -5,7 +5,7 @@ file: documentation
 header: Documentation
 ---
 
-_More documentation comming soon._
+_More documentation coming soon._
 
 ## Overview
 
