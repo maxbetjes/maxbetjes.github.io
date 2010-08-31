@@ -175,7 +175,7 @@ orders of magnitude more efficient than conventional BD._
 
 >%references%
 ### References
-[[1](sid:c1)](#r1) [van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. _Phys Rev Lett_, 94:128103.](http://dx.doi.org/10.1103/PhysRevLett.94.128103)  
-[[2](sid:c2)](#r2) [van Zon JS, ten Wolde PR (2005) Green’s-function reaction dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123:234910.](http://dx.doi.org/10.1063/1.2137716)  
-[[3](sid:c3)](#r3) [Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. _Phys Rev Lett_, 97:230602.](http://dx.doi.org/10.1103/PhysRevLett.97.230602)  
-[[4](sid:c4)](#r4) [Gibson MA, Bruck J (2000) Efficient exact stochastic simulation of chemical systems with many species and many channels. _J Phys Chem A_, 104: 1876 — 1888.](http://dx.doi.org/10.1021/jp993732q)  
+[[1](sid:c1)](#r1) van Zon JS, tenWolde PR (2005) Simulating biochemical networks at the particle level and in time and space: Green’s function reaction dynamics. _Phys Rev Lett_, 94:128103. ([doi](http://dx.doi.org/10.1103/PhysRevLett.94.128103))  
+[[2](sid:c2)](#r2) van Zon JS, ten Wolde PR (2005) Green’s-function reaction dynamics: A particle-based approach for simulating biochemical networks in time and space. _J Chem Phys_, 123:234910. ([doi](http://dx.doi.org/10.1063/1.2137716), [arXiv](http://arxiv.org/abs/q-bio/0404002))  
+[[3](sid:c3)](#r3) Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. _Phys Rev Lett_, 97:230602. ([doi](http://dx.doi.org/10.1103/PhysRevLett.97.230602), [arXiv](http://arxiv.org/abs/0905.3576))  
+[[4](sid:c4)](#r4) Gibson MA, Bruck J (2000) Efficient exact stochastic simulation of chemical systems with many species and many channels. _J Phys Chem A_, 104: 1876 — 1888. ([doi](http://dx.doi.org/10.1021/jp993732q))  

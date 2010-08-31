@@ -66,31 +66,3 @@ a { color: #08c; }
 a:link, a:visited, a:active { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.references a { color: #000; }
-.references a:hover { color: #08c; }
-.references a #c1,
-.references a #c1,
-.references a #c2,
-.references a #c3,
-.references a #c4,
-.references a #c5,
-.references a #c6,
-.references a #c7,
-.references a #c8,
-.references a #c9,
-.references a #c10,
-.references a #c11,
-.references a #c12,
-.references a #c13,
-.references a #c14,
-.references a #c15,
-.references a #c16,
-.references a #c17,
-.references a #c18,
-.references a #c19,
-.references a #c20,
-.references a #c21,
-.references a #c22,
-.references a #c23,
-.references a #c24,
-.references a #c25 { color: #08c; text-decoration: none; }
