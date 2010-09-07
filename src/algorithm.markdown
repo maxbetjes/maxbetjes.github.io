@@ -65,7 +65,7 @@ problem of two particles that can react with each other and diffuse in a
 spherical domain with absorbing boundary conditions can, to our knowledge, not 
 be solved analytically. We therefore apply a coordinate transformation leading 
 to a diffusion problem for the center-of-mass coordinate **R** and a 
-reaction-diffusion problem for the inter-particle vector r, as sketched in 
+reaction-diffusion problem for the inter-particle vector **r**, as sketched in 
 Fig. 3. The _event types_ that can occur are **R** leaving its domain, **r** 
 leaving its domain, a unimolecular reaction or a bimolecular reaction. For 
 each of these events a tentative _event time_ is determined, and the event 
