@@ -31,7 +31,7 @@ p.last, ul.last, ol.last, li.last { _width: auto !important; _float: none !impor
 
 
 /* Type. */
-body { font: 13px/1.5 "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; background-color: #fff; color: #333; }
+body { font: 13px/1.5 "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif; background-color: #fff; color: #333; }
 
 strong, b { font-weight: bold; }
 em, i { font-style: italic; }
