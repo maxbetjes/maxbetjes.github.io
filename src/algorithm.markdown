@@ -139,8 +139,9 @@ The possible _event types_ are either a unimolecular reaction or the escape of
 the single particle from the protective domain._
 
 >>>%media%
-<img width="440px" src="/images/pair.png" title="Fig.3. Pair">  
-Fig.3: _A _Pair_, a protective domain that contains a pair of particles. A 
+>>><embed width="441px" height="155px" src="/images/pair.svg"
+title="Fig.3. Pair" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>  
+>>>Fig.3: _A _Pair_, a protective domain that contains a pair of particles. A 
 coordinate transformation is applied, and one protective domain is defined for 
 the center-of-mass coordinate **R** and one for the inter-particle vector *r*. 
 The sizes of these domains are determined such that when both **R** and **r** 
