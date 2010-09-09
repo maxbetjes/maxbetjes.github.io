@@ -295,7 +295,7 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-size:29.15267944px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande"
+       style="font-size:29.15267944px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
        x="149.83736"
        y="232.15175"
        id="text2997"
@@ -304,10 +304,10 @@
          id="tspan2999"
          x="149.83736"
          y="232.15175"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande Italic">Pair</tspan></text>
+         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande Italic">Pair</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:29.15267944px;font-style:normal;font-weight:normal;line-height:200%;fill:#000000;fill-opacity:1;stroke:none;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande"
+       style="font-size:29.15267944px;font-style:normal;font-weight:normal;line-height:200%;fill:#000000;fill-opacity:1;stroke:none;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
        x="378.21033"
        y="241.56056"
        id="text2997-4"
@@ -316,21 +316,21 @@
          id="tspan2999-7"
          x="378.21033"
          y="241.56056"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande">Next tentative event:</tspan><tspan
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande">Next tentative event:</tspan><tspan
          sodipodi:role="line"
          x="378.21033"
          y="267.56055"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande"
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
          id="tspan3046">* bimolecular reaction</tspan><tspan
          sodipodi:role="line"
          x="378.21033"
          y="293.56055"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande"
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
          id="tspan3048">* unimolecular reaction</tspan><tspan
          sodipodi:role="line"
          x="378.21033"
          y="319.56055"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande"
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
          id="tspan3050">* <tspan
    style="font-weight:bold"
    id="tspan2878">R</tspan> escape <tspan
@@ -339,7 +339,7 @@
          sodipodi:role="line"
          x="378.21033"
          y="346.37598"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande"
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
          id="tspan3052">* <tspan
    style="font-weight:bold"
    id="tspan2885">r</tspan> escape <tspan
@@ -347,7 +347,7 @@
    id="tspan2883">r</tspan>-protective domain</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande Medium"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande Medium"
        x="214.36768"
        y="258.43921"
        id="text2866"
@@ -356,14 +356,14 @@
          id="tspan2868"
          x="214.36768"
          y="258.43921"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"><tspan
            style="font-size:13px;font-weight:bold"
            id="tspan2880">R</tspan><tspan
            style="font-size:10px"
            id="tspan2886">max</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Lucida Grande;-inkscape-font-specification:Lucida Grande Medium"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family: 'Lucida Grande', Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande Medium"
        x="273.89679"
        y="239.38045"
        id="text2872"
