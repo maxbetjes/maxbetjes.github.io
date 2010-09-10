@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.47pre4 r22446"
-   sodipodi:docname="pair.svg">
+   sodipodi:docname="single.svg">
   <defs
      id="defs4">
     <marker
@@ -193,7 +193,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.6203867"
-     inkscape:cx="155.9949"
+     inkscape:cx="107.2432"
      inkscape:cy="72.597919"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -223,61 +223,15 @@
      id="layer1"
      transform="translate(-146.11718,-215.75326)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.71493196;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 267.25067,286.96595 3.57467,10.72398"
-       id="path3647"
-       sodipodi:nodetypes="cc" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.71493196;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 263.67601,294.11526 10.72397,-3.57465"
-       id="path3649"
-       sodipodi:nodetypes="cc" />
-    <path
        sodipodi:type="arc"
-       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:2.94117641000000019;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:2.94117641;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path3662"
        sodipodi:cx="480"
        sodipodi:cy="452.36218"
        sodipodi:rx="40"
        sodipodi:ry="40"
        d="m 520,452.36218 c 0,22.09139 -17.90861,40 -40,40 -22.09139,0 -40,-17.90861 -40,-40 0,-22.09139 17.90861,-40 40,-40 22.09139,0 40,17.90861 40,40 z"
-       transform="matrix(0.03382976,-0.24071126,0.24071126,0.03382977,153.21462,378.63147)" />
-    <path
-       sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.94117641000000019;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path3664"
-       sodipodi:cx="320"
-       sodipodi:cy="612.36218"
-       sodipodi:rx="40"
-       sodipodi:ry="40"
-       d="m 360,612.36218 c 0,22.09139 -17.90861,40 -40,40 -22.09139,0 -40,-17.90861 -40,-40 0,-22.09139 17.90861,-40 40,-40 22.09139,0 40,17.90861 40,40 z"
-       transform="matrix(0.03382976,-0.24071126,0.24071126,0.03382977,101.50645,364.36139)" />
-    <path
-       sodipodi:type="arc"
-       style="fill:none;stroke:#000000;stroke-width:3.46973799;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path5651"
-       sodipodi:cx="340"
-       sodipodi:cy="512.36218"
-       sodipodi:rx="140"
-       sodipodi:ry="140"
-       d="m 480,512.36218 c 0,77.31987 -62.68014,140 -140,140 -77.31986,0 -140,-62.68013 -140,-140 0,-77.31986 62.68014,-140 140,-140 77.31986,0 140,62.68014 140,140 z"
-       transform="matrix(0.2882062,0,0,0.2882062,171.04789,144.66198)" />
-    <path
-       sodipodi:type="arc"
-       style="fill:none;stroke:#000000;stroke-width:2.79746924;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path5653"
-       sodipodi:cx="460"
-       sodipodi:cy="442.36218"
-       sodipodi:rx="84.315727"
-       sodipodi:ry="84.315727"
-       d="m 544.31573,442.36218 c 0,46.56629 -37.74944,84.31573 -84.31573,84.31573 -46.56629,0 -84.31573,-37.74944 -84.31573,-84.31573 0,-46.56629 37.74944,-84.31572 84.31573,-84.31572 46.56629,0 84.31573,37.74943 84.31573,84.31572 z"
-       transform="matrix(0.35746595,0,0,0.35746595,139.29644,113.47278)" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.71493196;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutL)"
-       d="m 304.18591,272.22129 20.92568,-15.49378"
-       id="path6439"
-       inkscape:transform-center-x="0.33585008"
-       sodipodi:nodetypes="cc" />
+       transform="matrix(0.03382976,-0.24071126,0.24071126,0.03382977,144.09957,392.37564)" />
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#000000;stroke-width:2.79746924;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -288,11 +242,6 @@
        sodipodi:ry="199.18222"
        d="m 539.18222,512.36218 c 0,110.00531 -89.17692,199.18222 -199.18222,199.18222 -110.0053,0 -199.18222,-89.17691 -199.18222,-199.18222 0,-110.0053 89.17692,-199.18222 199.18222,-199.18222 110.0053,0 199.18222,89.17692 199.18222,199.18222 z"
        transform="matrix(0.35746595,0,0,0.35746595,147.49957,109.1759)" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.71493196;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#TriangleOutL)"
-       d="M 269.038,292.32794 243.88113,265.779"
-       id="path8657"
-       sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:29.15267944px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
@@ -304,7 +253,7 @@
          id="tspan2999"
          x="149.83736"
          y="232.15175"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ff0000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande Italic">Pair</tspan></text>
+         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ff0000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande Italic">Single</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:29.15267944px;font-style:normal;font-weight:normal;line-height:200%;fill:#000000;fill-opacity:1;stroke:none; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
@@ -312,70 +261,21 @@
        y="241.56056"
        id="text2997-4"
        sodipodi:linespacing="200%"><tspan
-         sodipodi:role="line"
-         id="tspan2999-7"
-         x="378.21033"
-         y="241.56056"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande">Next tentative event:</tspan><tspan
-         sodipodi:role="line"
-         x="378.21033"
-         y="267.56055"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
-         id="tspan3046">* bimolecular reaction</tspan><tspan
-         sodipodi:role="line"
-         x="378.21033"
-         y="293.56055"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
-         id="tspan3048">* unimolecular reaction</tspan><tspan
-         sodipodi:role="line"
-         x="378.21033"
-         y="319.56055"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
-         id="tspan3050">* <tspan
-   style="font-weight:bold"
-   id="tspan2878">R</tspan> escape <tspan
-   style="font-weight:bold"
-   id="tspan2881">R</tspan>-protective domain</tspan><tspan
-         sodipodi:role="line"
-         x="378.21033"
-         y="346.37598"
-         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
-         id="tspan3052">* <tspan
-   style="font-weight:bold"
-   id="tspan2885">r</tspan> escape <tspan
-   style="font-weight:bold"
-   id="tspan2883">r</tspan>-protective domain</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande Medium"
-       x="214.36768"
-       y="258.43921"
-       id="text2866"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan2868"
-         x="214.36768"
-         y="258.43921"
-         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ff0000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"><tspan
-           style="font-size:13px;font-weight:bold"
-           id="tspan2880">R</tspan><tspan
-           style="font-size:10px"
-           id="tspan2886">max</tspan></tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:129.99999523%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande Medium"
-       x="273.89679"
-       y="239.38045"
-       id="text2872"
-       sodipodi:linespacing="130%"><tspan
-         sodipodi:role="line"
-         id="tspan2874"
-         x="273.89679"
-         y="239.38045"
-         style="font-weight:normal;fill:#ff0000"><tspan
-           style="font-size:13px;font-weight:bold"
-           id="tspan2882">r</tspan><tspan
-           style="font-size:10px;font-weight:normal;fill:#ff0000"
-           id="tspan2876">max</tspan></tspan></text>
+   sodipodi:role="line"
+   id="tspan2999-7"
+   x="378.21033"
+   y="241.56056"
+   style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande">Next tentative event:</tspan><tspan
+   sodipodi:role="line"
+   x="378.21033"
+   y="267.56055"
+   style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
+   id="tspan3046">* unimolecular reaction</tspan><tspan
+   sodipodi:role="line"
+   x="378.21033"
+   y="293.56055"
+   style="font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:200%;writing-mode:lr-tb;text-anchor:start;fill:#000000; font-family:Lucida Grande, Verdana, Arial, sans-serif;-inkscape-font-specification:Lucida Grande"
+   id="tspan3048">* escape protective domain</tspan>
+    </text>
   </g>
 </svg>

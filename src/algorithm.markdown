@@ -104,7 +104,8 @@ more efficient than BD.
 
 >>%column last%
 >>>%media%
-<img width="440px" src="/images/gfrd.png" title="Fig.1. GFRD">  
+>>><embed width="441px" height="281px" src="/images/gfrd.svg"
+title="Fig.1. GFRD" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>  
 Fig.1: _Overview of GFRD. The principal idea of GFRD is to decompose the 
 many-body reaction-diffusion problem into one- and two-body problems that can 
 be solved analytically using Green’s Functions. To this end, protective 
@@ -133,7 +134,8 @@ pairs of particles. With the color blue the protective domain that will be
 updated next is highlighted._
 
 >>>%media%
-<img width="440px" src="/images/single.png" title="Fig.2. Single">  
+>>><embed width="441px" height="155px" src="/images/single.svg"
+title="Fig.2. Single" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"/>  
 Fig.2: _A _Single_, a protective domain that contains only a single particle. 
 The possible _event types_ are either a unimolecular reaction or the escape of 
 the single particle from the protective domain._
@@ -158,7 +160,6 @@ thus either the escape of **R** from its domain, the escape of **r** from its
 domain, a bimolecular reaction, or a unimolecular reaction._
 
 
-<div style="width: 700px; margin-top: 50px">
 <img src="/images/performance.png" title="Fig.4. Performance">  
 Fig.4. _CPU time for simulating a system of hard spheres for a fixed amount of 
 real time as a function of the number of particles N for two scenarios: one in 
@@ -172,7 +173,6 @@ concentration C, for N=300 and N=3000 (the volume is thus varied). It is seen
 that above mM concentrations, BD is more efficient than eGFRD. However, in the 
 biologically relevant concentration range of nM to µM eGFRD can be up to 6 
 orders of magnitude more efficient than conventional BD._
-</div>
 
 >%references%
 ### References

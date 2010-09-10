@@ -32,3 +32,10 @@ Making the movies:
 Font of menu entries, png made using the Gimp: Nimbus Sans L, size 13, hinting, anti-aliasing, force auto-hinter.
 
 Font in svg's: [Lucida Grande](http://ifido.deviantart.com/art/Mac-OS-X-Tiger-Visual-Style-12670629).
+
+Exporting an image from OpenOffice.
+- export a complete slide. Select the image that is on the slide, but don't 
+  use 'Selection' under 'File type' in the export dialog.
+- or, copy the image to an OpenOffice drawing. Rescale the drawing together 
+  with the image, and again export the whole drawing. If you export just the 
+  selection, things get blurry.
