@@ -19,8 +19,7 @@ You can download the latest release of the code as a
 Binary packages for Fedora and Ubuntu will be added shortly.
 
 ## Browse
-You can browse the code using a web interface to the [Git
-repository](http://github.com/gfrd/egfrd).
+eGFRD is implemented in C++ and Python. You can browse the code using a web interface to the [Git repository](http://github.com/gfrd/egfrd).
 
 ## Clone
 To check out the development version of the code, make sure you have
