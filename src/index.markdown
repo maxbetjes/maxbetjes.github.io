@@ -47,21 +47,18 @@ Netherlands.
 >>%column last%
 
 >>>%media%
-<a href="/downloads"><img style="width: 320px; margin: 100px 50px 30px;" src="/images/download.png" title="Download"/></a>
+<a href="/downloads"><img style="width: 320px; margin: 100px 50px 0px;" src="/images/download.png" title="Download"/></a>
 
 >>>%media%
-<video class="video" poster="/movies/12-particles_100-steps/step.0201.png" width="440px" height="440px" controls preload="none" title="Movie. GFRD in 3D">
-  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-  <source src="/movies/12-particles_100-steps/12-particles_100-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-  <source src="http://uploadsrv.amolf.nl/uploads/uyr76h4q78miedema137a/12-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
-  <source src="/movies/12-particles_100-steps/12-particles_100-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+<video class="video" width="440px" height="480px" controls preload="none" title="Movie. GFRD in 3D">
+  <source src="/movies/12-particles_200-steps/12-particles_200-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+  <source src="/movies/12-particles_200-steps/12-particles_200-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>  
-Movie ([ogv](/movies/12-particles_100-steps/12-particles_100-steps.ogv), 
-[mp4](/movies/12-particles_100-steps/12-particles_100-steps.mp4)). _A movie of 
-eGFRD in action in 3D. The green spheres are protective domains for single 
-particles, the yellow sphere seen towards the end of the movie is a protective 
-domains for a pair of particles. With the color blue the protective domain 
-that will be updated next is highlighted._
+Movie ([ogv](/movies/12-particles_200-steps/12-particles_200-steps.ogv), 
+[mp4](/movies/12-particles_200-steps/12-particles_200-steps.mp4)). _A movie of 
+eGFRD in action in 3D. The large spheres are protective domains for single
+particles (light blue) or pairs of particles (dark blue). With the color red
+the protective domain that will be updated next is highlighted._
 
 
 <div style="position:relative; height: 160px;">
