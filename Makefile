@@ -5,8 +5,8 @@ HERE=$(PWD)
 all: website
 
 
-.PHONY: pull
-pull:
+.PHONY: update
+update:
 	git co master
 	git pull
 	# Preferably work on a local dev branch
@@ -37,8 +37,8 @@ website:
 # git commit -a -m 'Update website'
 # Don't forget to add newly created files to the commit too.
 
-.PHONY: push
-push:
+.PHONY: deploy
+deploy:
 	git co master
 	git merge --ff-only dev 
 	# This updates gfrd.org, because of the file CNAME.
