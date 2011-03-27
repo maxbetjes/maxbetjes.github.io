@@ -1,5 +1,5 @@
 
-### How to update gfrd.org
+## How to update gfrd.org
 We use [Jekyll](http://github.com/thomie/jekyll/) to separate layout from content. The source is written with [Markdown syntax](http://daringfireball.net/projects/markdown/basics), and Jekyll uses [Rdiscount](http://github.com/thomie/rdiscount/) to transform the source to html.
 
 First install Jekyll and Rdiscount as explained below. Then take a look at the Makefile for generating the website.
@@ -7,14 +7,14 @@ First install Jekyll and Rdiscount as explained below. Then take a look at the M
 The gfrd.org website is hosted using [Github pages](http://pages.github.com/) with custom domains. Note that Github will also transform any markdown file to html using it's own version of Jekyll. We only use this feature for support.html. This is the reason we keep the sources file separately in the src directory, instead of in the root directory, and copy the html files to the root directory after generation.
 
 
-## Website source:
+### Website source:
 
     git clone git@github.com:gfrd/gfrd.github.com.git
     # Preferably work on a local dev branch
     git co -b dev
 
 
-## Jekyll
+### Jekyll
 First intall Ruby and rake:
 
     sudo apt-get install ruby1.8-dev
@@ -42,7 +42,7 @@ Jekyll specific files and folders in website source:
 * \_site
 
 
-## Rdiscount
+### Rdiscount
 Jekyll depends on rdiscount to transform markdown files into html. We use a patched version for some extra features.
 
     git clone git://github.com/thomie/rdiscount.git
@@ -59,7 +59,7 @@ Patches:
 
 
 
-### Testing
+## Testing
 Two options:
 
 1) /about/ redirects to /about/index.hml (more robust)
@@ -80,20 +80,20 @@ Two options:
   without --permalinks pretty.
 
 
-## Test using jekyll
+### Test using jekyll
 
     $ jekyll --server
     http://0.0.0.0:4000/ 
 
 
-## Test using Apache
+### Test using Apache
 
     $ apachectl restart
     http://localhost:8000/
 
 
 
-### Movies
+## Movies
 Numbering the image files:
 
     $ x=1; for i in *png; do counter=$(printf %03d $x); ln "$i" /tmp/img"$counter".png; x=$(($x+1)); done
@@ -105,7 +105,7 @@ Making the movies:
 
 
 
-### Images
+## Images
 
 Exporting an image from OpenOffice.
 
@@ -119,3 +119,8 @@ Exporting an image from OpenOffice.
 Font of menu entries, png made using the Gimp: Nimbus Sans L, size 13, hinting, anti-aliasing, force auto-hinter.
 
 Font in svg's: [Lucida Grande](http://ifido.deviantart.com/art/Mac-OS-X-Tiger-Visual-Style-12670629).
+
+
+
+### Other
+Other libraries used, see [/credits](/credits).
