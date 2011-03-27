@@ -1,6 +1,13 @@
 destination: ./_site
-#auto: true
+# Autogenerate site when files have changed during development?
+auto: false
+# Enable syntax highlighting of Python source files
 pygments: true
+# Use rdiscount instead of Maruku because Maruku was giving problems
 markdown: rdiscount 
+
 rdiscount:
+  # Enable SmartyPants processing.
+  # Only works if using Jekyll with patch from robey:
+  # "add rdiscount config, starting with "smart", which i use. :)"
   smart: true
