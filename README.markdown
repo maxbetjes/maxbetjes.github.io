@@ -16,9 +16,10 @@ The gfrd.org website is hosted using [Github pages](http://pages.github.com/) wi
 
 ## Jekyll
 First intall Ruby and rake:
-sudo apt-get install ruby1.8-dev
-echo 'export PATH=$HOME/.gem/ruby/1.8/bin:$PATH' >> .bashrc
-gem install rake
+
+    sudo apt-get install ruby1.8-dev
+    echo 'export PATH=$HOME/.gem/ruby/1.8/bin:$PATH' >> .bashrc
+    gem install rake
 
 We use a patched version of Jekyll.
 
@@ -34,19 +35,20 @@ Patches:
 This enables SmartyPants processing. Also see [Discount](http://www.pell.portland.or.us/~orc/Code/discount/).
 
 Jekyll specific files and folders in website source:
-\_config.yml
-\_includes
-\_layouts
-\_site
+
+* \_config.yml
+* \_includes
+* \_layouts
+* \_site
 
 
 ## Rdiscount
 Jekyll depends on rdiscount to transform markdown files into html. We use a patched version for some extra features.
 
-git clone git://github.com/thomie/rdiscount.git
-cd rdiscount
-rake install
-# Note: don't use 'gem install rdiscount', it would  miss the patches.
+    git clone git://github.com/thomie/rdiscount.git
+    cd rdiscount
+    rake install
+    # Note: don't use 'gem install rdiscount', it would  miss the patches.
 
 Patches:
 
@@ -105,7 +107,7 @@ Making the movies:
 
 ### Images
 
-* Exporting an image from OpenOffice.
+Exporting an image from OpenOffice.
 
 - export a complete slide. Select the image that is on the slide, but don't 
   use 'Selection' under 'File type' in the export dialog.
@@ -114,6 +116,6 @@ Making the movies:
   with the image, and again export the whole drawing. If you export just the 
   selection, things get blurry.
 
-* Font of menu entries, png made using the Gimp: Nimbus Sans L, size 13, hinting, anti-aliasing, force auto-hinter.
+Font of menu entries, png made using the Gimp: Nimbus Sans L, size 13, hinting, anti-aliasing, force auto-hinter.
 
-* Font in svg's: [Lucida Grande](http://ifido.deviantart.com/art/Mac-OS-X-Tiger-Visual-Style-12670629).
+Font in svg's: [Lucida Grande](http://ifido.deviantart.com/art/Mac-OS-X-Tiger-Visual-Style-12670629).

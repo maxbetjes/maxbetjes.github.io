@@ -41,7 +41,8 @@ website:
 push:
 	git co master
 	git merge --ff-only dev 
-	# This updates gfrd.org, because of the file CNAME (!)
+	# This updates gfrd.org, because of the file CNAME.
+	# Ask Carl if you want to host the website somewhere else than Github.
 	git push origin master
 	git co dev
 
