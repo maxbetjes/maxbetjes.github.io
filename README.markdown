@@ -7,7 +7,7 @@ First install Jekyll and Rdiscount as explained below. Then take a look at the M
 The gfrd.org website is hosted using [Github pages](http://pages.github.com/)
 with custom domains. Note that Github will also transform any markdown file to
 html using it's own version of Jekyll. We only use this feature for
-support.html and README.html. This is the reason we keep the sources file separately in the src directory, instead of in the root directory, and copy the html files to the root directory after generation.
+support.html and README.html. This is the reason we keep the source files separately in the src directory, instead of in the root directory, and copy the html files to the root directory after generation.
 
 
 ### Website source:
@@ -18,7 +18,7 @@ support.html and README.html. This is the reason we keep the sources file separa
 
 
 ### Jekyll
-First intall Ruby and rake:
+First install Ruby and Rake:
 
     sudo apt-get install ruby1.8-dev
     echo 'export PATH=$HOME/.gem/ruby/1.8/bin:$PATH' >> .bashrc
@@ -65,14 +65,14 @@ Patches:
 ## Testing
 Two options:
 
-1) /about/ redirects to /about/index.hml (more robust)
+1. /about/ redirects to /about/index.hml (more robust)
 
     $ jekyll --permalink pretty
 
 * Test using Jekyll or Apache server
 * See http://github.com/henrik/jekyll
 
-2) /about redirects to /about.hml (a bit nicer)
+2. /about redirects to /about.hml (a bit nicer)
 
     $ jekyll
 
