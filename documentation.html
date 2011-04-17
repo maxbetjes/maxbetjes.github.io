@@ -53,18 +53,18 @@
 <div class="highlight"><pre><code class="python"><span class="c"># sample.py</span>
 <span class="kn">from</span> <span class="nn">egfrd</span> <span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">s</span> <span class="o">=</span> <span class="n">EGFRDSimulator</span><span class="p">(</span><span class="n">worldSize</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">EGFRDSimulator</span><span class="p">(</span><span class="n">worldSize</span><span class="o">=</span><span class="mi">1e-6</span><span class="p">)</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="n">Species</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="n">D</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">2.5e-8</span><span class="p">)</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">Species</span><span class="p">(</span><span class="s">&#39;B&#39;</span><span class="p">,</span> <span class="n">D</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">2.5e-8</span><span class="p">)</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">Species</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span> <span class="n">D</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">2.5e-8</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">Species</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="n">D</span><span class="o">=</span><span class="mi">1e-12</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mi">2.5e-8</span><span class="p">)</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">Species</span><span class="p">(</span><span class="s">&#39;B&#39;</span><span class="p">,</span> <span class="n">D</span><span class="o">=</span><span class="mi">1e-12</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mi">2.5e-8</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">Species</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span> <span class="n">D</span><span class="o">=</span><span class="mi">1e-12</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mi">2.5e-8</span><span class="p">)</span>
 
-<span class="n">s</span><span class="o">.</span><span class="n">addReaction</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">],</span> <span class="p">[</span><span class="n">C</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mf">1e-18</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">addReaction</span><span class="p">([</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">],</span> <span class="p">[</span><span class="n">C</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">1e-18</span><span class="p">)</span>
 
-<span class="n">s</span><span class="o">.</span><span class="n">throwInParticles</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mf">100</span><span class="p">)</span>
-<span class="n">s</span><span class="o">.</span><span class="n">throwInParticles</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mf">100</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">throwInParticles</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">throwInParticles</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
-<span class="k">while</span> <span class="n">s</span><span class="o">.</span><span class="n">t</span> <span class="o">&lt;</span> <span class="mf">100</span><span class="p">:</span>
+<span class="k">while</span> <span class="n">s</span><span class="o">.</span><span class="n">t</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
     <span class="n">s</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
 </code></pre>
 </div>

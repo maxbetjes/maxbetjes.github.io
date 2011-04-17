@@ -32,6 +32,12 @@ website:
 	# version of Jekyll. We only use this feature for support.html, so the 
 	# root directory should be free of any other markdown files.
 	rm support.html
+	
+	# Older versions of Pygments treat 100 as a float (mf), newer versions 
+	# as an integer (mi). Since there is no difference in css/syntax.css,
+	# replace all mf by mi such that Pygments version has no effect on 
+	# html.
+	sed -i 's/class="mf"/class="mi"/g' *.html
 
 # Check if everything looks ok locally. Then:
 # git commit -a -m 'Update website'
