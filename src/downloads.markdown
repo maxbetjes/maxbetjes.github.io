@@ -7,7 +7,7 @@ header: Downloads
 
 >%media right%
 ><a href="http://github.com/gfrd/egfrd/zipball/master"><img src="/images/downloadbutton.png" text="download"></a>
-><a href="http://github.com/gfrd/egfrd/zipball/master">Version 0.1</a>
+><a href="http://github.com/gfrd/egfrd/zipball/master">Version 0.2</a>
 
 
 ## Download
