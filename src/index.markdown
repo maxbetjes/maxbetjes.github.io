@@ -25,11 +25,11 @@ Brownian Dynamics.
 The GFRD algorithm is generic and can be applied to a wide variety of
 reaction-diffusion problems, including those in population dynamics,
 evolution, and soft-condensed matter physics. The scheme presented here has
-been specifically designed to simulate biochemical networks. The current
+been specifically designed to simulate biochemical networks. The original
 version allows the efficient simulation of signal transduction pathways and
-gene regulation networks in the cytoplasm, but work is in progress to
-implement reactions at surfaces such as membranes, and reactions at, and
-passive and active transport along, polymers such as microtubules and DNA.
+gene regulation networks in the cytoplasm. Recently we have also implemented
+reactions at surfaces including membranes, and reactions at, and passive and
+active transport along, polymers such as microtubules and DNA.
 
 >>### Developers
 GFRD is developed in the groups of Takahashi at the [Riken 
@@ -55,11 +55,13 @@ Netherlands.
   <source src="/movies/12-particles_200-steps/12-particles_200-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>  
 Movie ([ogv](/movies/12-particles_200-steps/12-particles_200-steps.ogv), 
-[mp4](/movies/12-particles_200-steps/12-particles_200-steps.mp4)). _A movie of 
-eGFRD in action in 3D. The large spheres are protective domains for single
-particles (light blue) or pairs of particles (dark blue). With the color red
-the protective domain that will be updated next is highlighted._
-
+[mp4](/movies/12-particles_200-steps/12-particles_200-steps.mp4)). _A movie of
+eGFRD in action in 3D. The large spheres and cylinders are protective domains with one or two
+particles inside. The plane at the bottom represents a membrane to which particles can bind.
+The spherical protective domains model the diffusion and reaction between particles in 3D. The flat
+cylindrical protective domains are used to calculate the diffusion and reaction of particles in the membrane,
+whereas the bigger cylindrical protective domains are used to model the association of a 3D particle with
+the membrane. Note that the color red is used to denote the protective domain that will be updated next._
 
 <div style="position:relative; height: 160px;">
   <a href="http://www.amolf.nl"><img style="position: absolute; bottom: -20px;" width="220px" src="/images/AmolfLogo_rgb.jpg" title="Amolf Logo"></a>
