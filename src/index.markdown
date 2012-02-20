@@ -50,13 +50,13 @@ Netherlands.
 <a href="/downloads"><img style="width: 320px; margin: 100px 50px 0px;" src="/images/download.png" title="Download"/></a>
 
 >>>%media%
-<video class="video" width="440px" height="480px" controls preload="none" title="Movie. GFRD in 3D">
-  <source src="/movies/12-particles_200-steps/12-particles_200-steps.ogv" type='video/ogg; codecs="theora, vorbis"'/>
-  <source src="/movies/12-particles_200-steps/12-particles_200-steps.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+<video class="video" width="440px" height="480px" controls preload="none" title="Movie. A membrane-binding simulation using eGFRD">
+  <source src="/movies/membrane_binding/movie_440.ogv" type='video/ogg; codecs="theora, vorbis"'/>
+  <source src="/movies/membrane_binding/movie_440.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
 </video>  
 Movie ([ogv](/movies/12-particles_200-steps/12-particles_200-steps.ogv), 
 [mp4](/movies/12-particles_200-steps/12-particles_200-steps.mp4)). _A movie of
-eGFRD in action in 3D. The large spheres and cylinders are protective domains with one or two
+eGFRD in action. The large spheres and cylinders are protective domains with one or two
 particles inside. The plane at the bottom represents a membrane to which particles can bind.
 The spherical protective domains model the diffusion and reaction between particles in 3D. The flat
 cylindrical protective domains are used to calculate the diffusion and reaction of particles in the membrane,

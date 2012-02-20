@@ -10,5 +10,5 @@ header: Support
 Bugs can be reported in the eGFRD [issue tracker](http://github.com/gfrd/egfrd/issues) on Github.
 
 ## Email
-If you have any questions about eGFRD please contact Thomas Miedema: <miedema@amolf.nl>.
+If you have any questions about eGFRD please contact the eGFRD team: <gfrd@amolf.nl>.
 
