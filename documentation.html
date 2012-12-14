@@ -52,8 +52,9 @@
 
 <div class="highlight"><pre><code class="python">
 <span class="c"># eGFRD sample script</span>
-<span class="c"># This shows how to implement a simple reaction A+B -> C in a cubic world with periodic boundary conditions.</span>
-<span class="c"># Lengths are measured in [m], times in [s], i.e. rates in [1/s]</span>
+<span class="c"># This shows how to implement a simple reaction A+B -> C</span>
+<span class="c"># in a cubic world with periodic boundary conditions.</span>
+<span class="c"># Lengths are measured in [m], times in [s], i.e. rates in [1/s].</span>
 <span class="kn">from</span> <span class="nn">egfrd</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="kn">gfrdbase</span>
 <span class="kn">import</span> <span class="kn">model</span>
@@ -69,6 +70,7 @@
 <span class="n">m.network_rules.add_reaction_rule</span><span class="p">(</span><span class="n">R</span><span class="p"><span class="p">)</span>
 
 <span class="c"># Create a simulation world and assign the reactions model</span>
+<span class="c"># Note: matrix_size defines the number of cells per dimension of the neighborhood matrix</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">gfrdbase.create_world</span><span class="p">(</span><span class="mi">m</span><span class="p">,</span> <span class="n">matrix_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
 <span class="c"># Create an eGFRD simulator and assign a random number generator</span>
