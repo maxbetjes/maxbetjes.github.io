@@ -6,7 +6,7 @@ layout: default
 The crux of enhanced Green’s Function Reaction Dynamics (eGFRD) is to decompose the many-body reaction-diffusion problem into one- and two-body differential equations. These equations can be solved analytically using Green’s Function, and used to set up an event-driven algorithm \[[1,2,3,4](#references)\].
 <p align="center">
     <a href="includes\movies\movie.mp4">
-        <img src="includes\images\movie.jpg" alt="eGFRD in action"/>
+        <img src="includes\images\movie_arrow.jpg" alt="eGFRD in action" width="500"/>
     </a><br>
     <b>eGFRD in action</b>
 </p>
