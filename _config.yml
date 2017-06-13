@@ -1,13 +1,22 @@
-destination: ./_site
-# Autogenerate site when files have changed during development?
-auto: false
-# Enable syntax highlighting of Python source files
-pygments: true
-# Use rdiscount instead of Maruku because Maruku was giving problems
-markdown: rdiscount 
+theme: jekyll-theme-cayman
+exclude: ["README.md"]
 
-rdiscount:
-  # Enable SmartyPants processing.
-  # Only works if using Jekyll with patch from robey:
-  # "add rdiscount config, starting with "smart", which i use. :)"
-  smart: true
+title: enhanced Green's Function Reaction Dynamics
+description: An event-driven algorithm for simulating reaction-diffusion systems at the particle level
+
+gfrd_title: "eGFRD"
+gfrd_website: "egfrd.org"
+
+company_name: "AMOLF"
+company_website: "https://www.amolf.nl"
+group_website: "https://www.amolf.nl/research/biochemical-networks/"
+
+riken_website: "http://www.riken.jp"
+
+github_repository: "https://github.com/gfrd/modern_egfrd.git"
+github_download_zip: "http://github.com/gfrd/modern_egfrd/zipball/master"
+github_download_tar: "http://github.com/gfrd/modern_egfrd/tarball/master"
+github_install_instructions: "https://github.com/gfrd/modern_egfrd/blob/master/INSTALL.md"
+github_issue_tracker: "https://github.com/gfrd/modern_egfrd/issues"
+
+visualstudio_website: "https://www.visualstudio.com"
