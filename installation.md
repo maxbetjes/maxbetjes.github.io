@@ -26,7 +26,7 @@ The result of the simulation will be stored in the file `data.out` and shows the
 ```
 
 ## Power Spectrum
-The A, B and C reaction-diffusion system can also be used to obtain the power spectrum. Use the following command to setup the simulator with the same parameters as given by the paper of Kaizu et. al. \[[2](#references)\]:
+The A, B and C reaction-diffusion system can also be used to obtain the power spectrum. Use the following command to setup the simulator with the same parameters as given by the paper of Kaizu et. al. \[[1](#references)\]:
 ```
 ./RunGfrd PowerSpectrum -e 600 > data.out
 ```
@@ -37,7 +37,7 @@ Fig.1: Results of the power spectrum simulation, which agree well with the theor
 </div>
 
 ## MAPK
-Mitogen-activated protein kinase (MAPK) is a well known example of a enzyme kinase that that modifies proteins, by adding phosphate groups. This experimentally known system can be simulated using eGFRD \[[3](#references)\]. With the modern eGFRD package the MAPK simulation can be easily setup using:
+Mitogen-activated protein kinase (MAPK) is a well known example of a enzyme kinase that that modifies proteins, by adding phosphate groups. This experimentally known system can be simulated using eGFRD \[[2](#references)\]. With the modern eGFRD package the MAPK simulation can be easily setup using:
 ```
 ./RunGfrd MapK > data.out
 ```
