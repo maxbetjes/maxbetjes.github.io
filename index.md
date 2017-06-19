@@ -15,7 +15,7 @@ The crux of enhanced Green’s Function Reaction Dynamics (eGFRD) is to decompos
 The eGFRD algorithm is generic and can be applied to a wide variety of reaction-diffusion problems, including those in population dynamics, evolution, and soft-condensed matter physics. The scheme presented here has been specifically designed to simulate biochemical networks. The original version allows the efficient simulation of signal transduction pathways and gene regulation networks in the cytoplasm. Recently we have implementation a modern C++ version of eGFRD, resulting in a novel and very fast simulator.
 
 ## Developers
-The eGFRD algorithm was initially constructed by the group of Takahashi at the [Riken institute]({{site.riken_website}}) in Japan and Ten Wolde at [AMOLF]({{site.company_website}}) in The Netherlands.
+The eGFRD algorithm was initially constructed by the group of Takahashi at the [Riken institute]({{site.riken_website}}) in Japan and the group of Ten Wolde at [AMOLF]({{site.company_website}}) in The Netherlands.
 
 # References
 1. Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. Phys Rev Lett, 94: 128103. ([doi](https://dx.doi.org/10.1103/PhysRevLett.94.128103))
