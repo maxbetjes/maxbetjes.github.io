@@ -21,7 +21,7 @@ where NA, NB and NC are the number of A, B, and C respectively in the volume V =
 ./RunGfrd Equilibrium -ka 1e-19 -kd 2e-2 -p 100 -e 200 > data.out
 ```
 
-The first command line argument sets the simulation type. The value “Equilibrium” represents the particle simulation of the described association-dissociation reaction. The values of the association rate k<sub>a</sub> and dissociation rate k<sub>d</sub> are set as command line argument. The parameter `-p` sets the equilibration time during which the system is allowed to relax to equilibrium, while `–e` sets the run time during which the statistics is accumulated, both in seconds. All parameter settings can be viewed by running:
+The first command line argument sets the simulation type. The value “Equilibrium” represents the particle simulation of the described association-dissociation reaction. The values of the association rate k<sub>a</sub> and dissociation rate k<sub>d</sub> are also set as command line argument. The parameter `-p` sets the equilibration time during which the system is allowed to relax to equilibrium, while `–e` sets the run time during which the statistics is accumulated, both in seconds. All parameter settings can be viewed by running:
 ```
 ./RunGfrd Equilibrium --help
 ```
