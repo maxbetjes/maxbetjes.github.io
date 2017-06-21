@@ -3,28 +3,32 @@ title: installation
 layout: default
 ---
 
+The modern C++ implementation of the eGFRD has been published as an open source package on GitHub. Please follow the [installation instructions]({{site.github_install_instructions}}) on the repository to setup the simulator. Problems can be reported via the eGFRD [issue tracker]({{site.github_issue_tracker}}).
+
 The modern C++ implementation of the eGFRD has been published as open source package on GitHub. Please follow the [installation instructions]({{site.github_install_instructions}}) on the repository to setup the simulator. Problems can be reported on the eGFRD [issue tracker]({{site.github_issue_tracker}}).
 
 # Examples
-To help get you get started, we’ve assembled some sample simulations. These describe biomolecular systems, which has also been used as sanity check, to verify whether the modern eGFRD implementation works correctly.
+To help you getting started, we have assembled some simple models. These can be used to verify the implementation of the code and to build more complex models.
 
 ## Equilibrium
-Consider a set of particles A, B and C with the following reaction: A + B ⇾ C with binding coefficient k<sub>a</sub> [m<sup>3</sup>/s] and C ⇾ A + B with the unbinding coefficient k<sub>d</sub> [s<sup>-1</sup>]. When the particles are constraint to a closed system, a box with length L [m] and periodic boundary conditions, the reaction must equilibrate towards a steady state. For this system we can calculate the number of C particles analytically.
+Consider a set of particles A, B and C with the following reaction: A + B ⇾ C with binding rate constant k<sub>a</sub> [m<sup>3</sup>/s] and C ⇾ A + B and unbinding rate k<sub>d</sub> [s<sup>-1</sup>]. In a box with length L [m] and periodic boundary conditions, the reaction will relax towards equilibrium. For this system, we can calculate the number of C particles analytically.
 ```
 <#C> = (NA + NB) + KD*V*sqrt[(NA + NB + KD*V)^2 - 4*NA*NB]/2
 ```
 
-where NA, NB and NC are the number of A, B, and C respectively in the closed volume V = L<sup>3</sup>, and KD = k<sub>d</sub>/k<sub>a</sub> the dissociation constant. Therefore, setting up this simulation with the eGFRD algorithm must yield similar result for various k<sub>d</sub> and k<sub>a</sub>, when the ratio KD remains equal. To run an eGFRD equilibrium simulation, enter the following command in the Unix shell after installing the package:
+where NA, NB and NC are the number of A, B, and C respectively in the volume V = L<sup>3</sup>, and KD = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. The number of C particles thus depends on the dissociation constant, that is the ratio of the association and dissociation rate, and not on the absolute values of the rate constants. This can be used to test the code. To run an eGFRD simulation of this reaction, enter the following command in the Unix shell after installing the package:
 ```
 ./RunGfrd Equilibrium -ka 1e-19 -kd 2e-2 -p 100 -e 200 > data.out
 ```
-which will simulate the system for 100 seconds towards equilibrium. The result will be stored in the file `data.out` and shows the simulation time against the total number of present A, B and C molecules. Finally `<#C>` is stored in the file, which corresponds with the analytical value. The parameters; reaction coefficient `-ka`, coefficient coefficient `-kd`, preparation time `-p` and simulation-time `-e` are set using the command line arguments. All other settable options can be viewed by running:
+
+The variable “Equilibrium” describes the simple association-dissociation reaction. The values of the association rate ka and dissociation rate kd are set as command line argument. The parameter -p sets the equilibration time during which the system is allowed to relax to equilibrium, while –e sets the run time during which the statistics is accumulated, both in seconds. All parameter settings can be viewed by running:
 ```
 ./RunGfrd Equilibrium --help
 ```
+The result will be stored in the file data.out and shows the simulation time against the total number of A, B and C molecules. Finally, the analytical prediction <#C> is also stored in the file.
 
 ## Power Spectrum
-The A, B and C reversible dissociation system can also be used to obtain the power spectrum. Use the following command to setup the simulator with the same parameters as given by the paper of Kaizu et. al. \[[1](#references)\]:
+Besides the dissociation constant, it may also prove useful to compute the power spectrum of the simple association-dissociation reaction. The following command prompts GFRD to compute the power spectrum for this reaction, with the same parameters as in the paper of Kaizu et. al. \[[1](#references)\]:
 ```
 ./RunGfrd PowerSpectrum -e 600 > data.out
 ```
@@ -35,13 +39,13 @@ Fig.1: Results of the power spectrum simulation, which agree well with the theor
 </div>
 
 ## MAPK
-Mitogen-activated protein kinase (MAPK) is a well known example of a enzyme kinase that that modifies proteins, by adding phosphate groups. This experimentally known system can be simulated using eGFRD \[[2](#references)\]. With the modern eGFRD package the MAPK simulation can be easily setup using:
+The Mitogen-Activated Protein Kinase (MAPK) cascade is one of most studied and best characterized signalling pathways in biology. The cascade consists of three layers, where in each layer a protein is phosphorylated at two states. The application of eGFRD to one layer showed that fluctuations at the molecular scale can dramatically change the macroscopic behavior at the cellular scale \[[2](#references)\]. With the new eGFRD package the MAPK simulation can be easily set up using:
 ```
 ./RunGfrd MapK > data.out
 ```
 
 ## Custom
-Users can also use the package to create their own simulations with ini-file like scripts. A simple example with file name *rebind.gfrd*, is given below. To run the modern eGFRD simulator, copy the script to the same folder as where the RunGfrd executable is located and enter the following command:
+Users can also use the package to set up their own model with ini-file like scripts. A simple example with file name *rebind.gfrd*, is given below. To run the modern eGFRD simulator, copy the script to the same folder as where the RunGfrd executable is located and enter the following command:
 ```
 .\RunGfrd Costum -f rebind.gfrd > data.out
 ```
