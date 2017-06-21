@@ -47,7 +47,7 @@ The Mitogen-Activated Protein Kinase (MAPK) cascade is one of most studied and b
 ## Custom
 Users can also use the package to set up their own model with ini-file like scripts. A simple example with file name *rebind.gfrd*, is given below. To run the modern eGFRD simulator, copy the script to the same folder as where the RunGfrd executable is located and enter the following command:
 ```
-.\RunGfrd Costum -f rebind.gfrd > data.out
+.\RunGfrd Custom -f rebind.gfrd > data.out
 ```
 
 ```
