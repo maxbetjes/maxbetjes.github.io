@@ -18,5 +18,6 @@ github_download_zip: "http://github.com/gfrd/modern_egfrd/zipball/master"
 github_download_tar: "http://github.com/gfrd/modern_egfrd/tarball/master"
 github_install_instructions: "https://github.com/gfrd/modern_egfrd/blob/master/INSTALL.md"
 github_issue_tracker: "https://github.com/gfrd/modern_egfrd/issues"
+github_old_repository: "https://github.com/gfrd/egfrd.git"
 
 visualstudio_website: "https://www.visualstudio.com"

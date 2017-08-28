@@ -3,27 +3,28 @@ title: installation
 layout: default
 ---
 
+The modern C++ implementation of the eGFRD has been published as an open source package on GitHub. Please follow the [installation instructions]({{site.github_install_instructions}}) on the repository to setup the simulator. Problems can be reported via the eGFRD [issue tracker]({{site.github_issue_tracker}}).
+
 The modern C++ implementation of the eGFRD has been published as open source package on GitHub. Please follow the [installation instructions]({{site.github_install_instructions}}) on the repository to setup the simulator. Problems can be reported on the eGFRD [issue tracker]({{site.github_issue_tracker}}).
 
-# Examples
+## Examples
 To help you getting started, we have assembled some simple models. These can be used to verify the implementation of the code and to build more complex models.
 
 ## Equilibrium
 Consider a set of particles A, B and C with the following reaction: A + B ⇾ C with binding rate constant k<sub>a</sub> [m<sup>3</sup>/s] and C ⇾ A + B and unbinding rate k<sub>d</sub> [s<sup>-1</sup>]. In a box with length L [m] and periodic boundary conditions, the reaction will relax towards equilibrium. For this system, we can calculate the number of C particles analytically.
-```
-<#C> = (NA + NB) + KD*V*sqrt[(NA + NB + KD*V)^2 - 4*NA*NB]/2
-```
 
-where NA, NB and NC are the number of A, B, and C respectively in the volume V = L<sup>3</sup>, and KD = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. The number of C particles thus depends on the dissociation constant, that is the ratio of the association and dissociation rate, and not on the absolute values of the rate constants. This can be used to test the code. To run an eGFRD simulation of this reaction, enter the following command:
+<code><#C> = (N<sub>A</sub> + N<sub>B</sub>) + K<sub>D</sub> &bull; V  &bull; sqrt[(N<sub>A</sub> + N<sub>B</sub> + K<sub>D</sub> &bull; V)<sup>2</sup> - 4 &bull; N<sub>A</sub> &bull; N<sub>B</sub>]/2</code>
+
+where N<sub>A</sub>, N<sub>B</sub> and N<sub>C</sub> are the number of A, B, and C respectively in the volume V = L<sup>3</sup>, and K<sub>D</sub> = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. The number of C particles thus depends on the dissociation constant, that is the ratio of the association and dissociation rate, and not on the absolute values of the rate constants. This can be used to test the code. To run an eGFRD simulation of this reaction, enter the following command in the Unix shell after installing the package:
 ```
 ./RunGfrd Equilibrium -ka 1e-19 -kd 2e-2 -p 100 -e 200 > data.out
 ```
 
-The first command line argument sets the simulation type. The value “Equilibrium” represents a build-in simulation of the described association-dissociation reaction. The values of the association rate k<sub>a</sub> and dissociation rate k<sub>d</sub> can also be set as command line argument. The argument `-p` sets the preperation time. This allows the system to relax to an equilibrium. The argument `–e` sets the simulation time during which the statistics are accumulated. To view all arguments for the Equilibrium simulation type --help:
+The variable “Equilibrium” describes the simple association-dissociation reaction. The values of the association rate ka and dissociation rate kd are set as command line argument. The parameter -p sets the equilibration time during which the system is allowed to relax to equilibrium, while –e sets the run time during which the statistics is accumulated, both in seconds. All parameter settings can be viewed by running:
 ```
 ./RunGfrd Equilibrium --help
 ```
-The result will be stored in the file data.out and shows the simulation time against the instantaneous number of A, B and C particles. Finally, the analytical prediction <#C> is also stored in the file.
+The result will be stored in the file data.out and shows the simulation time against the total number of A, B and C molecules. Finally, the analytical prediction <#C> is also stored in the file.
 
 ## Power Spectrum
 Besides the dissociation constant, it may also prove useful to compute the power spectrum of the simple association-dissociation reaction. The following command prompts GFRD to compute the power spectrum for this reaction, with the same parameters as in the paper of Kaizu et. al. \[[1](#references)\]:
@@ -45,21 +46,21 @@ The Mitogen-Activated Protein Kinase (MAPK) cascade is one of most studied and b
 ## Custom
 Users can also use the package to set up their own model with ini-file like scripts. A simple example with file name *rebind.gfrd*, is given below. To run the modern eGFRD simulator, copy the script to the same folder as where the RunGfrd executable is located and enter the following command:
 ```
-.\RunGfrd Custom -f rebind.gfrd > data.out
+.\RunGfrd Costum -f rebind.gfrd > data.out
 ```
 
 ```
 ; eGFRD rebinding simulation
 
 [Simulator]
-           Seed = 0xA2529C06; 	pseudorandom number generator.
+           Seed = 0xA2529C06
     PrepareTime = 0.5; sec.
         EndTime = 15.0; sec.
    ShowProgress = False
 MaintenanceStep = 10000
 MaintenanceFile = sim_dump.out
 
-[World]
+[World] ;this is some comment
   Matrix = 8
     Size = 1e-6; m
 	
@@ -97,6 +98,6 @@ B = 50
 C = 0
 ```
 
-# References
+## References
 1. Kaizu K, de Ronde W, Paijmans J, Takahashi K, Tostevin F, ten Wolde PR (2014) The Berg-Purcell Limit Revisited Biophys J, 106:976-985. ([doi](https://dx.doi.org/10.1016/j.bpj.2013.12.030))
 2. Takahashia K, Tănase-Nicolad S, ten Wolde PR (2009) Spatio-temporal correlations can drastically change the response of a MAPK pathway ([doi](https://dx.doi.org/10.1073/pnas.0906885107))
