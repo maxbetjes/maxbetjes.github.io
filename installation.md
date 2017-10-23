@@ -5,32 +5,39 @@ layout: default
 
 The modern C++ implementation of the eGFRD has been published as an open source package on GitHub. Please follow the [installation instructions]({{site.github_install_instructions}}) on the repository to setup the simulator. Problems can be reported via the eGFRD [issue tracker]({{site.github_issue_tracker}}).
 
-The modern C++ implementation of the eGFRD has been published as open source package on GitHub. Please follow the [installation instructions]({{site.github_install_instructions}}) on the repository to setup the simulator. Problems can be reported on the eGFRD [issue tracker]({{site.github_issue_tracker}}).
-
 ## Examples
 To help you getting started, we have assembled some simple models. These can be used to verify the implementation of the code and to build more complex models.
 
 ## Equilibrium
 Consider a set of particles A, B and C with the following reaction: A + B ⇾ C with binding rate constant k<sub>a</sub> [m<sup>3</sup>/s] and C ⇾ A + B and unbinding rate k<sub>d</sub> [s<sup>-1</sup>]. In a box with length L [m] and periodic boundary conditions, the reaction will relax towards equilibrium. For this system, we can calculate the number of C particles analytically.
 
-<code><#C> = (N<sub>A</sub> + N<sub>B</sub>) + K<sub>D</sub> &bull; V  &bull; sqrt[(N<sub>A</sub> + N<sub>B</sub> + K<sub>D</sub> &bull; V)<sup>2</sup> - 4 &bull; N<sub>A</sub> &bull; N<sub>B</sub>]/2</code>
+<code>N<sub>C_th</sub> = 2 &bull; N + K<sub>D</sub> &bull; V &bull; sqrt[(2 &bull; N + K<sub>D</sub> &bull; V)<sup>2</sup> - 4 &bull; N &bull; N]/2</code>
 
-where N<sub>A</sub>, N<sub>B</sub> and N<sub>C</sub> are the number of A, B, and C respectively in the volume V = L<sup>3</sup>, and K<sub>D</sub> = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. The number of C particles thus depends on the dissociation constant, that is the ratio of the association and dissociation rate, and not on the absolute values of the rate constants. This can be used to test the code. To run an eGFRD simulation of this reaction, enter the following command in the Unix shell after installing the package:
+where N is the number of A and B particles respectively in the volume V = L<sup>3</sup>, and K<sub>D</sub> = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. To test the eGFRD-simulation a model (equilibrium.gfrd) is provide that sets up this scenario and starts with zero C particles. After some time the number of C particles should approach the calculated equilibrium N<sub>C_th</sub>. To run this model:
+
 ```
-./RunGfrd Equilibrium -ka 1e-19 -kd 2e-2 -p 100 -e 200 > data.out
+./RunGfrd ../../samples/equilibrium/equilibrium.gfrd
 ```
 
-The variable “Equilibrium” describes the simple association-dissociation reaction. The values of the association rate ka and dissociation rate kd are set as command line argument. The parameter -p sets the equilibration time during which the system is allowed to relax to equilibrium, while –e sets the run time during which the statistics is accumulated, both in seconds. All parameter settings can be viewed by running:
+The output of the program shows average amount of particles at intervals of 1 second. The number of C particles should be readily increasing and after reaching equilibrium will fluctuate around the calculated N<sub>C_th</sub>. Press Ctrl-C to end the simulation.
+
+As a additional check the unbinding rate k<sub>d</sub> can be changed to a higher value decreasing the average number of C particles in equilibrium. This can be done by editing the model-file in a text-editor or by defining the value k<sub>d</sub> on the commandline:
+
 ```
-./RunGfrd Equilibrium --help
+./RunGfrd ../../samples/equilibrium/equilibrium.gfrd -d kd=8e-2
 ```
-The result will be stored in the file data.out and shows the simulation time against the total number of A, B and C molecules. Finally, the analytical prediction <#C> is also stored in the file.
+
+
 
 ## Power Spectrum
-Besides the dissociation constant, it may also prove useful to compute the power spectrum of the simple association-dissociation reaction. The following command prompts GFRD to compute the power spectrum for this reaction, with the same parameters as in the paper of Kaizu et. al. \[[1](#references)\]:
+Besides the dissociation constant, it may also prove useful to compute the power spectrum of the simple association-dissociation reaction. The provided model powerspectrum.gfrd sets up the simulator with the same parameters as in the paper of Kaizu et. al. \[[1](#references)\]:
+
 ```
-./RunGfrd PowerSpectrum -e 600 > data.out
+./RunGfrd ../../samples/powerspectrum/powerspectrum.gfrd
 ```
+
+The powerspectrum needs to be calculated from the time-codes in the power_rec.dat file. This can be done with <TODO>
+
 
 <p align="center"><img src="includes/images/powerspectrum.jpg" alt="Power spectrum results"/></p>
 <div style="margin:auto;width:75%;text-align:center;font-style:italic">
@@ -40,61 +47,70 @@ Fig.1: Results of the power spectrum simulation, which agree well with the theor
 ## MAPK
 The Mitogen-Activated Protein Kinase (MAPK) cascade is one of most studied and best characterized signalling pathways in biology. The cascade consists of three layers, where in each layer a protein is phosphorylated at two states. The application of eGFRD to one layer showed that fluctuations at the molecular scale can dramatically change the macroscopic behavior at the cellular scale \[[2](#references)\]. With the new eGFRD package the MAPK simulation can be easily set up using:
 ```
-./RunGfrd MapK > data.out
+./RunGfrd ../../samples/mapK/mapK.gfrd
 ```
 
 ## Custom
-Users can also use the package to set up their own model with ini-file like scripts. A simple example with file name *rebind.gfrd*, is given below. To run the modern eGFRD simulator, copy the script to the same folder as where the RunGfrd executable is located and enter the following command:
+Users can use the package to set up their own model by creating their a new gfrd-file. This can be from scratch, or copy one of the samples as a starting point. See [documentation](https://github.com/gfrd/moderen_egfrd/doc/notes on model-files).
+
 ```
-.\RunGfrd Custom -f rebind.gfrd > data.out
+.\RunGfrd user-file.gfrd
 ```
+
+When the model-language is too restricted or you're just more confident writing C++ code, it is also possible to do just that. As an staring point the [SimCustom.hpp](https://github.com/gfrd/moderen_egfrd/src/RunGfrd/SimCustom.hpp) is your place. To start you custom simulator type:
+
+```
+.\RunGfrd --custom
+```
+
+
+
+## Resume
+
+The simulator (when enabled) will write it's internal state to a file at every maintanance step (usually the maintanance step is is high number like 100000 or 1000000). In the unfortunate event that something goes wrong (unexpected termination) the state file can be used to resume simulation. This is espacially usefull when the simulater crashes after days of calculating and you now need to debug that error. 
+
+```
+.\RunGfrd --resume sim_state.dat
+```
+
+
+
+
+
+## Sample model file: resume.gfrd
+
 
 ```
 ; eGFRD rebinding simulation
 
 [Simulator]
-           Seed = 0xA2529C06
-    PrepareTime = 0.5; sec.
-        EndTime = 15.0; sec.
-   ShowProgress = False
-MaintenanceStep = 10000
+           Seed = 0x1234CAFE
+        EndTime = 90.0                 ; sec.
+MaintenanceStep = 100000
 MaintenanceFile = sim_dump.out
 
-[World] ;this is some comment
-  Matrix = 8
-    Size = 1e-6; m
-	
+[World]
+Matrix = 8
+  Size = 3.42e-6                      ; 40 femto Liter = 4e-17 m3
+
 [CopyNumbers]
-    Mode = On
-Interval = 1E-3
+Interval = 1E-1
     File = copy_num.out
+    Type = Instantaneous
 
 [SpeciesType]
-Name = A
-   r = 1e-9; m
-   D = 1e-12; m^2*s^-1
-
-[SpeciesType]
-Name = B
-   r = 1e-9; m
-   D = 1e-12; m^2*s^-1
-
-[SpeciesType]
-Name = C
-   r = 1.5e-9; m
-   D = 1e-12; m^2*s^-1
+Name = A B C
+   r = 1e-9                            ; m
+   D = 1e-12                           ; m^2*s^-1
 
 [ReactionRule]
-Rule = A + B --> C
-   k = 1e-16; m^3*s^-1
-
-[ReactionRule]
-Rule = C --> A + B
-   k = 1e3; s^-1
+Rule = A + B <=> C
+  ka = 1e-19                           ; m^3*s^-1
+  kd = 2e-2                            ; s^-1
 
 [Particles]
-A = 50
-B = 50
+A = 100
+B = 100
 C = 0
 ```
 
