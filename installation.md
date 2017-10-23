@@ -21,7 +21,7 @@ where N is the number of A and B particles respectively in the volume V = L<sup>
 
 The output of the program shows average amount of particles at intervals of 1 second. The number of C particles should be readily increasing and after reaching equilibrium will fluctuate around the calculated N<sub>C_th</sub>. Press Ctrl-C to end the simulation.
 
-As a additional check the unbinding rate k<sub>d</sub> can be changed to a higher value decreasing the average number of C particles in equilibrium. This can be done by editing the model-file in a text-editor or by defining the value k<sub>d</sub> on the commandline:
+Now the unbinding rate k<sub>d</sub> can be changed to a higher value decreasing the average number of C particles in equilibrium. This can be done by editing the model-file in a text-editor or by defining the value k<sub>d</sub> on the commandline:
 
 ```
 ./RunGfrd ../../samples/equilibrium/equilibrium.gfrd -d kd=8e-2
@@ -36,7 +36,7 @@ Besides the dissociation constant, it may also prove useful to compute the power
 ./RunGfrd ../../samples/powerspectrum/powerspectrum.gfrd
 ```
 
-The powerspectrum needs to be calculated from the time-codes in the power_rec.dat file. This can be done with <strong>TODO</strong>
+This simulation writes binding and unbinding time-stamps in the file power_rec.dat. The powerspectrum needs to be calculated from tihs data. This can be done with ... <strong>TODO</strong>
 
 
 <p align="center"><img src="includes/images/powerspectrum.jpg" alt="Power spectrum results"/></p>
@@ -67,7 +67,7 @@ When the model-language is too restricted or you're just more confident writing 
 
 ## Resume
 
-The simulator (when enabled) will write it's internal state to a file at every maintanance step (usually the maintanance step is is high number like 100000 or 1000000). In the unfortunate event that something goes wrong (unexpected termination) the state file can be used to resume simulation from the maintanance step before the crash. This is espacially usefull when the simulater fails after days of calculating and you now need to debug that error. 
+The simulator (when enabled) writes it's internal state to a file at every maintanance step (usually the maintanance step is is high number like 100000 or 1000000). In the unfortunate event that something goes wrong (unexpected termination) the state file can be used to resume simulation from the maintanance step before the crash. This is espacially usefull when the simulater fails after days of calculating and you now need to now debug that error. 
 
 ```
 .\RunGfrd --resume sim_state.dat
@@ -77,7 +77,7 @@ The simulator (when enabled) will write it's internal state to a file at every m
 
 
 
-## Sample model file: resume.gfrd
+## Sample model file: [rebind.gfrd](https://github.com/gfrd/modern_egfrd/blob/master/samples/rebind/rebind.gfrd)
 
 
 ```
