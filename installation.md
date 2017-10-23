@@ -13,7 +13,7 @@ Consider a set of particles A, B and C with the following reaction: A + B ⇾ C 
 
 <code>N<sub>C_th</sub> = 2 &bull; N + K<sub>D</sub> &bull; V &bull; sqrt[(2 &bull; N + K<sub>D</sub> &bull; V)<sup>2</sup> - 4 &bull; N &bull; N]/2</code>
 
-where N is the number of A and B particles respectively in the volume V = L<sup>3</sup>, and K<sub>D</sub> = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. To test the eGFRD-simulation a model (equilibrium.gfrd) is provide that sets up this scenario and starts with zero C particles. After some time the number of C particles should approach the calculated equilibrium N<sub>C_th</sub>. To run this model:
+where N is the number of A and B particles respectively in the volume V = L<sup>3</sup>, and K<sub>D</sub> = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. To test the eGFRD-simulation a model ([equilibrium.gfrd](https://github.com/gfrd/modern_egfrd/blob/master/samples/equilibrium/equilibrium.gfrd)) is provide that sets up this scenario and starts with zero C particles. After some time the number of C particles should approach the calculated equilibrium N<sub>C_th</sub>. To run this model:
 
 ```
 ./RunGfrd ../../samples/equilibrium/equilibrium.gfrd
@@ -30,13 +30,13 @@ As a additional check the unbinding rate k<sub>d</sub> can be changed to a highe
 
 
 ## Power Spectrum
-Besides the dissociation constant, it may also prove useful to compute the power spectrum of the simple association-dissociation reaction. The provided model powerspectrum.gfrd sets up the simulator with the same parameters as in the paper of Kaizu et. al. \[[1](#references)\]:
+Besides the dissociation constant, it may also prove useful to compute the power spectrum of the simple association-dissociation reaction. The provided model [powerspectrum.gfrd](https://github.com/gfrd/modern_egfrd/blob/master/samples/powerspectrum/powerspectrum.gfrd) sets up the simulator with the same parameters as in the paper of Kaizu et. al. \[[1](#references)\]:
 
 ```
 ./RunGfrd ../../samples/powerspectrum/powerspectrum.gfrd
 ```
 
-The powerspectrum needs to be calculated from the time-codes in the power_rec.dat file. This can be done with <TODO>
+The powerspectrum needs to be calculated from the time-codes in the power_rec.dat file. This can be done with <strong>TODO</strong>
 
 
 <p align="center"><img src="includes/images/powerspectrum.jpg" alt="Power spectrum results"/></p>
@@ -51,13 +51,13 @@ The Mitogen-Activated Protein Kinase (MAPK) cascade is one of most studied and b
 ```
 
 ## Custom
-Users can use the package to set up their own model by creating their a new gfrd-file. This can be from scratch, or copy one of the samples as a starting point. See [documentation](https://github.com/gfrd/moderen_egfrd/doc/notes on model-files).
+Users can use the package to set up their own model by creating their a new gfrd-file. This can be from scratch or copy one of the samples as a starting point. See [documentation](https://github.com/gfrd/modern_egfrd/blob/master/doc/notes%20on%20model-files.txt).
 
 ```
 .\RunGfrd user-file.gfrd
 ```
 
-When the model-language is too restricted or you're just more confident writing C++ code, it is also possible to do just that. As an staring point the [SimCustom.hpp](https://github.com/gfrd/moderen_egfrd/src/RunGfrd/SimCustom.hpp) is your place. To start you custom simulator type:
+When the model-language is too restricted or you're just more confident writing C++ code, it is also possible to do just that. As an staring point the [SimCustom.hpp](https://github.com/gfrd/modern_egfrd/blob/master/src/RunGfrd/SimCustom.hpp) is your place. To start you custom simulator type:
 
 ```
 .\RunGfrd --custom
@@ -67,7 +67,7 @@ When the model-language is too restricted or you're just more confident writing 
 
 ## Resume
 
-The simulator (when enabled) will write it's internal state to a file at every maintanance step (usually the maintanance step is is high number like 100000 or 1000000). In the unfortunate event that something goes wrong (unexpected termination) the state file can be used to resume simulation. This is espacially usefull when the simulater crashes after days of calculating and you now need to debug that error. 
+The simulator (when enabled) will write it's internal state to a file at every maintanance step (usually the maintanance step is is high number like 100000 or 1000000). In the unfortunate event that something goes wrong (unexpected termination) the state file can be used to resume simulation from the maintanance step before the crash. This is espacially usefull when the simulater fails after days of calculating and you now need to debug that error. 
 
 ```
 .\RunGfrd --resume sim_state.dat
