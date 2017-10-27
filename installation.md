@@ -36,7 +36,7 @@ Besides the dissociation constant, it may also prove useful to compute the power
 ./RunGfrd ../../samples/powerspectrum/powerspectrum.gfrd
 ```
 
-This simulation writes binding and unbinding time-stamps in the file power_rec.dat. The powerspectrum needs to be calculated from tihs data. This can be done with ... <strong>TODO</strong>
+This simulation writes binding and unbinding event time-stamps in a file 'power_rec.dat'. A powerspectrum can be calculated from tihs data, e.q. with the provided Python script '<code>calcspectrum.py</code>' or mutch faster the C/C++ code '<code>calcspectrum.cpp</code>'. These also calculate the intrinsic and effective curves. See figure below.
 
 
 <p align="center"><img src="includes/images/powerspectrum.jpg" alt="Power spectrum results"/></p>
