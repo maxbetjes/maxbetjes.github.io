@@ -11,7 +11,7 @@ To help you getting started, we have assembled some simple models. These can be 
 ## Equilibrium
 Consider a set of particles A, B and C with the following reaction: A + B ⇾ C with binding rate constant k<sub>a</sub> [m<sup>3</sup>/s] and C ⇾ A + B and unbinding rate k<sub>d</sub> [s<sup>-1</sup>]. In a box with length L [m] and periodic boundary conditions, the reaction will relax towards equilibrium. For this system, we can calculate the number of C particles analytically.
 
-<code>N<sub>C_th</sub> = { 2&bull;N + K<sub>D</sub>&bull;V - sqrt[ ( 2&bull;N + K<sub>D</sub>&bull;V)<sup>2</sup> - 4&bull;N&bull;N ] } / 2</code>
+<code>N<sub>C_th</sub> = { 2&bull;N + K<sub>D</sub>&bull;V - sqrt[ (2&bull;N + K<sub>D</sub>&bull;V)<sup>2</sup> - 4&bull;N&bull;N ] } / 2</code>
 
 where N is the number of A and B particles respectively in the volume V = L<sup>3</sup>, and K<sub>D</sub> = k<sub>d</sub>/k<sub>a</sub> is the dissociation constant. To test the eGFRD-simulation a model ([equilibrium.gfrd](https://github.com/gfrd/modern_egfrd/blob/master/samples/equilibrium/equilibrium.gfrd)) is provide that sets up this scenario and starts with zero C particles. After some time the number of C particles should approach the calculated equilibrium N<sub>C_th</sub>. To run this model:
 
