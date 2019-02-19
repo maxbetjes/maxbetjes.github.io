@@ -25,4 +25,6 @@ The eGFRD algorithm was originally developed by the group of Takahashi at the [R
 2. Van Zon JS, Ten Wolde PR (2005) Green’s Function Reaction Dynamics: A particle-based approach for simulating biochemical networks in time and space. J Chem Phys, 123: 234910. ([doi](https://dx.doi.org/10.1063/1.2137716), [arXiv](https://arxiv.org/abs/q-bio/0404002))
 3. Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. Proc. Natl Acad Sci USA, 107: 2473 — 2478. ([doi](https://dx.doi.org/10.1073/pnas.0906885107), [arXiv](https://arxiv.org/abs/0907.0514))
 4. Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. Phys Rev Lett, 97:230602. ([doi](https://dx.doi.org/10.1103/PhysRevLett.97.230602), [arXiv](https://arxiv.org/abs/0905.3576))
-5. Sokolowski TR, Ten Wolde PR (2017)  Spatial-Stochastic Simulation of Reaction-Diffusion Systems. ([arXiv](https://arxiv.org/abs/1705.08669))
+5. Sokolowski TR, Paijmans J, Bossen L, Miedema T, Wehrens M, Becker NB, Kaizu K, Takahashi K, Dogterom M, Ten Wolde PR(2019) eGFRD in all dimensions. J Chem Phys, 150: 054108.  ([doi](https://doi.org/10.1063/1.5064867))
+
+
