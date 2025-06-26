@@ -5,7 +5,10 @@ layout: default
 
 GFRD decomposes the many-body reaction-diffusion problem into one- and two-body problems that can be solved analytically using Green’s Functions \[[1,2,3,4](#references)\]. These Green’s Functions are then employed to set up an event-driven algorithm, which makes it possible to take large jumps in time and space when the particles are far apart from each other. GFRD can be up to 6 orders of magnitude faster than conventional algorithms based on Brownian Dynamics \[[1](#references)\].
 <p align="center">
- <video width="720" height="720" controls autoplay muted loop>
+ <video width="320" height="720" controls autoplay muted loop>
+  <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+   <video width="320" height="720" controls autoplay muted loop>
   <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
    Your browser does not support the video tag.
  </video> 
