@@ -8,11 +8,7 @@ GFRD decomposes the many-body reaction-diffusion problem into one- and two-body 
  <video width="720" height="720" controls autoplay muted loop>
   <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
    Your browser does not support the video tag.
- </video> |
-  <video width="720" height="720" controls autoplay muted loop>
-  <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
-   Your browser does not support the video tag.
- </video> |
+ </video> 
 </p>
 
 
