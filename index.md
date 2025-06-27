@@ -28,16 +28,13 @@ OrganoidTracker is a modular framework for 3D cell tracking that provides cell t
 </p>
 
 ## Contact US
-Questions about OrganoidTracker? Interested in collaborations? [Contact Us] ({site.riken_website})! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
+Questions about OrganoidTracker? Interested in collaborations? [Contact Us] ({{site.company_website}})! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
 
 ## Applications
 List all our papers (?)
 
-## eGFRD in all dimensions
-The original code to simulate reactions and diffusion in 3D (cytoplasm) has been rewritten in Modern C++, resulting in a very fast simulator. A [prototype]({{site.github_old_repository}}) has been developed that can also simulate systems in 2D (membranes) and 1D (filaments) \[[5](#references)\].
-
 ## Developers
-The eGFRD algorithm was originally developed by the group of Takahashi at the [Riken institute]({{site.riken_website}}) in Japan and the group of Ten Wolde at [AMOLF]({{site.company_website}}) in The Netherlands.
+OrganoidTracker was developped by Max Betjes and Rutger Kok (currently at Rodriguez-Colman Lab, UMCU) at AMOLF in the labs of Jeroen van Zon and Sander Tans. Maintenance is done by Max Betjes and Rutger Kok.
 
 ## References
 1. Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. Phys Rev Lett, 94: 128103. ([doi](https://dx.doi.org/10.1103/PhysRevLett.94.128103))
