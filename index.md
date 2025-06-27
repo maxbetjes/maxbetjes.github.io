@@ -3,8 +3,8 @@ title: index
 layout: default
 ---
 
-OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis. <br>
-OrganoidTracker comes with a python bases GUI optimized for the curation of 3D cell tracking results. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. <br>
+OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis \[[1](#references)\]. <br>
+OrganoidTracker comes with a python bases GUI optimized for the curation of 3D cell tracking results \[[2](#references)\]. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. <br>
 We host a [Hugging Face space]({{site.hugging_face_website}}) where users can quickly test our models' performance on their data. 
 {: style="text-align: justify"}
 
@@ -23,7 +23,6 @@ We host a [Hugging Face space]({{site.hugging_face_website}}) where users can qu
  </video> 
 </p>
 
-
 <p align="center">
     <b>Automated tracking in action.</b>
 </p>
@@ -41,10 +40,7 @@ OrganoidTracker was developped by Max Betjes and Rutger Kok (currently at Rodrig
 {: style="text-align: justify"}
 
 ## References
-1. Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. Phys Rev Lett, 94: 128103. ([doi](https://dx.doi.org/10.1103/PhysRevLett.94.128103))
-2. Van Zon JS, Ten Wolde PR (2005) Green’s Function Reaction Dynamics: A particle-based approach for simulating biochemical networks in time and space. J Chem Phys, 123: 234910. ([doi](https://dx.doi.org/10.1063/1.2137716), [arXiv](https://arxiv.org/abs/q-bio/0404002))
-3. Takahashi K, Tanase-Nicola S, Ten Wolde PR (2010) Spatio-temporal correlations can drastically change the response of a MAPK pathway. Proc. Natl Acad Sci USA, 107: 2473 — 2478. ([doi](https://dx.doi.org/10.1073/pnas.0906885107), [arXiv](https://arxiv.org/abs/0907.0514))
-4. Opplestrup T, Bulatov VV, Gilmer GH, Kalos MH, Sadigh B (2006) First-passage Monte Carlo algorithm: diffusion without all the hops. Phys Rev Lett, 97:230602. ([doi](https://dx.doi.org/10.1103/PhysRevLett.97.230602), [arXiv](https://arxiv.org/abs/0905.3576))
-5. Sokolowski TR, Paijmans J, Bossen L, Miedema T, Wehrens M, Becker NB, Kaizu K, Takahashi K, Dogterom M, Ten Wolde PR(2019) eGFRD in all dimensions. J Chem Phys, 150: 054108.  ([doi](https://doi.org/10.1063/1.5064867))
+1. Betjes MA, Tans SJ, Van Zon JS (2025) Cell tracking with accurate error prediction. ([doi]({{site.paper}}))
+2. Kok RNU, Hebert L, Huelsz-Prince G, Goos YJ, Zheng X, et al. (2020) OrganoidTracker: Efficient cell tracking using machine learning and manual error correction. PLOS ONE 15(10): e0240802. ([doi](https://doi.org/10.1371/journal.pone.0240802))
 
 
