@@ -24,8 +24,6 @@ OrganoidTracker comes with a python bases GUI optimized for the curation of 3D c
 
 
 <p align="center">
-    <a href="includes\movies\SV2_Organoid_3D_bottom_view.mp4">
-    </a><br>
     <b>Automated tracking in action.</b>
 </p>
 
