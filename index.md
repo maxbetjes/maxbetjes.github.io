@@ -5,7 +5,7 @@ layout: default
 <p style='text-align: justify;'>
 OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis. <br>
 OrganoidTracker comes with a python bases GUI optimized for the curation of 3D cell tracking results. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. <br>
-We host a <a href="{{site.company_website}}" >Hugging face space</a> where users can quickly test our models' <a>[Contact Us]({{site.company_website}})</a> performance on their data. 
+We host a <a href="{{site.hugging_face_website}}" >Hugging face space</a> where users can quickly test our models' performance on their data. 
  </p>
 
 <p align="center">
@@ -13,7 +13,7 @@ We host a <a href="{{site.company_website}}" >Hugging face space</a> where users
   <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
    Your browser does not support the video tag.
   </video> 
-  <video width="260" height="250" controls autoplay muted loop>
+  <video width="270" height="250" controls autoplay muted loop>
    <source src="includes/movies/SV1_Organoid_single_plane.mp4" type="video/mp4">
    Your browser does not support the video tag.
  </video> 
@@ -31,7 +31,7 @@ We host a <a href="{{site.company_website}}" >Hugging face space</a> where users
 
 ## Contact US
 <p style='text-align: justify;'>
-Questions about OrganoidTracker? Interested in collaborations? [Contact Us]({{site.company_website}})! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
+Questions about OrganoidTracker? Interested in collaborations? <a href="{{site.hugging_face_website}}" >Contact us</a>! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
 </p>
 
 ## Applications
