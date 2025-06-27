@@ -5,7 +5,7 @@ layout: default
 
 OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis. <br>
 OrganoidTracker comes with a python bases GUI optimized for the curation of 3D cell tracking results. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. <br>
-We host a <a href="{{site.hugging_face_website}}" >Hugging face space</a> where users can quickly test our models' performance on their data [yo]({{site.{{site.hugging_face_website}}). 
+We host a [Hugging Face space]({{site.hugging_face_website}}) where users can quickly test our models' performance on their data. 
 {: style="text-align: justify"}
 
 <p align="center">
@@ -30,22 +30,14 @@ We host a <a href="{{site.hugging_face_website}}" >Hugging face space</a> where 
 
 
 ## Contact US
-<p style='text-align: justify;'>
 Questions about OrganoidTracker? Interested in collaborations? <a href="{{site.hugging_face_website}}" >Contact us</a>! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
-</p>
+
 
 ## Applications
-<p style='text-align: justify;'>
 List all our papers (?)
-</p>
 
 ## Developers
-<p style='text-align: justify;'>
 OrganoidTracker was developped by Max Betjes and Rutger Kok (currently at Rodriguez-Colman Lab, UMCU) at AMOLF in the labs of Jeroen van Zon and Sander Tans. Maintenance is done by Max Betjes and Rutger Kok.
-</p>
-
-## TESTSTST
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 {: style="text-align: justify"}
 
 ## References
