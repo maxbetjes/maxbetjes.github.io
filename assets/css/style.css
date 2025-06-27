@@ -3,3 +3,6 @@
 
 @import 'jekyll-theme-cayman';
 
+.text-justify {
+  text-align: justify;
+}
