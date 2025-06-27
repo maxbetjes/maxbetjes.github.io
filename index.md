@@ -3,7 +3,8 @@ title: index
 layout: default
 ---
 
-GFRD decomposes the many-body reaction-diffusion problem into one- and two-body problems that can be solved analytically using Green’s Functions \[[1,2,3,4](#references)\]. These Green’s Functions are then employed to set up an event-driven algorithm, which makes it possible to take large jumps in time and space when the particles are far apart from each other. GFRD can be up to 6 orders of magnitude faster than conventional algorithms based on Brownian Dynamics \[[1](#references)\].
+OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis. OrganoidTracker comes with a python bases GUI optimized for the curation of 3D cell tracking results. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. We host a Hugging Face space where users can quickly test our models performance on their data. 
+
 <p align="center">
  <video width="250" height="250" controls autoplay muted loop>
   <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
