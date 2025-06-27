@@ -3,14 +3,12 @@ exclude: ["README.md"]
 
 title: OrganoidTracker
 description: Machine learning driven 3D cell tracking with accurate error predictions
-gfrd_title: "eGFRD"
-gfrd_website: "egfrd.org"
+gfrd_title: "OrganoidTracker.org"
+gfrd_website: "OrgnaoidTracker.org"
 
 company_name: "AMOLF"
 company_website: "https://www.amolf.nl"
 group_website: "https://www.amolf.nl/research/biochemical-networks/"
-
-riken_website: "http://www.riken.jp"
 
 github_repository: "https://github.com/gfrd/modern_egfrd.git"
 github_download_zip: "http://github.com/gfrd/modern_egfrd/zipball/master"
