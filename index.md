@@ -3,7 +3,7 @@ title: index
 layout: default
 ---
 <p style='text-align: justify;'>
-OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis. 
+OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis. \n
 OrganoidTracker comes with a python bases GUI optimized for the curation of 3D cell tracking results. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. We host a Hugging Face space where users can quickly test our models performance on their data. 
  </p>
 
