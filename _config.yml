@@ -1,9 +1,8 @@
 theme: jekyll-theme-cayman
 exclude: ["README.md"]
 
-title: enhanced Green's Function Reaction Dynamics
-description: An event-driven algorithm for simulating reaction-diffusion systems at the particle level
-
+title: OrganoidTracker
+description: Machine learning driven 3D cell tracking with accurate error predictions
 gfrd_title: "eGFRD"
 gfrd_website: "egfrd.org"
 
