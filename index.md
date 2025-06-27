@@ -6,15 +6,15 @@ layout: default
 OrganoidTracker is a modular framework for 3D cell tracking that provides cell tracks and well-callibrated error probabilities associated with every step in these tracks. These error proabilities can be used to guide manual review or to filter the data enabling fully automated analysis. OrganoidTracker comes with a python bases GUI optimized for the curation of 3D cell tracking results. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. We host a Hugging Face space where users can quickly test our models performance on their data. 
 
 <p align="center">
- <video width="250" height="250" controls autoplay muted loop>
+ <video width="260" height="250" controls autoplay muted loop>
   <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
    Your browser does not support the video tag.
   </video> 
-  <video width="250" height="250" controls autoplay muted loop>
+  <video width="260" height="250" controls autoplay muted loop>
    <source src="includes/movies/SV1_Organoid_single_plane.mp4" type="video/mp4">
    Your browser does not support the video tag.
  </video> 
- <video width="250" height="250" controls autoplay muted loop>
+ <video width="260" height="250" controls autoplay muted loop>
    <source src="includes/movies/SV9_c_Elegans.mp4" type="video/mp4">
    Your browser does not support the video tag.
  </video> 
@@ -24,11 +24,14 @@ OrganoidTracker is a modular framework for 3D cell tracking that provides cell t
 <p align="center">
     <a href="includes\movies\SV2_Organoid_3D_bottom_view.mp4">
     </a><br>
-    <b>Autaomated tracking in action.</b>
+    <b>Automated tracking in action.</b>
 </p>
 
+## Contact US
+Questions about OrganoidTracker? Interested in collaborations? [Contact Us] ({site.riken_website})! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
+
 ## Applications
-The eGFRD algorithm is generic and can be applied to a wide variety of reaction-diffusion problems, including those in population dynamics, evolution, and soft-condensed matter physics. The scheme presented here has been specifically designed to simulate biochemical networks. 
+List all our papers (?)
 
 ## eGFRD in all dimensions
 The original code to simulate reactions and diffusion in 3D (cytoplasm) has been rewritten in Modern C++, resulting in a very fast simulator. A [prototype]({{site.github_old_repository}}) has been developed that can also simulate systems in 2D (membranes) and 1D (filaments) \[[5](#references)\].
