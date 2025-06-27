@@ -29,6 +29,7 @@ OrganoidTracker comes with a python bases GUI optimized for the curation of 3D c
     <b>Automated tracking in action.</b>
 </p>
 
+<p style='text-align: justify;'>
 ## Contact US
 Questions about OrganoidTracker? Interested in collaborations? [Contact Us]({{site.company_website}})! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
 
@@ -37,6 +38,7 @@ List all our papers (?)
 
 ## Developers
 OrganoidTracker was developped by Max Betjes and Rutger Kok (currently at Rodriguez-Colman Lab, UMCU) at AMOLF in the labs of Jeroen van Zon and Sander Tans. Maintenance is done by Max Betjes and Rutger Kok.
+</p>
 
 ## References
 1. Van Zon JS, Ten Wolde PR (2005) Simulating biochemical networks at the particle level in time and space: Green’s Function Reaction Dynamics. Phys Rev Lett, 94: 128103. ([doi](https://dx.doi.org/10.1103/PhysRevLett.94.128103))
