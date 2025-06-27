@@ -11,6 +11,7 @@ company_website: "https://www.amolf.nl"
 group_website: "https://www.amolf.nl/research/biochemical-networks/"
 jeroen_website: "https://amolf.nl/people/jeroen-van-zon"
 sander_website: "https://amolf.nl/people/sander-tans"
+hugging_face_website: "https://huggingface.co/spaces/maxbetjes/OrganoidTracker"
 
 github_repository: "https://github.com/gfrd/modern_egfrd.git"
 github_download_zip: "http://github.com/gfrd/modern_egfrd/zipball/master"
