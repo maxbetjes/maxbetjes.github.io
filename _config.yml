@@ -1,6 +1,8 @@
 theme: jekyll-theme-cayman
 exclude: ["README.md"]
 
+markdown: kramdown 
+
 title: OrganoidTracker
 description: Machine learning driven 3D cell tracking with accurate error predictions
 gfrd_title: "OrganoidTracker.org"
