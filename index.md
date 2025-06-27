@@ -28,14 +28,19 @@ We host a [Hugging Face space]({{site.hugging_face_website}}) where users can qu
     <b>Automated tracking in action.</b>
 </p>
 
-<p style='text-align: justify;'>
+
 ## Contact US
+<p style='text-align: justify;'>
 Questions about OrganoidTracker? Interested in collaborations? [Contact Us]({{site.company_website}})! We are very interested in cell tracking problems and we have developped a wide range of analysis tools, that may suite your needs.  
+</p>
 
 ## Applications
+<p style='text-align: justify;'>
 List all our papers (?)
+</p>
 
 ## Developers
+<p style='text-align: justify;'>
 OrganoidTracker was developped by Max Betjes and Rutger Kok (currently at Rodriguez-Colman Lab, UMCU) at AMOLF in the labs of Jeroen van Zon and Sander Tans. Maintenance is done by Max Betjes and Rutger Kok.
 </p>
 
