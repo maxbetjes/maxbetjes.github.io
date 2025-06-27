@@ -13,6 +13,7 @@ company_website: "https://www.amolf.nl"
 jeroen_website: "https://amolf.nl/people/jeroen-van-zon"
 sander_website: "https://amolf.nl/people/sander-tans"
 hugging_face_website: "https://huggingface.co/spaces/maxbetjes/OrganoidTracker"
+paper: "https://www.biorxiv.org/content/10.1101/2024.10.11.617799v1"
 
 github_repository: "https://github.com/gfrd/modern_egfrd.git"
 github_download_zip: "http://github.com/gfrd/modern_egfrd/zipball/master"
