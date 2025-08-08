@@ -33,6 +33,8 @@ We host a [Hugging Face space]({{site.hugging_face_website}}) where users can qu
 ## Contact Us
 Questions about OrganoidTracker? Interested in collaborations? [Contact us]({{site.jeroen_website}})! We are very interested in cell tracking problems and we have developed a wide range of analysis tools, that may suite your needs.  
 
+## Add-ons
+see our add-onns here
 
 ## Applications
 List all our papers (?)
