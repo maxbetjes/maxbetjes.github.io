@@ -1,11 +1,11 @@
-gfrd.github.com
+OrganoidTracker.org
 ======
 
-The source code of http://egfrd.org/
+The source code of OrganoidTracker.org
 
 LICENSE
 ------------
 
-Copyright 2017 AMOLF.
+Copyright 2025 AMOLF.
 
 Licensed under the MIT License.
