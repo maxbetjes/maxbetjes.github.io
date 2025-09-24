@@ -22,7 +22,7 @@ layout: default
     <b>Automated tracking in action.</b>
 </p>
 
-OrganoidTracker is 3D cell tracking tool developed by the Tans and van Zon labs, which are based at the AMOLF institute in Amsterdam. It was created for cells within organoids, which are challenging to track because they from 3D tissue architectures, are tightly packed, and move rapidly, for instance during divisions, but also works well for other 3D and 2D systems.
+OrganoidTracker is 3D cell tracking tool developed by the Tans and van Zon labs at the AMOLF institute in Amsterdam. It was created for organoids, which cells are difficult to track because they formm complex 3D tissue architectures, are tightly packed, and can move rapidly, for instance during divisions, but also works well for other 3D and 2D systems.
 
 It comes with a python based GUI, which also enables optimised manual review and curation of the 3D cell tracking results \[[2](#references)\]. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. 
 
