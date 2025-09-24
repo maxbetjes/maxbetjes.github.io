@@ -30,18 +30,12 @@ Our most recent version allows more efficient cell tracking, and provides error 
 
 We have also developed various additional functionalities, incuding label-free tracking based on bright-field microscopy, tracking followed by antibody staining to determine differentiation events, and quantifying fluorescent protein expression along the lineage trees that the tracking provides. Please see these options under 'add ons' in the top menu.
 
-We host a [Hugging Face space]({{site.hugging_face_website}}) where users can upload their data and quickly test our models' performance on their data. We are also open to tracking your data within our groups, and to help with different types of downstream analysis of the resulting spatio-temporal data. We have already establishe many productive collaborations, so do contact us if you are interested.
+We host a [Hugging Face space]({{site.hugging_face_website}}) where users can upload their data and quickly test our models' performance on their data. We are also open to tracking your data within our groups, and to help with different types of downstream analysis of the resulting spatio-temporal data. We have already established many productive collaborations, so do contact us if you are interested.
 
 {: style="text-align: justify"}
 
-
-
-
 ## Contact Us
 Questions about OrganoidTracker? Interested in collaborations? [Contact us]({{site.jeroen_website}})! We are very interested in cell tracking problems and we have developed a wide range of analysis tools, that may suite your needs.  
-
-## Applications
-List all our papers (?)
 
 ## Developers
 OrganoidTracker was developped by Max Betjes and Rutger Kok (currently at Rodriguez-Colman Lab, UMCU) at AMOLF in the labs of [Jeroen van Zon]({{site.jeroen_website}}) and [Sander Tans]({{site.sander_website}}). Maintenance is done by Max Betjes and Rutger Kok.
