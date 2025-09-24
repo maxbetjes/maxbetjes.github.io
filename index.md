@@ -3,18 +3,6 @@ title: index
 layout: default
 ---
 
-OrganoidTracker is 3D cell tracking tool developed by the Tans and van Zon labs, which are based at the AMOLF institute in Amsterdam. It was created for cells within organoids, which are challenging to track because they from 3D tissue architectures, are tightly packed, and move rapidly, for instance during divisions, but also works well for other 3D and 2D systems.
-
-It comes with a python based GUI, which also enables optimised manual review and curation of the 3D cell tracking results \[[2](#references)\]. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. 
-
-Our most recent version allows more efficient cell tracking, and provides error probabilities of the tracking results. These error proabilities can be used to better guide manual review, or to filter the data and thus enable fully automated analysis \[[1](#references)\]. 
-
-We have also developed various additional functionalities, incuding label-free tracking based on bright-field microscopy, tracking followed by antibody staining to determine differentiation events, and quantifying fluorescent protein expression along the lineage trees that the tracking provides. Please see these options under 'add ons' in the top menu.
-
-We host a [Hugging Face space]({{site.hugging_face_website}}) where users can upload their data and quickly test our models' performance on their data. We are also open to tracking your data within our groups, and to help with different types of downstream analysis of the resulting spatio-temporal data. We have already establishe many productive collaborations, so do contact us if you are interested.
-
-{: style="text-align: justify"}
-
 <p align="center">
  <video width="260" height="250" controls autoplay muted loop>
   <source src="includes/movies/SV2_Organoid_3D_bottom_view.mp4" type="video/mp4">
@@ -34,12 +22,23 @@ We host a [Hugging Face space]({{site.hugging_face_website}}) where users can up
     <b>Automated tracking in action.</b>
 </p>
 
+OrganoidTracker is 3D cell tracking tool developed by the Tans and van Zon labs, which are based at the AMOLF institute in Amsterdam. It was created for cells within organoids, which are challenging to track because they from 3D tissue architectures, are tightly packed, and move rapidly, for instance during divisions, but also works well for other 3D and 2D systems.
+
+It comes with a python based GUI, which also enables optimised manual review and curation of the 3D cell tracking results \[[2](#references)\]. We currently have machine-learning models available trained on intestinal organoid data and c. Elegans embryos. The intestinal organoid trained models can track a wide range range of 3D tissues including blastocysts. 
+
+Our most recent version allows more efficient cell tracking, and provides error probabilities of the tracking results. These error proabilities can be used to better guide manual review, or to filter the data and thus enable fully automated analysis \[[1](#references)\]. 
+
+We have also developed various additional functionalities, incuding label-free tracking based on bright-field microscopy, tracking followed by antibody staining to determine differentiation events, and quantifying fluorescent protein expression along the lineage trees that the tracking provides. Please see these options under 'add ons' in the top menu.
+
+We host a [Hugging Face space]({{site.hugging_face_website}}) where users can upload their data and quickly test our models' performance on their data. We are also open to tracking your data within our groups, and to help with different types of downstream analysis of the resulting spatio-temporal data. We have already establishe many productive collaborations, so do contact us if you are interested.
+
+{: style="text-align: justify"}
+
+
+
 
 ## Contact Us
 Questions about OrganoidTracker? Interested in collaborations? [Contact us]({{site.jeroen_website}})! We are very interested in cell tracking problems and we have developed a wide range of analysis tools, that may suite your needs.  
-
-## Add-ons
-see our add-onns here
 
 ## Applications
 List all our papers (?)
