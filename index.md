@@ -22,16 +22,13 @@ layout: default
     <b>Automated tracking in action.</b>
 </p>
 
-OrganoidTracker is 3D cell tracking tool developed by the Tans and van Zon labs at AMOLF in Amsterdam. It was created for organoids, where cells are difficult to track because they form complex 3D tissue architectures, are tightly packed and can move rapidly. However, it also works well for other 3D and 2D cell systems.
+OrganoidTracker is a 3D cell tracking tool developed by the Tans and van Zon labs at AMOLF in Amsterdam. It was created for organoids, where cells are difficult to track because they form complex 3D tissue architectures, are tightly packed and can move rapidly. However, it also works well for other 3D and 2D cell systems.
 
 It comes with a python-based GUI, that enables optimised manual curation of the 3D cell tracking results \[[2](#references)\]. We currently have machine-learning models available trained on intestinal organoid and on <em> C. elegans</em> embryos data. The intestinal organoid-trained models can track a wide range range of 3D tissues, including blastocysts. 
 
 Our most recent version allows more efficient cell tracking, and provides error probabilities of the tracking results. These error probabilities can be used to target manual curation or to filter data for fully automated analysis \[[1](#references)\]. 
 
-We have also developed various additional functionalities, incuding label-free tracking based on bright-field microscopy, tracking followed by antibody staining to determine differentiation events, and quantifying fluorescent protein expression along the lineage trees that the tracking provides. Please see these options under 'add ons' in the top menu.
-
 We host a [Hugging Face space]({{site.hugging_face_website}}) where users can upload their microscopy data to quickly test our models' performance on their data. We are also open to tracking your microscopy movies within our groups, and to help with different types of downstream analysis of the resulting spatio-temporal data. We have already established many productive collaborations, so do contact us if you are interested.
-
 {: style="text-align: justify"}
 
 ## Contact Us
