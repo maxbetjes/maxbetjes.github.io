@@ -40,7 +40,7 @@ OrganoidTracker was developped by Max Betjes and Rutger Kok (currently at Rodrig
 {: style="text-align: justify"}
 
 ## References
-1. Betjes MA, Tans SJ, Van Zon JS (2025) Cell tracking with accurate error prediction. ([doi]({{site.paper}}))
+1. Betjes MA, Kok RNU, Tans SJ & Van Zon JS (2025) Cell tracking with accurate error prediction. Nature Methods. ([doi]({{site.paper}}))
 2. Kok RNU, Hebert L, Huelsz-Prince G, Goos YJ, Zheng X, et al. (2020) OrganoidTracker: Efficient cell tracking using machine learning and manual error correction. PLOS ONE 15(10): e0240802. ([doi](https://doi.org/10.1371/journal.pone.0240802))
 
 
